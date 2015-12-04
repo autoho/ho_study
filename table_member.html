@@ -9,18 +9,25 @@
         <legend>회원정보 입력</legend>
 
 <table border="1" width="100%" summary="회원가입 사용자 이름 입력란 입니다.">
-    <capsion>표시는 필수 입력 사항입니다.</capsion>
+    <caption>표시는 필수 입력 사항입니다.</caption>
+    <colgroup>
+        <col width="10%"/>
+        <col width="100%"/>
+        <col width="5%"/>
+        <col width="5%"/>
+
+    </colgroup>
     <tbody>
        <tr>
            <th><label for="userNa">사용자 이름</label></th>
-           <td colspan="2">
+           <td>
                <input type="text" id="userNa" value="이름" name="suerNa" />
                <br />
            </td>
        </tr>
        <tr>
            <th rowspan="2"><label for="userId">아이디</label></th>
-           <td >
+           <td colspan="2">
                <input type="text" id="userId" name="suerId" />
                <input type="button" value="중복확인" /></br>
            </td>

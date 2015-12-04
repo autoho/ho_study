@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--tr은 테이블위에 한줄 td는 줄 안에 데이타
+     테이블 이용시
+     테이블 태그를 사용하여 엘리멘트를 구성해야 한다
+     구성요소중 tr 행을 이야기 하고 , td 열을 이야기한다. -->
+     <!--
+         테이블 영역
+     thead : 제이블의 머릿글-필수사항은 아님
+     tbody : 테이블의 컨텐츠
+     tfoot : 테이블의 합산 정보-필수 사항 아님
+             thead와 tbody사이에 위치한다.
+     -->
+    <table border="5" width="100%" summary="자세한 설명">
+        <!-- capsion : 표의 제목부 h$ 관련태그와는 의미가 다르다
+            summary는 alt와 비슷한 기능이나 더 자세하게 설명
+            - 표에대한 자세한 설명
+            - 필수 항목은 아님
+        -->
+        <caption>게시판</caption>
+        <!--colgroup 은 테이블 아이템 즉 열의 넓이에 대한 디자인 값을 넣을 때 사용 된다.
+            구성요소로는 빈태그형식으리 col을 사용합니다.
+            col의 속성으로 는 style="" width="" 등을 이용하여 디자인 속성을 조절 할 수 있다.
+         -->
+         <!--
+            colspan : 좌우열을 명합할때 사용
+            rowspan : 상하행의 열을 병합할때 사용
+            공통: 값을 줄경우 해당 수 만큼의 열과 행의 역할을함
+         -->
+        <colgroup>
+            <col width="50"/>
+            <col width="50"/>
+            <col width="50"/>
+            <col width="50"/>
+
+        </colgroup>
+         <thead>
+            <tr>
+                <td colspan="2">번호</td>
+                <!--<td>제목</td> 콜스판을 사용할경우 스판값에 따라 항목을 제거 해야함-->
+                <td>작성자</td>
+                <td>작성일</td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>foot</td>
+                <td>foot</td>
+                <td>foot</td>
+                <td>foot</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td rowspan="2">item</td>
+                <!--<td>item</td> 로우 스판일 경우 스판값만큼 다음 열에서 항목 수를 조절 해야 함-->
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+
+                <td rowspan="2">item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+
+                <td>item</td>
+            </tr>
+        </tbody>
+
+<!-- 콜그룹 -->
+    </table>
+
+    <table border="1" width="100%" summary="자세한 설명">
+
+        <caption>게시판</caption>
+
+        <colgroup>
+            <col style="width=100"/>
+            <col style="width=300"/>
+
+        </colgroup>
+         <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성일</th>
+            </tr>
+            <thead>
+               <tr>
+                   <th scope="colgroup">번호</th>
+                   <th scope="col">제목</th>
+                   <th scope="col">작성자</th>
+                   <th scope="col">작성일</th>
+               </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="row">foot</th>
+                <td>foot</td>
+                <td>foot</td>
+                <td>foot</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th scope="row">item</th>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <th scope="row">item</th>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+
+        </tbody>
+
+
+    </table>
+
+<!--셀렉트 박스 안에 -->
+
+<table border="1" width="100%" summary="자세한 설명">
+
+    <caption>게시판</caption>
+
+    <colgroup>
+        <col style="width=100"/>
+        <col style="width=300"/>
+
+    </colgroup>
+     <thead>
+        <tr>
+            <th scope="col">번호</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성자</th>
+            <th scope="col">작성일</th>
+        </tr>
+        <thead>
+           <tr>
+               <th scope="colgroup">번호</th>
+               <th scope="col">제목</th>
+               <th scope="col">작성자</th>
+               <th scope="col">작성일</th>
+           </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th scope="row">foot</th>
+            <td>foot</td>
+            <td>foot</td>
+            <td>foot</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <th scope="row">item</th>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <th scope="row">item</th>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+
+    </tbody>
+
+
+</table>
+
+
+
+
+</body>
+</html>
