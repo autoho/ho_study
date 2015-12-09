@@ -1,0 +1,52 @@
+<!-- css 는 html 을 시각적으로 스타일링, 지다인을  하기위한 스타일 시트임-->
+
+<!-- 스타일 시트 에 대한 문법
+
+    h1{color:blue;front-size:12px;}
+     h1 은 Selector 선택자 :명령을 내리기 위한 선택
+    {} 선택된 엘리먼트 디자인적 요소를 정의하는 부분
+    속성: 값 형태로 정의하면 된다.
+    */
+     dolor Priperty
+     blue value
+     front-siae Prorerty
+     12px value
+    #: 아이디 선택 시 #으로 시작 다음에 아이디를 적는다 id 는 #으로 선택하고
+    한페이지에 같은 이름의 id는 중복선언 될 수 없음
+
+    class는  .으로 선택을 함
+    한페이지 같은 이름의 클래스가 여러개 선언 될 수 있음
+
+    * 아이디나 클래스 이름 만들 때 첫 글자를 숫자로 시작 할 수 없다.
+      특수 문자 사용 할 수 없다.(_언더바와 *하이픈은 가능)
+      첫글자를 대문자로 시작 하지 말것
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <style>
+        h1{color:red;font-size:20px;border:1px red solid}
+        #head2{color:blue}
+
+        p{clolr:green}
+
+        .redcolor{color:red}
+
+
+    </style>
+</head>
+<body>
+
+    <h1 id="head1">안녕하세요1</h1>
+    <h1 id="head2">안녕하세요2</h1>
+    <p class="redcolor">안녕할까요?안녕할까요?안녕할까요?안녕할까요?안녕할까요?</p>
+    <p>안녕할까요?안녕할까요?안녕할까요?안녕할까요?안녕할까요?</p>
+    <p class="redcolor">안녕할까요?안녕할까요?안녕할까요?안녕할까요?안녕할까요?</p>
+    <p>안녕할까요?안녕할까요?안녕할까요?안녕할까요?안녕할까요?</p>
+
+</body>
+</html>

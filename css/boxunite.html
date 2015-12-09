@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>boxunite</title>
+
+    <style>
+        .unite{
+            border:1px #F00 solid;
+            width:auto;
+            height: 100px;
+            margin: 100px;
+            }
+        .box{
+            border:1px #F00 solid;
+            width: 200px;
+            height: 300px;
+            margin-left: 100px;
+            }
+        .inner{
+            border:1px #F00 solid;
+            width: auto;
+            margin: 20px;
+            }
+            .unit{
+                border:1px #F00 solid;
+                width: auto;
+                height: 300px;
+                margin: 100px;
+
+            }
+            .unit2{
+                border:1px #F00 solid;
+                width:300px;
+                height: auto;
+                margin: 100px;
+            }
+
+        .minMax{
+        border:1px #F00 solid;
+        width: auto;
+        max-width: 700px;
+        min-width: 500px;
+        height: auto;
+        }
+        .height{
+        border:1px #F00 solid;
+        width: auto;
+        max-height: 700px;
+        min-height: 500px;
+        height: auto;
+        }
+
+    </style>
+    <!-- width : auto 는 나의 부모 만큼만 이며 추가로 들어오는 절대값을
+    인정하여 자동으로 사이즈 조절을 하겠다라는 뜻
+
+    height: auto는 내가 가지고 있는 건텐츠 만큼 자동으로 늘어나겠다 라는 뜻
+
+    mim-width: 최소 정해진 값이상은 줄어들지 않음
+    max-width: 최대 정해진 값이상은 늘어나지 않음
+
+    min-height:최소 정해진값이하로는 줄지않음 컨텐츠 양이 많아지면,
+         정해진값이상이 될시에 height 값이 같이 늘어남
+    max-height:컨텐츠 양이 아무리 많이 늘어나더라도 , 정해진 값이상은 늘어나지 않음
+-->
+
+</head>
+<body>
+    <div>
+       <div class="unite"> </div>
+
+        <div class="box">
+            <div class="inner">
+        </div>
+    </div>
+
+    <div class="unit">안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+        안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+    </div>
+
+    <div class="unit2">안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+        안녕하세요안녕하세요안녕하세요 000000000000000000000000000000000000000000000000000000000 안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+    </div>
+
+    <div>
+        <div class="minMax">000</div>
+    </div>
+
+    <div class="height">
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+        안녕하세요 <br />
+
+        안녕하세요 <br />
+    </div>
+
+</body>
+</html>
