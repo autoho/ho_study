@@ -6,7 +6,6 @@
     
     <style>
         *{padding:0; margin:0;}
-        ul{list-style:none;}
         body{font-size:12px;}
         .wrap{
             width: 900px;
@@ -15,12 +14,12 @@
             margin:80px auto;
         }
         .wrap div.top{
-            border-bottom:2px #F00 solid;
+            border-bottom:2px #000 solid;
             margin:0 30px;
-            padding-bottom:20px;
+            padding-bottom:3px;
         }
-        .top .logo{float:left; margin-bottom:2px;}
-        .top .benner{float:right; margin-top:15px;}
+        .top .logo{float:left; margin-top:15px; margin-bottom:5px;}
+        .top .benner{float:right; margin-top:30px;}
         .top .btnlist{clear:left; height:22px; font-size:0;}
         
         .top .btnlist button{
@@ -47,30 +46,46 @@
         .top .btnlist span{font-size:12px;}
         
        .content{border:1px #F00 solid; width: 840px; height: 380px; margin:20px auto;}
-       .left{border:1px #F00 solid; width:513px; height: 132px;}
-       
+       .left{border:1px #F00 solid; width:513px; height: 132px; float:left;}
+       .content .left ul{list-style:none;}
+
        .content .left .mainNews img{
            width:160; 
            height:94px;
-           float:left;
        }
-        .left .mainNews{border:1px #F00 solid; height: 132px;}
+        .left .mainNews{
+            border:none; height: 130px;
+            border-bottom:0px #000 solid;
+            /*margin:0 30px;*/
+            padding-bottom:9px;
+        }
         .left .mainNews li:first-child{margin-left:0; margin-bottom:10px; background:none; padding-left:0;}
-        .left .mainNews li:first-child strong{color:red;font-size:20px; margin-bottom:10px; display:block;}
+        .left .mainNews li:first-child strong{color:red; font-size:20px; margin-bottom:10px; display:block;}
         .left .mainNews li:first-child img{float:left;}
         .left .mainNews li:first-child p{margin-left:170px;}
         .left .mainNews li{margin-left:170px; background: url('http://static.naver.net/newsstand/2015/1215/etnews/104101/008.png') no-repeat 0 -243px; padding-left:20px;}
        
-       .left .sub{border:1px #F00 solid; height:244px;}
+       .left .sub{border:1px #F00 solid; height:240px;}
        .left .sub .firstLine {width: 162px; margin-left:0; float:left;}
-       .left .sub .firstLine .car img{margin: 5px auto; width: auto; height: 78px; display:block;}
-       .left .sub .firstLine .car p{width: 96px; margin:0px auto; display:block;}
-       .left .sub .firstLine .brain img{margin:5px auto; width: auto; height: 78px; display:block;}
-       .left .sub .firstLine .brain p{width: 118px; margin:0px auto; display:block;}
+       .left .sub .firstLine .car img{margin: 5px auto 2px; width: auto; height: 78px; display:block;}
+       .left .sub .firstLine .car p{width: 96px; margin:0px 17px; display:block;}
+       .left .sub .firstLine .brain img{margin:5px auto 2px; width: auto; height: 78px; display:block;}
+       .left .sub .firstLine .brain p{width: 118px; margin:0px 17px; display:block;}
         
         .left .sub .secondLine{font-size:15px; line-height:27px;}
         .left .sub .secondLine li.red{color: red;}
         
+        .content .right{border:none; width: 307px; height: 375px; float:right;}      
+        .content .right .issue li{padding:10px 17px 0px;}
+        /*.content .right .issue div{border:1px #000 solid; margin:10px auto;}*/
+        
+        .content .right .imageNews ul{list-style:none;}
+        .content .right .imageNews li img{width: 146px; height: 95px;}
+        .content .right .imageNews li p{font-size:11px; width: 146px; height:25px; margin:2px auto;}
+        .right .imageNews .box1{float:left;}
+        .right .imageNews .box2{float:right;}
+        .right .imageNews .box3{float:left;}
+        .right .imageNews .box4{float:right;}
         
     </style>
 </head>
@@ -160,10 +175,26 @@
                 </div>
                 <div class="imageNews">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li class="box1"><a href="http://www.etnews.com/20151212000074?mc=ns_005_00001">
+                            <img src="http://static.naver.net/newsstand/2015/1215/etnews/180216/004.jpg">
+                            <p>“태양계서 슈퍼지구 발견…12~25AU 떨어진 곳"</p>
+                            </a>
+                        </li>
+                        <li class="box2"><a href="http://www.etnews.com/20151208000287?mc=ns_005_00003">
+                            <img src="http://static.naver.net/newsstand/2015/1215/etnews/180216/006.jpg">
+                            <p>3D프린터로 음식 만들어요</p>
+                            </a>
+                        </li>
+                        <li class="box3"><a href="http://www.etnews.com/20151213000125?mc=ns_003_00001">
+                            <img src="http://static.naver.net/newsstand/2015/1215/etnews/180216/005.jpg">
+                            <p>"차량주변 '360도어라운드뷰'로보세요"</p>
+                            </a>
+                        </li>
+                        <li class="box4"><a href="http://www.etnews.com/20150707000390?mc=ns_003_00003">
+                            <img src="http://static.naver.net/newsstand/2015/1215/etnews/180216/007.jpg">
+                            <p>특가할인 워터젯샤워기! 샤워기 수압 해결 가능!</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
