@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>listicon.html</title>
+
+    <style>
+    ul,li{border:1px #F00 solid}
+    ul{list-style:none; padding:0; margin:0}
+    div.list ul li{
+        background-image:url("../images/bgmap.png");
+        background-repeat:no-repeat;
+        padding-left:15px;
+    }
+    div.list li.icon-1{background-position: 0 4px;}
+    div.list li.icon-2{background-position: 0 -11px;}
+    div.list li.icon-3{background-position: 0 -68px;}
+    div.list li.icon-4{background-position: 0 -40px;}
+    div.list li.icon-5{background-position: 0 -54px;}
+
+    </style>
+</head>
+<body>
+    <!-- div.list>ul>li.icon-{text$}*5 -->
+    <div class="list">
+        <ul>
+            <li class="icon-1">text1</li>
+            <li class="icon-2">text2</li>
+            <li class="icon-3">text3</li>
+            <li class="icon-4">text4</li>
+            <li class="icon-5">text5</li>
+            <li class="icon-1">text1</li>
+            <li class="icon-1">text2</li>
+            <li class="icon-4">text3</li>
+            <li class="icon-4">text4</li>
+            <li class="icon-5">text5</li>
+            <li class="icon-5">text5</li>
+        </ul>
+    </div>
+
+</body>
+</html>

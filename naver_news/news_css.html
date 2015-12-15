@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>newscss.html</title>
+    <style>
+        *{padding:0; margin:0;}
+        .wrap{
+            width: 900px;
+            height: 540px;
+            border:1px #F00 solid;
+            margin:50px auto;
+        }  
+        
+        .wrap div.top{
+            border:1px #F00 solid;
+            margin:0 30px;
+        }
+        .top .logo{float:left; margin-bottom:2px;}
+        .top .banner{float:right;}
+        .top .button-list{clear:left;height:22px; font-size:0;}
+        
+        .top .button-list button{
+            border:0 none; text-indent:-9999px; height:22px; 
+            cursor:pointer;
+            margin-left:2px;
+            background-image: url('../images/sp_nwstd.png');
+        }
+        
+        .top .button-list button:first-child{margin-left:0;}
+        .top .button-list button.btn-1{width: 66px; background-position: -187px -199px;}
+        .top .button-list button.btn-2{width: 106px; background-position: -293px -174px;}
+        .top .button-list button.btn-3{width: 28px; background-position: -500px -270px;}
+        .top .button-list button,
+        .top .button-list span{font-size:12px;}
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="top">
+            <h1 class="logo"><a href=""><img src="../images/newslogo.gif" alt="전자신문" /></a></h1>
+            
+            <div class="banner">
+                <a href="">
+                    <img src="../images/banner.jpg" alt="베너" />
+                </a>
+            </div>
+            
+            <div class="button-list">
+                <button class="btn-1">구독하기</button>
+                <button class="btn-2">이용자한마디</button>
+                <button class="btn-3">소셜보내기</button>
+                <span>12-14 11:10편집</span>
+            </div>
+        </div>
+        
+        
+    </div>
+   
+</body>
+</html>

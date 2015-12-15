@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>text.html</title>
+<!-- font
+    font-size : int{pt,px,em,rem,vw,vh,vmin,vmax}-글씨 크기 (16px=1em)
+    font-weight: 글씨 두께 100 900 bold normal
+    font-family: 글꼴
+    font-style: 글씨의 형태 ex:이텔릭(기울임)->일반
+
+    text-align:좌우 정렬 -justify: 여러줄 넓이 맞춤
+    vertical-align:상하 정렬
+
+    line-height: 줄간격
+    letter-spasing: 자간
+    word-wrap:
+    white-space
+    word-spacing: 스페이스바 간격
+    word-break:
+    color: 글씨 색상
+ -->
+     <style>
+         .text{font-size:14px;
+          font-family: '돋움','굴림','바탕',Arial,'Arial blod'
+          text-align: left;
+         }
+         p.test{outline: 1px #f00 solid;
+                  font-weight: 100;
+         }
+        em{font-style:normal;
+        vertical-align: bottom;}
+
+        p.justify{outline: 1px #F00 solid;
+            font-family: '궁서','Arial'
+            font-size: 18px;
+            text-align: justify;
+        }
+        p.lineHeight{outline: 1px #F00 solid;
+            font-size: 12px;
+            line-height: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+     </style>
+
+</head>
+<body>
+
+    <p class="test">test text<em>기울임</em>test text<em>기울임</em></p>
+    <p class="text">
+        [요약] 국가나 사회에 현저한 공적을 남겨 전 국민의 추앙을 받는 사람이
+        서거한 후에 국가 주도로 치르는 장례 [본문] 국가나 사회에 현저한 공적을
+        남겨 전 국민의 추앙을 받는 사람이 서거한...
+        에그 베네딕트(egg benedict)는 구운 잉글리시 머핀 가운데에 햄이나 캐나디안
+        베이컨, 수란(a poached egg)을 얹고 홀란다이즈 소스(holladaise sauce)를
+        뿌린 미국 샌드위치의 한...
+
+    </p>
+
+    <p class="justify">justify</p>
+    <p class="justify">
+        [요약] 국가나 사회에 현저한 공적을 남겨 전 국민의 추앙을 받는 사람이
+        서거한 후에 국가 주도로 치르는 장례 [본문] 국가나 사회에 현저한 공적을
+        남겨 전 국민의 추앙을 받는 사람이 서거한...
+        에그 베네딕트(egg benedict)는 구운 잉글리시 머핀 가운데에 햄이나 캐나디안
+        베이컨, 수란(a poached egg)을 얹고 홀란다이즈 소스(holladaise sauce)를
+        뿌린 미국 샌드위치의 한...
+    </p>
+    <p class="lineHeight">lineheight</p>
+    <p class="lineHeight">
+        [요약] 국가나 사회에 현저한 공적을 남겨 전 국민의 추앙을 받는 사람이
+        서거한 후에 국가 주도로 치르는 장례 [본문] 국가나 사회에 현저한 공적을
+        남겨 전 국민의 추앙을 받는 사람이 서거한...
+        에그 베네딕트(egg benedict)는 구운 잉글리시 머핀 가운데에 햄이나 캐나디안
+        베이컨, 수란(a poached egg)을 얹고 홀란다이즈 소스(holladaise sauce)를
+        뿌린 미국 샌드위치의 한...
+    </p>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

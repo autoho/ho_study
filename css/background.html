@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>background.html</title>
+
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            border: 1px #F00 solid;
+            background:no-repeat 20px 50px;
+            /*                    x     y
+            */
+        }
+
+        .background{
+            width: auto;
+            height: 500px;
+            border: 1px #F00 solid;
+            background-image: url(../images/ugc.jpg);
+            background-repeat: no-repeat;
+            background-position: 20% 10%;
+            background-attachment: fixed;
+            /* 백그라운드 한줄로 입력 가능 하다...
+            background:#f00 url() no-repeat 20%
+            */
+        }
+
+        .background_size{
+            width: auto;
+            height: 500px;
+            border: 1px #F00 solid;
+            background-image: url(../images/ugc.jpg);
+            background-size: 20% 20%;
+            background-size: contain;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <img src="../images/ugc.jpg" alt="하늘하늘">
+    </div><br />
+
+     <div class="background">
+     </div><br />
+
+    <div class="background_size">
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>

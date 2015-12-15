@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>overflow.htms</title>
+
+        <style>
+            /* overflow :
+    		visible - 기본상태이며 주어진영역을 벗어나게되도 컨텐츠 내용이 보이는 상태
+       		hidden - 주어진영역을 벗어나게되면 컨텐츠를 넘어간영역만큼 숨기는 상태
+       		scroll - 영역을 벗어나게되면, 스크롤바가 생기는 상태
+            overflow-x : 스크롤바 x축 컨트롤
+        	overflow-y : 스크롤바 y축 컨트롤*/
+
+            .flow{width: 500px;height: 500px;border:3px #F00 solid;
+                /*overflow: auto;*/
+                overflow-x: scroll;
+                overflow-y: visible;
+            }
+        </style>
+</head>
+<body>
+
+    <div class="flow">
+        <img src="../images/g4.jpg" alt="니야옹~">
+    </div>
+
+</body>
+</html>

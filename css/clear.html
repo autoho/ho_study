@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    
+        <!--clear 상위 요소중 float 이선언된 엘리먼트요소의 공중에 뜸현상에 영향을 받지 않는 상태-->
+        
+        <!--both: 상위플룻요소중 height 값이 가장 긴엘리먼트 로부터 시작-->
+        <!--left : 플룻 left 가 선언된 요소중 height 값이 가장큰 엘리먼트 아래부터 시작-->
+        <!--right : 플룻 right 가 선언된 요소중 height 값이 가장큰 엘리먼트 아래부터 시작-->
+        
+    <style>
+    div{border:1px #F00 solid;}
+    .box1{
+    width:200px;
+    height:200px;
+    float:left
+    }
+    .box2{
+    width:200px;
+    height:300px;
+    float:right;
+    }
+    .clear{
+    width:auto;
+    height:200px;
+    clear:both;
+    }
+    
+      .box5{
+    width:200px;
+    height:50px;
+    float:left
+    }
+    .box6{
+    width:400px;
+    height:80px;
+    float:right;
+    }
+    .clear7{
+    width:300px;
+    height:50px;
+    clear:left;
+    }
+    
+    </style>
+    
+</head>
+<body>
+    <div class="box1">A
+        
+    </div>
+    <div class="box2">B
+        
+    </div>
+    <div class="clear">clear target
+        
+    </div>
+    <br />
+    
+    <div class="box5">A
+        
+    </div>
+    <div class="box6">B
+        
+    </div>
+    <div class="clear7">clear target
+        
+    </div>
+
+    
+</body>
+</html>
