@@ -6,6 +6,8 @@
     
     <style>
         *{padding:0; margin:0;}
+        ul{list-style:none;}
+        body{font-size:12px;}
         .wrap{
             width: 900px;
             height: 540px;
@@ -13,11 +15,12 @@
             margin:80px auto;
         }
         .wrap div.top{
-            border:1px #F00 solid;
+            border-bottom:2px #F00 solid;
             margin:0 30px;
+            padding-bottom:20px;
         }
         .top .logo{float:left; margin-bottom:2px;}
-        .top .benner{float:right;}
+        .top .benner{float:right; margin-top:15px;}
         .top .btnlist{clear:left; height:22px; font-size:0;}
         
         .top .btnlist button{
@@ -42,7 +45,31 @@
             background-position: -500px -270px;
         }
         .top .btnlist span{font-size:12px;}
-    
+        
+       .content{border:1px #F00 solid; width: 840px; height: 380px; margin:20px auto;}
+       .left{border:1px #F00 solid; width:513px; height: 132px;}
+       
+       .content .left .mainNews img{
+           width:160; 
+           height:94px;
+           float:left;
+       }
+        .left .mainNews{border:1px #F00 solid; height: 132px;}
+        .left .mainNews li:first-child{margin-left:0; margin-bottom:10px; background:none; padding-left:0;}
+        .left .mainNews li:first-child strong{color:red;font-size:20px; margin-bottom:10px; display:block;}
+        .left .mainNews li:first-child img{float:left;}
+        .left .mainNews li:first-child p{margin-left:170px;}
+        .left .mainNews li{margin-left:170px; background: url('http://static.naver.net/newsstand/2015/1215/etnews/104101/008.png') no-repeat 0 -243px; padding-left:20px;}
+       
+       .left .sub{border:1px #F00 solid; height:244px;}
+       .left .sub .firstLine {width: 162px; margin-left:0; float:left;}
+       .left .sub .firstLine .car img{margin: 5px auto; width: auto; height: 78px; display:block;}
+       .left .sub .firstLine .car p{width: 96px; margin:0px auto; display:block;}
+       .left .sub .firstLine .brain img{margin:5px auto; width: auto; height: 78px; display:block;}
+       .left .sub .firstLine .brain p{width: 118px; margin:0px auto; display:block;}
+        
+        .left .sub .secondLine{font-size:15px; line-height:27px;}
+        .left .sub .secondLine li.red{color: red;}
         
         
     </style>
@@ -70,6 +97,76 @@
                 
             </div>
             
+        </div>
+        
+        <div class="content">
+            <div class="left">
+                <div class="mainNews">
+                    <ul>
+                        <li>
+                            <strong>세계 최초 '인터넷상호접속정산소' 새해 가동</strong>
+                            <a href="http://www.etnews.com/20151214000371?mc=ns_001_00002">
+                                <img src="http://static.naver.net/newsstand/2015/1215/etnews/104101/001.jpg">
+                            </a>
+                            <p>세계 최초 ‘인터넷 상호접속정산소(IX정산소, 가칭)’가 새해 첫날 가동한다.
+                            여기서 측정한 트래픽으로 인터넷 상호접속료를 계산한다. 
+                            접속료 계산 공식인 ‘표준인터넷접속...</p>
+                        </li>
+                        <li>[해설]新 인터넷 상호접속제 도입..트래픽 질서 세운다</li>
+                        <li>12월 `통신대전` 개막</li>
+                    </ul>
+                </div>
+                
+                <div class="sub">
+                    <div class="firstLine">
+                        <ul>
+                            <li class="car">
+                                <a href="http://www.etnews.com/20151215000338?mc=ns_002_00001">
+                                    <img src="http://static.naver.net/newsstand/2015/1215/etnews/160807/002.jpg">
+                                    <p>[카드뉴스]제네시스 EQ900 대해부</p>
+                                </a>
+                            </li>
+                            <li class="brain">
+                                <a href="http://www.etnews.com/20151214000054?mc=ns_002_00003">
+                                    <img src="http://static.naver.net/newsstand/2015/1215/etnews/160807/003.jpg">
+                                    <p>커피가 당신의 뇌배선을 바꾼다</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="secondLine">
+                        <ul>    
+                            <li class="red"><strong>“아이폰 판매 고공비행 멈춘다…내년 사상 첫 5.7</strong></li>
+                            <li>삼성 반격 시동…애플 디자인 특허 무효화로 뒤집기</li>
+                            <li>2018년에는 3000만원대 수소차 구매 가능</li>
+                            <li>삼성전자, PC사업 되살린다</li>
+                            <li>WSJ “갤S7에 마이크로SD슬롯…망막센서 검토중”</li>
+                            <li class="red"><strong>세계 최초 '인터넷상호접속정산소' 새해 가동</strong></li>
+                            <li>MS, 스마트폰을 PC처럼 쓴다</li>
+                            <li>삼성, 갤럭시S7 네 종류로 내놓나</li>
+                            <li>불티난 삼성·LG 세탁기, 판매 신기록 행진</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="issue">
+                    <h2><img src="http://static.naver.net/newsstand/2015/1215/etnews/172008/009.gif"></h2>
+                        <ul>
+                            <li><strong>산업·통상 정책</strong></li>
+                            <li>파리 협정, 우리의 득과실은?…책임·실리 살리는 </li>
+                            <li>국내 태블릿 시장 나 홀로 `고공행진`</li>
+                        </ul>
+                </div>
+                <div class="imageNews">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         
         
