@@ -7,13 +7,17 @@
         /**{outline:1px #F00 solid; height:auto;}*/
         *{padding:0; margin:0;}
         ul{list-style:none;}
-        body{font-size:12px;}
+        body{font-size:12px;
+            background-image:url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);
+        }
 
         .wrap{
-            border:1px #F00 solid;
+            /*border:1px #000 solid;*/
+            padding:0 13px;
             width:900px;
             height:540px;
             margin:80px auto;
+            background-image:url('http://static.naver.net/newsstand/img/20121231/bg_panel.png');
             }
             .wrap .top{
             border-bottom:2px #000 solid;
@@ -56,7 +60,6 @@
         }
         
         .wrap .content .leftSide{
-            border:1px #F00 solid;
             width: 513px;
             height: 380px;
             margin-right:20px;
@@ -64,7 +67,7 @@
         }
         
         .content .leftSide .mainNews{
-            border:1px #F00 solid;
+            border:none;
             width: 513px;
             height: 132px;
             margin-bottom:14px;
@@ -86,19 +89,22 @@
         }
         .content .leftSide .mainNews li:first-child p{
             margin-left:170px;
+            margin-bottom:5px;
         }
         .content .leftSide .mainNews li{
             margin-left:170px;
             background:url('http://static.naver.net/newsstand/2015/1215/etnews/104101/008.png') no-repeat 0 -243px;
-            padding-left:20px;
+            padding-left:10px;
         }
         
         .content .leftSide .subNews {
-            border-top:2px #000 solid;
+            /*border-top:2px #000 solid;*/
             width: 513px;
             height: 244px;
         }
+        
         .leftSide .subNews .leftBox{
+            border-top:2px red solid;
             width: 162px;
             height: 219px;
             padding:9px 0px 10px;
@@ -116,10 +122,10 @@
         }
         
         .leftSide .subNews .rightLi{
-            border:none;
+            border-top:2px gray solid;
             width: 321px;
             height: 234px;
-            padding:8px 0px 0px 15px;
+            padding:8px 0px 0px 30px;
             float:right;
         }
         .leftSide .subNews .rightLi li{
@@ -134,13 +140,65 @@
         }
             
         .content .rightSide{
-            border:1px #F00 solid;
+            border:none;
             width: 303px;
             float:right;
         }
         
+        .content .rightSide .issue{
+            border:1px gray solid;
+            width: 303px;
+            height: 112px;
+            margin-bottom:8px;
+        }
+        .content .rightSide .issue h2{
+            height:30px;
+            background: url('http://static.naver.net/newsstand/2015/1216/etnews/093222/009.gif')no-repeat; 
+            text-indent:-999999px;
+        }
+        .content .rightSide .issue ul{
+            margin:6px 10px;
+        }
+        .content .rightSide .issue ul li{
+            font-size:12px;
+            line-height:20px;
+            padding-left:10px;
+            background: url('http://static.naver.net/newsstand/2015/1216/etnews/093222/010.gif')no-repeat 3px 10px;
+        }
+
         
-        /*.webSite{clear:right;}*/
+        .content .rightSide .boxNews{
+            border:none;
+            width: 302px;
+            height: 255px;
+            overflow:hidden;
+            margin:0px;
+        }
+        
+        .content .rightSide .boxNews ul{
+            border:none;
+            width:105%;
+        }
+        
+        .content .rightSide .boxNews li a{
+            border:none;
+            width: 148px;
+            height: 126px;
+            float:left;
+            margin-right:10px;
+            overflow:hidden;
+        }
+        .content .rightSide .boxNews li img{
+            width: 148px;
+           
+            
+        }
+
+        .webSite{
+            float:right;
+            margin-right:20px;
+        }
+        
         
         
         
@@ -173,13 +231,14 @@
                 <div class="mainNews">
                     <ul>
                         <li>
-                            <a href="http://www.etnews.com/20151215000349?mc=ns_001_00002">
                             <strong>화웨이, 출고가 10만원대 초저가폰 내놨다</strong>
+                            <a href="http://www.etnews.com/20151215000349?mc=ns_001_00002">
                             <img src="http://static.naver.net/newsstand/2015/1216/etnews/093222/001.jpg">
+                            </a>
                             <p>‘단말기 유통구조 개선법(단통법)’ 시행 이후 확산일로인 중저가폰 
                                 시장을 겨냥한 스마트폰 출시가 늘고 있다. 
                                 기술 발달에 따라 스마트폰 성능이 상향 평준화되면서 가격...</p>
-                        </a>
+                      
                             
                         </li>
                         <li><strong>연말 특수 겨냥 이통사 지원금 경쟁 시작</strong></li>
@@ -261,8 +320,7 @@
         </div>
         <div class="webSite">
             <a href="http://www.etnews.com/">
-                <img src="http://www.etnews.com/">
-                <span>전자신문 사이트 바로가기</span>
+                <span><strong>전자신문</strong> 사이트 바로가기</span>
             </a>
         </div>
         
