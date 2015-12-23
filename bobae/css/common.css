@@ -1,0 +1,611 @@
+*{margin:0; padding:0;}
+ul{list-style:none;}
+fieldset{border:0;}
+img{vertical-align:top;}
+legend{font-size:0; text-indent:-99999px;}
+a{text-decoration:none;}
+/*iconeList*/
+.icone-1{background-image:url(../images/layout_top_selcet_btn.png);
+    background-repeat:no-repeat;
+    background-position:right center;
+    padding-right:15px;
+}
+.icone-2{
+    background-image:url(../images/layout_top_mobile_icon.png);
+    background-repeat:no-repeat;
+    background-position:left center;
+    padding-left:15px;
+}
+.icone-3{
+    background-image:url(../images/more_icon.png);
+    background-repeat:no-repeat;
+    background-position:right center;
+    padding-left:5px;
+}
+
+/*layout*/
+.gnb{border-bottom:1px #000 solid;
+    height: 30px;
+    background-color: #f8f8f8;
+}
+.gnb>div{
+    /*border:1px gray solid;*/
+    width: 990px;
+    height: 20px;
+    margin:0 auto;
+    font-size:12px;
+}
+.gnb li{
+    float:left;
+    display:block;
+    line-height:30px;
+    margin-right:10px;
+}
+.gnb .topleft li.bookmark{
+    background-image:url(../images/layout_top_bookmark_icon.png);
+    background-repeat:no-repeat;
+    background-position:0 center;
+    padding-left:10px;
+}
+.gnb .topleft li.ranking{
+    background-image:url(../images/layout_top_rank_iconbg.png);
+    background-repeat:no-repeat;
+    background-position:0 center;
+    padding-left:20px;
+}
+.gnb .topleft li.ranking span{
+    background-image:url(../images/layout_top_redarrow_icon.png);
+    background-repeat:no-repeat;
+    background-position:0 center;
+    padding-left:10px;
+    font-size:10px;
+}
+/*.gnb .topleft li.ranking2{*/
+/*    background-image:url(../images/layout_top_redarrow_icon.png);*/
+/*    background-repeat:no-repeat;*/
+/*    background-position:0 center;*/
+/*    padding-left:10px;*/
+/*    font-size:10px;*/
+/*}*/
+.gnb li a{text-decoration: none; color:#000}
+.gnb li a:hover{text-decoration: underline; color:#fff}
+
+.gnb .topright{
+    float:right;
+}
+.gnb .topright li{
+    margin:0;
+    float:left;
+    display:block;
+    background-image:url(../images/icon-bar5.jpg);
+    background-position:0 center;
+    background-repeat:no-repeat;
+    line-height:30px;
+    padding:0 7px 0 8px;
+}
+
+.gnb .topright li:first-child{
+    background-image:none;
+}
+
+.gnb .topright span{
+    text-decoration:none; color:blue;
+}
+.wrap{
+
+    width: 990px;
+    min-height: 1763px;
+    margin:0 auto;
+    position:relative;
+}
+.wrap .topmenu{
+    width: 990px;
+    height: 107px;
+}
+.wrap .topmenu .toplogomenu{
+    width: 330px;
+    height: 107px;
+    overflow:hidden;
+    float:left;
+}
+.wrap .topmenu .toplogomenu .logo{
+    margin-top:34px;
+}
+.wrap .topmenu .toplogomenu li{
+    margin-top:5px;
+    float:left;
+    margin-right:8px;
+    display:block;
+    background-image:url(../images/icon-bar5.jpg);
+    background-position:0 center;
+    background-repeat:no-repeat;
+}
+.wrap .topmenu .toplogomenu li img{
+    padding-left:8px;
+    height: 14px;
+    width:auto;
+}
+.wrap .topmenu .toplogomenu li:first-child img{
+    padding:0;
+}
+.wrap .topmenu .search{
+    border:none;
+    width: 330px;
+    height: 73px;
+    float:left;
+    margin:19px auto 0px;
+    text-align:center; 
+}
+.wrap .topmenu .search input[type="text"]{
+    border:2px #3b5999 solid;
+    height: 21px;
+    width: 218px;
+    padding:0 10px;
+    font-size:12px;
+    color:#666;
+    vertical-align:middle;
+}
+.wrap .topmenu .search input[type="submit"]{
+    text-indent:-9999px;
+    font-size:0;
+    border:none;
+    background-image:url(../images/surch9_03.png);
+    width: 38px;
+    height: 25px;
+    background-color:#3b5999;
+    background-repeat:no-repeat;
+    background-position:center center;
+    cursor:pointer;
+    vertical-align:middle;
+}
+.wrap .topmenu .musicalbanner{
+    width: 320px;
+    height: 107px;
+    float:right;
+}
+.wrap .topmenu .musicalbanner img{
+    padding-top:10px;
+    padding-left:70px;
+}
+.wrap .lab{
+    position:absolute;
+    top:109px;
+    width:990px;
+    height:76px;
+}
+
+.wrap .lab>ul{
+    float:left;
+    height: 39px;
+    width: 990px;
+    background-color:#3b5999;
+}
+.wrap .lab>ul li{
+    float:left;
+    line-height:39px;
+    background: url("../images/icon-bar5.jpg");
+    background-repeat:no-repeat;
+    background-position:0 center;
+    padding:0;
+    overflow:hidden;
+}
+.wrap .lab>ul li:first-child{
+    background:none;
+}
+.wrap .lab>ul ul li a{    
+    color:#666;
+    font-size:12px;
+    padding:0 5px 0 6px;
+}
+.wrap .lab>ul ul li:first-child{
+    background-image:none;
+}
+.wrap .lab li ul{
+    position:absolute;
+    left:0;
+    letter-spacing:-2px;
+}
+.wrap .lab>ul>li>ul>li{
+}
+.wrap .lab>ul>li>a{
+    padding:0 7px;
+    color:#FFF;
+    display:block
+    /*font-size:14px;*/
+}
+.wrap .lab>ul>li>a:hover{
+    background:#5785f2;
+}
+.wrap .lab>ul>li{
+    font-size:14px;
+    letter-spacing:-2px;
+}
+.wrap .lab ul li img{
+    vertical-align:middle;
+}
+.wrap .lab .notice{
+    height: 39px;
+    float:right;
+    position:absolute;
+    right:10px;
+}
+.wrap .lab .notice span{
+    color:#FFF;
+    font-size:12px;
+    line-height:39px;
+}
+.wrap .lab .notice img{    
+    vertical-align:middle;
+}
+.wrap .lab .visit{
+    height: 35px;
+    position:absolute;
+    right:10px;
+    margin-top:39px;
+}
+.wrap .lab .visit span{
+    color:#000;
+    font-size:12px;
+    line-height:39px;
+    letter-spacing:-2px;
+}
+.wrap .lab .visit span.blue{
+    color:#3b5999;
+    letter-spacing:-1px;
+}
+
+.content{
+    border:1px #F00 solid;
+    width: 992px;
+    height: 1763px;
+    margin-top:78px;
+}
+.content .lefiside{
+    border:1px #F00 solid;
+    width: 748px;
+    height: 1349px;
+    float:left;
+}
+.content .lefiside .contentsbanner{
+    border:1px #c7cbce solid;
+    width: 520px;
+    height: 100px;
+    float:left;
+}
+.content .lefiside .sidebanner{
+    border:1px #c7cbce solid;
+    width: 220px;
+    height: 100px;
+    float:right;
+}
+.content .lefiside .mainsale{
+    width: 746px;
+    height: 233px;
+    margin-top:11px;
+    float:left;
+    overflow:hidden;
+}
+.content .lefiside .mainsale .topsale{
+    border:1px #c7cbce solid;
+    float:left;
+}
+
+.content .lefiside .subsale{
+    margin-left:9px;
+    width: 322px;
+    height: 231px;
+    float:left;
+}
+.content .lefiside .subsale img{
+    border:1px #c7cbce solid;
+    float:left;
+    height: 70px;
+    width: 110px;
+    margin-right:10px;
+}
+.content .lefiside .subsale li{
+    border-bottom:1px #c7cbce solid;
+    height: 70px;
+    padding-bottom:5px;
+    margin:4px 0;
+    overflow:hidden;
+}
+.content .lefiside .subsale li:first-child{
+    margin-top:0;
+}
+.content .lefiside .subsale span{
+    font-size:12px;
+    color:black;
+}
+
+.content .lefiside .cybermaket{
+    border-top:1px #c7cbce solid;
+    width: 734px;
+    height: 197px;
+    margin-top:353px;
+    overflow:hidden;
+}
+/*사이버매장 신규매물*/
+.content .lefiside .cybermaket .cyberbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    margin-top:10px;
+    font-size:0px;
+}
+.content .lefiside .cybermaket .cyberbar a{
+    padding-right:5px;
+    margin-left:582px;
+    font-size:10px;
+    color:black;
+    display:inline;
+}
+.content .lefiside .cybermaket ul li{
+    display:inline;
+    float:left;
+    margin-left:10px;
+    overflow:hidden;
+}
+.content .lefiside .cybermaket ul img{
+    border:1px #c7cbce solid;
+    width: 136px;
+    height: 102px;
+}
+.content .lefiside .cybermaket ul li:first-child{
+    margin-left:0;
+}
+.content .lefiside .cybermaket ul li span{
+    display:block;
+    width: 98px;
+    height: 43px;
+    padding:10px 15px;
+    text-align:center;
+    letter-spacing:-1px;
+    font-size:13px;
+    color:#666;
+}
+/*국산중고차신규매물*/
+.content .lefiside .koreanewcar{
+    border-top:1px #c7cbce solid;
+    width: 734px;
+    height: 197px;
+    margin-top:10px;
+    overflow:hidden;
+}
+.content .lefiside .koreanewcar .korbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    font-size:0px;
+}
+.content .lefiside .koreanewcar .korbar a{
+    padding-right:5px;
+    margin-left:582px;
+    font-size:10px;
+    color:black;
+    display:inline;
+}
+.content .lefiside .koreanewcar ul li{
+    display:inline;
+    float:left;
+    margin-left:10px;
+    overflow:hidden;
+}
+.content .lefiside .koreanewcar ul img{
+    border:1px #c7cbce solid;
+    width: 136px;
+    height: 102px;
+}
+.content .lefiside .koreanewcar ul li:first-child{
+    margin-left:0;
+}
+.content .lefiside .koreanewcar ul li span{
+    display:block;
+    width: 98px;
+    height: 43px;
+    padding:10px 15px;
+    text-align:center;
+    letter-spacing:-1px;
+    font-size:13px;
+    color:#666;
+}
+/*수입중고차신규매물*/
+.content .lefiside .importecar{
+    border-top:1px #c7cbce solid;
+    width: 734px;
+    height: 197px;
+    overflow:hidden;
+}
+.content .lefiside .importecar .impbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    font-size:0px;
+}
+.content .lefiside .importecar .impbar a{
+    padding-right:5px;
+    margin-left:582px;
+    font-size:10px;
+    color:black;
+    display:inline;
+}
+.content .lefiside .importecar ul li{
+    display:inline;
+    float:left;
+    margin-left:10px;
+    overflow:hidden;
+}
+.content .lefiside .importecar ul img{
+    border:1px #c7cbce solid;
+    width: 136px;
+    height: 102px;
+}
+.content .lefiside .importecar ul li:first-child{
+    margin-left:0;
+}
+.content .lefiside .importecar ul li span{
+    display:block;
+    width: 98px;
+    height: 43px;
+    padding:10px 15px;
+    text-align:center;
+    letter-spacing:-1px;
+    font-size:13px;
+    color:#666;
+}
+/*오토바이 신규매물*/
+.content .lefiside .bike{
+    border-top:1px #c7cbce solid;
+    width: 734px;
+    height: 197px;
+    overflow:hidden;
+}
+.content .lefiside .bike .bikebar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    font-size:0px;
+}
+.content .lefiside .bike .bikebar a{
+    padding-right:5px;
+    margin-left:590px;
+    font-size:10px;
+    color:black;
+    display:inline;
+}
+.content .lefiside .bike ul li{
+    display:inline;
+    float:left;
+    margin-left:10px;
+    overflow:hidden;
+}
+.content .lefiside .bike ul img{
+    border:1px #c7cbce solid;
+    width: 136px;
+    height: 102px;
+}
+.content .lefiside .bike ul li:first-child{
+    margin-left:0;
+}
+.content .lefiside .bike ul li span{
+    display:block;
+    width: 98px;
+    height: 43px;
+    padding:10px 15px;
+    text-align:center;
+    letter-spacing:-1px;
+    font-size:13px;
+    color:#666;
+}
+/*협력업체*/
+.content .lefiside .partner{
+    border-top:1px #c7cbce solid;
+    width: 734px;
+    height: 197px;
+    overflow:hidden;
+}
+.content .lefiside .partner .parbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    font-size:0px;
+}
+.content .lefiside .partner .parbar a{
+    padding-right:5px;
+    margin-left:630px;
+    font-size:10px;
+    color:black;
+    display:inline;
+}
+.content .lefiside .partner ul li{
+    display:inline;
+    float:left;
+    margin-left:10px;
+    overflow:hidden;
+}
+.content .lefiside .partner ul img{
+    border:1px #c7cbce solid;
+    width: 136px;
+    height: 102px;
+}
+.content .lefiside .partner ul li:first-child{
+    margin-left:0;
+}
+.content .lefiside .partner ul li span{
+    display:block;
+    width: 98px;
+    height: 43px;
+    padding:10px 15px 0px;
+    text-align:center;
+    letter-spacing:-1px;
+    font-size:13px;
+    color:#666;
+}
+/*오른쪽*/
+.content .rightside{
+    border:1px #F00 solid;
+    width: 237px;
+    height: 1349px;
+    float:right;
+}
+/*login*/
+.content .rightside .loginpannel{
+    border:1px #c7cbce solid;
+    background-color:#f6f6f6;
+    width: 237px;
+    height: 100px;
+}
+
+.content .rightside .loginpannel .loginput input[type="text"]{
+    margin-top:10px;
+    margin-left:12px;
+    width: 151px;
+    height: 25px;
+    float:left;
+}
+.content .rightside .loginpannel .loginput input[type="submit"]{
+    border:1px #8e8f91 solid;
+    margin-top:10px;
+    margin-right:10px;
+    width: 55px;
+    height: 58px;
+    float:right;
+}
+.content .rightside .loginpannel .loginput input[type="password"]{
+    margin-left:12px;
+    width: 151px;
+    height: 25px;
+    float:left;
+}
+.content .rightside .loginpannel .checkinput {
+    font-size:12px;
+    margin-top:10px;
+    float:left;
+    letter-spacing:-1px;
+}
+.content .rightside .loginpannel .checkinput li{
+    float:left;
+    display:block;
+    line-height:20px;
+    vertical-align:center;
+}
+.content .rightside .loginpannel .checkinput li:first-child{
+    margin-right:40px;    
+}
+.content .rightside .loginpannel .checkinput input[type="checkbox"]{
+    outline:2px #8e8f91 solid;
+    margin-left:12px;
+}
+.content .rightside .loginpannel .checkinput span{
+color:black;
+}
+
+
+
+/*풋터*/
+.content .footer{
+    border:1px #F00 solid;
+    width: 992px;
+    height: 279px;
+    clear:left;
+}
