@@ -1,11 +1,14 @@
 *{margin:0; padding:0;}
 ul{list-style:none;}
+ol{list-style:none;}
 fieldset{border:0;}
 img{vertical-align:top;}
 legend{font-size:0; text-indent:-99999px;}
-a{text-decoration:none;}
+a{text-decoration:none; color:black}
+
+
 /*iconeList*/
-.icone-1{background-image:url(../images/layout_top_selcet_btn.png);
+.icone-1{background-image:url("../images/layout_top_selcet_btn.png");
     background-repeat:no-repeat;
     background-position:right center;
     padding-right:15px;
@@ -97,6 +100,7 @@ a{text-decoration:none;}
     min-height: 1763px;
     margin:0 auto;
     position:relative;
+    border:1px black solid;
 }
 .wrap .topmenu{
     width: 990px;
@@ -255,13 +259,13 @@ a{text-decoration:none;}
 }
 
 .content{
-    border:1px #F00 solid;
+    /*border:1px #F00 solid;*/
     width: 992px;
     height: 1763px;
     margin-top:78px;
 }
 .content .lefiside{
-    border:1px #F00 solid;
+    /*border:1px #F00 solid;*/
     width: 748px;
     height: 1349px;
     float:left;
@@ -315,7 +319,6 @@ a{text-decoration:none;}
 }
 .content .lefiside .subsale span{
     font-size:12px;
-    color:black;
 }
 
 .content .lefiside .cybermaket{
@@ -337,7 +340,6 @@ a{text-decoration:none;}
     padding-right:5px;
     margin-left:582px;
     font-size:10px;
-    color:black;
     display:inline;
 }
 .content .lefiside .cybermaket ul li{
@@ -382,7 +384,6 @@ a{text-decoration:none;}
     padding-right:5px;
     margin-left:582px;
     font-size:10px;
-    color:black;
     display:inline;
 }
 .content .lefiside .koreanewcar ul li{
@@ -543,7 +544,7 @@ a{text-decoration:none;}
 }
 /*오른쪽*/
 .content .rightside{
-    border:1px #F00 solid;
+    /*border:1px #F00 solid;*/
     width: 237px;
     height: 1349px;
     float:right;
@@ -599,13 +600,348 @@ a{text-decoration:none;}
 .content .rightside .loginpannel .checkinput span{
 color:black;
 }
+/*커뮤니티 핫이슈*/
+.content .rightside .hotissue{
+    width: 237px;
+    height: 251px;
+}
+.content .rightside .hotissue .issuebar{
+    width: 217px;
+    height: 12px;
+    padding:10px;
+    line-height:12px;
+    font-size:12px;
+    /*display:block;*/
+}
+.content .rightside .hotissue .issuebar .comunityhotissue{
+    margin-right:65px;
+}
+.content .rightside .hotissue ol li{
+    /*display:block;*/
+    width: 215px;
+    height: 55px;
+    margin:0 10px;
+    padding:8px 0px 9px;
+    border-bottom:1px #c7cbce solid;
+}
+.content .rightside .hotissue ol li span{
+    width: 113px;
+    height: 42px;
+    padding:7px 7px 7px 13px;
+    display:block;
+    font-size:12px;
+    float:left;
+    color:#000;
+    line-height:20px;
+}
+.content .rightside .hotissue ol li img{
+    border:1px #c7cbce solid;
+    width: 80px;
+    height: 56px;
+}
+.content .rightside .hotissue ol li:first-child{
+    background:url("../images/right_comunity_num1_icon.png") no-repeat 1px 21px;
+}
+.content .rightside .hotissue li:first-child+li{
+    background:url("../images/right_comunity_num2_icon.png") no-repeat 1px 21px;
+}
+.content .rightside .hotissue li:first-child+li+li{
+    background:url("../images/right_comunity_num3_icon.png") no-repeat 1px 21px;
+}
+/*자동차 뉴스*/
+.content .rightside .carnews{
+    width: 215px;
+    height: 197px;
+    margin-left:11px;
+    padding-bottom:10px;
+    overflow:hidden;
+    border-bottom:1px #c7cbce solid;
+}
+.content .rightside .carnews .carnewsbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    margin-top:10px;
+    font-size:0px;
+}
+.content .rightside .carnews .carnewsbar a{
+    padding-right:5px;
+    margin-left:165px;
+    width: 32px;
+    font-size:10px;
+    color:black;
+    display:block;
+}
+.content .rightside .carnews .carnewsbar img{
+    float:left;
+}
+.content .rightside .carnews ul{
+    font-size:12px;
+}
+.content .rightside .carnews ul li img{
+    font-size:12px;
+    margin-bottom:7px;
+    width: 80px;
+    height: 56px;
+    border:1px #c7cbce solid;
+}
+.content .rightside .carnews ul li span{
+    display:block;
+    width: 118px;
+    height: 41px;
+    float:right;
+    color:black;
+    padding:15px 5px 0px 10px;
+}
+.content .rightside .carnews ul li:first-child~li{
+    line-height:20px;
+    padding-left:15px;
+    color:#000;
+    background:url(../images/dotted_icon.png) no-repeat 8px 9px;
+}
+/*커뮤니티 인기글*/
+.content .rightside .comunitybest{
+    width: 215px;
+    height: 198px;
+    margin-left:11px;
+    overflow:hidden;
+    border-bottom:1px #c7cbce solid;
+}
+.content .rightside .comunitybest .comunitybestbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    margin-top:10px;
+    font-size:0px;
+}
+.content .rightside .comunitybest .comunitybestbar a{
+    padding-right:5px;
+    margin-left:165px;
+    width: 32px;
+    font-size:10px;
+    color:black;
+    display:block;
+}
+.content .rightside .comunitybest .comunitybestbar img{
+    float:left;
+}
+.content .rightside .comunitybest ul{
+    font-size:12px;
+}
+.content .rightside .comunitybest ul li img{
+    font-size:12px;
+    margin-bottom:7px;
+    width: 80px;
+    height: 42px;
+    border:1px #c7cbce solid;
+}
+.content .rightside .comunitybest ul li span{
+    display:block;
+    width: 118px;
+    height: 32px;
+    float:right;
+    padding:5px;
+}
+/*내차소 인기글*/
+.content .rightside .mycarpopular{
+    width: 215px;
+    height: 198px;
+    margin-left:11px;
+    overflow:hidden;
+}
+.content .rightside .mycarpopular .mycarpopularbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    margin-top:10px;
+    font-size:0px;
+}
+.content .rightside .mycarpopular .mycarpopularbar a{
+    padding-right:5px;
+    margin-left:165px;
+    width: 32px;
+    font-size:10px;
+    color:black;
+    display:block;
+}
+.content .rightside .mycarpopular .mycarpopularbar img{
+    float:left;
+}
+.content .rightside .mycarpopular ol li{
+    /*display:block;*/
+    width: 215px;
+    height: 47px;
+    margin:0 3px;
+    padding:3px 0px 0px;
+    border-bottom:1px #c7cbce solid;
+}
+.content .rightside .mycarpopular ol li span{
+    width: 113px;
+    height: 38px;
+    padding:4px 4px 4px 12px;
+    display:block;
+    font-size:12px;
+    float:left;
+    color:#000;
+}
+.content .rightside .mycarpopular ol li img{
+    border:1px #c7cbce solid;
+    width: 80px;
+    height: 41px;
+}
+.content .rightside .mycarpopular ol li:first-child{
+    background:url("../images/right_comunity_num1_icon.png") no-repeat 1px 10px;
+}
+.content .rightside .mycarpopular li:first-child+li{
+    background:url("../images/right_comunity_num2_icon.png") no-repeat 0 10px;
+}
+.content .rightside .mycarpopular li:first-child+li+li{
+    background:url("../images/right_comunity_num3_icon.png") no-repeat 0 10px;
+}
+/*보배드림 이야기*/
+.content .rightside .babaestory{
+    width: 215px;
+    height: 198px;
+    margin-left:11px;
+    overflow:hidden;
+    border-bottom:1px #c7cbce solid;
+}
+.content .rightside .babaestory .babaestorybar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    margin-top:10px;
+    font-size:0px;
+}
+.content .rightside .babaestory .babaestorybar a{
+    padding-right:5px;
+    margin-left:165px;
+    width: 32px;
+    font-size:10px;
+    display:block;
+}
+.content .rightside .babaestory .babaestorybar img{
+    float:left;
+}
+/*이벤트소식*/
+.content .rightside .eventnews{
+    width: 215px;
+    height: 100px;
+    overflow:hidden;
+    margin-left:10px;
+    border-bottom:1px #c7cbce solid;
+}
+.content .rightside .eventnews .eventnewsbar{
+    height: 18px;
+    padding-top:17px;
+    overflow:hidden;
+    font-size:0px;
+    /*width: 215px;*/
+    /*height: 36px;*/
+    /*font-size:12px;*/
+    /*border:1px black solid;*/
+    
+}
+.content .rightside .eventnews .eventnewsbar img{
+    float:left;
+}
+.content .rightside .eventnews .eventnewsbar a{
+    padding-right:5px;
+    margin-left:165px;
+    width: 32px;
+    font-size:10px;
+    display:block;
+}
+.content .rightside .eventnews a>img{
+    float:left;
+    width: 80px;
+    height: 56px;
+    border:1px #c7cbce solid;
 
+}
+.content .rightside .eventnews a{
+    display:block;
+
+}
+.content .rightside .eventnews a>span{
+    display:block;
+    font-size:12px;
+    margin-left:80px;
+    width: 134px;
+    height: 56px;
+    padding:5px;
+}
+.content .rightside .snsetc{
+    border-top:1px #c7cbce solid;
+    width: 215px;
+    height: 94px;
+    margin-left:10px;
+}
+.content .rightside .snsetc .snsetcbar{
+    width: 215px;
+    height: 35px;
+    float:left;
+}
+.content .rightside .snsetc .snsetcbar img{
+    margin-top:11px;
+}
+.content .rightside .snsetc ul li{
+    display:inline;
+    line-height:25px;
+}
 
 
 /*풋터*/
 .content .footer{
-    border:1px #F00 solid;
-    width: 992px;
+    border:1px #c7cbce solid;
+    width: 987px;
     height: 279px;
     clear:left;
+}
+.content .footer .footerbar{
+    border-bottom:1px #c7cbce solid;
+    border-top:1px #c7cbce solid;
+    width: 987px;
+    height: 20px;
+    padding-top:10px
+}
+.content .footer .footerbar img{
+    margin-left:10px;
+}
+.content .footer .footerbar a>img{
+    margin-left:850px;
+}
+.content .footer .footermanu{
+    margin-left:10px;
+}
+.content .footer ul li{
+    float:left;
+    width: 120px;
+    margin-top:20px;
+    padding-left:5px;
+    border:1px #dbdce0 solid;
+}
+.content .footer ul li strong{
+    font-size:13px;
+    line-height:30px;
+}
+
+.content .footer ul>li>ul>li{
+    font-size:12px;
+    line-height:22px;
+    margin-top:0;
+    padding-left:0;
+}
+/*copyright*/
+.wrap .copyright .copyrightbar{
+    border-bottom:2px #dbdce0 solid;
+    height: 30px;
+    width: 987px;
+}
+.wrap .copyright ul li{
+    border:1px red solid;
+    display:inline;
+    font-size:14px;
+    width: 987px;
+    height: 40px;
 }

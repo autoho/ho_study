@@ -1,0 +1,15 @@
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+body{font-size:12px; background-image:url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);}
+
+.topline{height: 40px; padding-top:5px; vertical-align:middle; width:100%; border:1px #F00 solid; background:url(http://static.naver.net/newsstand/img/20121231/bg_hd.png);min-width:900px;}
+.topline .newsstand{float:left;}
+.topline .newsstand a{width: 120px; height: 15px; background:url("images/sp_nwstd.png")0 -89px no-repeat; display:inline-block;}
+.topline .newsstand span{width: 232px; height: 14px; display:inline-block; text-indent:-99999px; overflow:hidden;background:url("images/sp_nwstd.png")-119px -91px;}
+.topline .toploginmenu{float:right;}
+.topline .toploginmenu ul li{border:1px #F00 solid; display:inline;}
+.topline .toploginmenu ul li a{display:inline-block; text-indent:-99999px;}
+.topline .toploginmenu ul li:first-child a{width: 46px; height: 20px; background:url("images/login.png")no-repeat;}
+
+.topline .centerbutton{text-align:center;}

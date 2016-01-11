@@ -1,0 +1,136 @@
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration:none; color:black}
+body{font-size:12px;
+     color:black;
+    background-image:url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);
+    }
+/*iconeList*/
+/*.icone-1{padding-left:3px; background:url("images/sp_nwstd.png") no-repeat -243px -150px;}*/
+.icone-1{padding-left:3px; background:url("images/bar.png") no-repeat 0 center;}
+
+/*top*/
+.gnb{height: 56px; width: 100%; line-height:39px; vertical-align:middle; min-width:900px; background-image:url(http://static.naver.net/newsstand/img/20121231/bg_hd.png);}
+.gnb .newsstand{float:left;}
+.gnb .newsstand a{width: 120px; height: 15px; background:url("images/sp_nwstd.png")0 -89px no-repeat;display:inline-block;}
+.gnb .newsstand span{width: 232px; height: 14px; background:url("images/sp_nwstd.png")-119px -91px; display:inline-block; text-indent:-99999px; overflow:hidden;}
+
+.gnb .topmenu{float:right;}
+.gnb .topmenu ul{width: 314px; height: 40px; border:none;}
+.gnb .topmenu li{float:left; padding-left:8px;}
+.gnb .topmenu li a{display:inline-block; vertical-align:middle; padding-left:5px;}
+.gnb .topmenu li:first-child a{width: 46px; height: 20px; background:url("images/login.png")no-repeat;}
+.gnb .topmenu li:first-child+li a{width: 19px; height: 18px; background:url("images/sp_gnb_v10.png") -2px -130px no-repeat;}
+.gnb .topmenu li:first-child+li+li a{width: 59px;height: 15px; background:url("images/sp_nwstd.png") -254px -152px no-repeat;}
+.gnb .topmenu li:first-child+li+li+li a{width: 40px;height: 15px; background:url("images/sp_nwstd.png") -333px -152px no-repeat;}
+.gnb .topmenu li:first-child+li+li+li+li a{width: 51px;height: 11px; background:url("images/sp_nwstd.png") -541px -276px no-repeat;}
+.gnb .topmenu li:first-child+li a:hover{width: 19px; height: 18px; background:url("images/sp_gnb_v10.png") -37px -130px no-repeat;}
+.gnb .topmenu li:first-child+li+li a:hover{width: 59px;height: 15px; background:url("images/sp_nwstd.png") -254px -63px no-repeat;}
+.gnb .topmenu li:first-child+li+li+li a:hover{width: 40px;height: 15px; background:url("images/sp_nwstd.png") -333px -63px no-repeat;}
+.gnb .topmenu li:first-child+li+li+li+li a:hover{width: 51px;height: 11px; background:url("images/sp_nwstd.png") -541px -276px no-repeat;}
+
+.gnb .mymenu{text-align:center; font-size:0;}
+.gnb .mymenu button{height: 29px; border:none; vertical-align:middle; text-indent:-99999px; background-image:url("images/sp_nwstd.png");}
+.gnb .mymenu button.btn1{width:87px;  background-position:-1px -184px;}
+.gnb .mymenu button.btn1:hover{background-image:url('images/sp_nwstd.png'); background-position:-1px -150px;}
+.gnb .mymenu button.btn2{width:87px; background-position:-88px -150px;}
+.gnb .mymenu button.btn2:hover{background-image:url('images/sp_nwstd.png'); background-position:-87px -184px;}
+
+.high{width: 900px; height: 81px; margin:0 auto;}
+.high ul{text-align:center; font-size:0px;}
+.high ul li{display:inline}
+.high ul li a{height: 23px; border:none; display:inline-block; text-indent:-99999px; background:url("images/sp_nwstd.png") no-repeat;}
+.high ul li:first-child a{width:71px; background-position:-1px -252px;}
+.high ul li+li a{width:67px; background-position:-93px -278px;}
+.high ul li+li+li a{width:67px; background-position:-93px -304px;}
+.high ul li+li+li+li a{width:51px; background-position:-93px -330px;}
+.high ul li+li+li+li+li a{width:31px; background-position:-93px -382px;}
+.high ul li+li+li+li+li+li a{width:78px; background-position:-93px -408px;}
+.high ul li+li+li+li+li+li+li a{width:88px; background-position:-93px -434px;}
+.high ul li+li+li+li+li+li+li+li a{width:39px; background-position:-93px -460px;}
+.high ul li+li a:hover{width:67px; background-position:-182px -278px;}
+.high ul li+li+li a:hover{width:67px; background-position:-182px -304px;}
+.high ul li+li+li+li a:hover{width:51px; background-position:-182px -330px;}
+.high ul li+li+li+li+li a:hover{width:31px; background-position:-182px -382px;}
+.high ul li+li+li+li+li+li a:hover{width:78px; background-position:-182px -408px;}
+.high ul li+li+li+li+li+li+li a:hover{width:88px; background-position:-182px -434px;}
+.high ul li+li+li+li+li+li+li+li a:hover{width:39px; background-position:-182px -460px;}
+
+/*layout*/
+.wrap{width: 900px; height: 540px; margin:0 auto; background-image:url('http://static.naver.net/newsstand/img/20121231/bg_panel.png'); background-position:-15px -2px; padding:0 3px; position:relative;}
+.wrap .top{width: 840px; height: 111px; border-bottom:2px #545454 solid; margin:0 30px;}
+.wrap .top .logo{margin-top:20px; float:left;}
+.wrap .top .banner{width: 467px; height: 60px; margin-top:35px; float:right;}
+.wrap .top .button{clear:left; padding-top:5px; font-size:12px;}
+.wrap .top .button button{height: 21px; text-indent:-99999px; background-image:url("images/sp_nwstd.png"); border:none;}
+.wrap .top .button button.btn1{width: 66px;background-position:-187px -199px;}
+.wrap .top .button button.btn2{width: 75px;background-position:-325px -240px;}
+.wrap .top .button button.btn3{width: 28px;background-position:-500px -270px;}
+.wrap .top .button span{font-size:10px;}
+
+.wrap .todaytopic{margin:14px 30px 8px; height: 29px; border:1px #e0e0e0 solid; overflow:hidden; background-color:#e9e9e9;}
+.wrap .todaytopic ul li{margin-top:7px; margin-right:70px; display:block; font-size:12px; height: 21px; float:left;}
+.wrap .todaytopic ul li:first-child{margin-right:30px; margin-top:0;}
+.wrap .content{width: 840px; height: 342px; margin:0 30px;border:none;}
+.wrap .content .leftside{width: 264px; height: 335px; padding-right:12px; overflow:hidden; border-right:1px #e0e0e0 solid; float:left;}
+.wrap .content .leftside strong{font-size:17px; }
+.wrap .content .leftside p{overflow:hidden; height: 31px; color:#666666; margin:7px 0;}
+.wrap .content .leftside ul>li strong{font-size:12px; line-height:25px;}
+.wrap .content .leftside ul>li.blue strong{color:blue;}
+.wrap .content .incenter{width: 260px; height: 335px; padding:0 12px; float:left; border-right:1px #e0e0e0 solid;}
+.wrap .content .incenter strong{font-size:17px; line-height:27px;}
+.wrap .content .incenter p{overflow:hidden; height: 31px; color:#666666; margin:7px 0;}
+.wrap .content .incenter li{width: 260px; height: 40px; margin-top:8px;}
+.wrap .content .incenter li img{width: 77px; height: 41px; float:left;}
+.wrap .content .incenter ul>li strong{width: 170px; height: 40px; margin:0 7px 0px 84px; display:block; font-size:13px; line-height:16px;}
+.wrap .content .incenter ul>li.blue strong{color:blue;}
+.wrap .content .rightside{width: 276px; height: 335px; float:right;}
+.wrap .content .rightside ul{width: 276px; height: 224px;}
+.wrap .content .rightside ul li{float:left; margin-left:10px; margin-bottom:10px; position:relative;}
+.wrap .content .rightside ul img{width: 128px; height: 105px;}
+.wrap .content .rightside li strong{display:block; position:absolute; bottom:3px; width:100%; height: 25px; background:black; opacity:0.6; color:white; text-align:center; line-height:25px;}
+.wrap .content .rightside .rightdown{width: 266px; height: 105px; margin:14px 0px 0px 10px; position:relative;}
+.wrap .content .rightside .rightdown img{width: 266px; height: 105px;}
+.wrap .content .rightside .rightdown strong{width: 254px; height: 37px; position:absolute; bottom:0px; background-color:black; display:block; color:white; padding:0 6px; opacity:0.6; padding-top:5px;}
+
+button[type="button"]{border:none; position:absolute; left:50%; top:400px; text-indent:-99999px;}
+button.next{width: 21px; height: 42px; margin-left:500px; background:url("images/sp_nwstd.png")no-repeat -83px -20px;}
+button.prev{width: 21px; height: 42px; margin-left:-530px; background:url("images/sp_nwstd.png")no-repeat -19px -20px;}
+button.next:hover{width: 21px; height: 42px; margin-left:500px; background:url("images/sp_nwstd.png")no-repeat -210px -20px;}
+button.prev:hover{width: 21px; height: 42px; margin-left:-530px; background:url("images/sp_nwstd.png")no-repeat -146px -20px;}
+
+.bottom{width: 891px; height: 110px; margin:0 auto;}
+.bottom .autoskip{float:left; line-height:23px; vertical-align:middle;}
+.bottom .autoskip span{display:inline-block; width: 43px; height: 12px; border:1px #F00 solid; text-indent:-99999px; background:url("images/sp_nwstd.png")no-repeat -525px -299px;}
+.bottom .autoskip select{width: 90px; background:url("images/sp_nwstd.png")no-repeat;}
+.bottom .autoskip select.fast{background-position:-435px -485px;}
+.bottom .autoskip select.norma{background-position:-435px -510px;}
+.bottom .autoskip select.slow{background-position:-435px -535px;}
+.bottom .autoskip select.off{background-position:-435px -560px;}
+
+.bottom .pages{font-size:0px; float:right;}
+.bottom .pages button{ height: 22px; border:none; background:url("images/sp_nwstd.png")no-repeat;}
+.bottom .pages button.backarrow{width: 22px; background-position:-435px -585px;}
+.bottom .pages button.prevarrow{width: 22px; background-position:-460px -585px;}
+.bottom .pages button.backarrow:hover{background-position:-535px -585px;}
+.bottom .pages button.prevarrow:hover{background-position:-560px -585px;}
+
+.othercompany{height:98px; position:relative; overflow:hidden; padding-left:35px; padding-right:35px;background-image:url(http://static.naver.net/newsstand/img/20140716/bg_nv.png);}
+.othercompany ul{height: 77px; margin:13px auto 0px;}
+.othercompany ul li{float:left; margin-left:6px;margin-bottom:8px; display:inline-block;}
+.othercompany li img{width: 83px;height: 75px;border:1px #8d7454 solid;}
+.othercompany li img:hover{box-shadow:0px 0px 1px #000; border:1px #000 solid;}
+
+.othercompany button{width: 10px; height: 20px; text-indent:-99999px; border:none; background:url("images/sp_nwstd.png"); vertical-align:middle;}
+.othercompany button.smallnext{position:absolute; top:40%; left:13px; background-position:-262px -268px;}
+.othercompany button.smallprev{position:absolute; top:40%; right:13px; background-position:-282px -268px;}
+.othercompany button.smallnext:hover{background-position:-303px -268px;}
+.othercompany button.smallprev:hover{background-position:-322px -268px;}
+
+.copyright{height:80px; border-top: 1px #2c2721 solid; color:#FFF ; text-align:center; font-size:10px; line-height:17px; background-color:#473e33;background-image:url(http://static.naver.net/newsstand/img/20131014/bg_ft.png);}
+.copyright a{color:#aca69f;}
+.copyright a:hover{text-decoration:underline;}
+.copyright .notice{margin-top:9px; margin-bottom:9px;}
+.copyright .notice strong{padding-right:6px; background:url("images/arrow.png") no-repeat right center;}
+.copyright .notice a{padding-left:5px;}
+.copyright .gray{color:#aca69f;}

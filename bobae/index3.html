@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <style>
+        *{padding:0; margin:0;}
+        ul{list-style:none;}
+        body{font-size:12px;
+             background-image:url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);}
+        
+        .wrap{padding:0 13px; width: 900px; height: 540px; margin:80px auto; background-image:url('http://static.naver.net/newsstand/img/20121231/bg_panel.png'); }
+        .top{border-bottom:2px gray solid; width: 840px; height: 111px; margin:0px 30px;}   
+        
+        .top .logo{margin:20px 0px 0px; float:left;}
+        
+        .top .banner{margin:40px 0px 0px; float:right;}
+            
+        .top .button{padding:10px 0px 0px; clear:left; font-size:12px;}
+        
+        .top .button button{border:0 none; background: url('../images/sp_nwstd.png'); cursor:pointer; height:21px; text-indent:-99999px;}
+        
+        .top .button button.btn1{width: 66px; background-position: -187px -199px;}
+        .top .button button.btn2{width: 106px; background-position: -293px -174px;}
+        .top .button button.btn3{width: 28px; background-position: -500px -270px;}
+        
+        .wrap .content{width: 830px;height: 380px;margin:20px auto 0px;overflow:hidden;}
+        
+        .wrap .content .leftside{width: 595px;height: 382px;border-right:1px gray solid;float:left;}
+        .wrap .content .leftside .headline{width: 588px; height: 110px;}
+            
+         .wrap .content .leftside .headline li:first-child {margin-left:0px;background:none;padding:0;}
+        .wrap .content .leftside .headline li:first-child img{width: 165px;height: 108px;float:left;}  
+        .wrap .content .leftside .headline li:first-child strong{display:block;font-size:18px;margin-left:170px;padding:10px 0;}
+        .wrap .content .leftside .headline li{line-height:22px;padding-left:20px;margin-left:180px;background:url('http://static.naver.net/newsstand/2015/1217/mkinternet/190213/002.gif')no-repeat 0 3px;}
+            
+        .subnews{margin-top:5px;width: 588px;height: 260px;border-top:1px gray solid;}
+        
+        .subnews .one {width: 390px;height: 260px;margin:0;float:left;}
+            
+        .subnews .one .subfirstnews {width: 390px;height: 77px;padding-top:5px;float:left;}    
+        .subnews .one .subfirstnews li:first-child {background:none;margin:0;padding:0;}
+            
+        .subnews .one .subfirstnews li:first-child img{width: 82px;height: 72px;float:left;}
+        .subnews .one .subfirstnews li:first-child strong{font-size:14px;display:block;width: 268px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-left:90px;}
+        .subnews .one .subfirstnews li{
+            margin-left:90px;
+            margin-top:7px;
+            background:url('http://static.naver.net/newsstand/2015/1217/mkinternet/190213/002.gif')
+            no-repeat 0 3px;
+            padding-left:18px;}
+            
+        .subnews .one .linenews{
+            margin-top:82px;
+            width: 390px;
+            height: 187px;}
+            
+        .subnews .one .linenews li{
+            font-size:14px;
+            line-height:26px;}
+            
+        .subnews .centernews{
+            width: 147px;
+            height: 260px;
+            padding:5px 22px;
+            float:right;}
+        
+        .subnews .centernews li{
+            margin-top:7px;
+            margin-bottom:15px;}
+        
+            
+        .subnews .centernews li img{
+            width: 147px;
+            height: 81px;}   
+        
+        .content .rigntside{
+            /*border:1px black solid;*/
+            width: 230px;
+            height: 375px;
+            float:right;}
+        
+        .rigntside .entertainment li img{
+            width: 85px;
+            height: 62px;
+            float:last;}
+            
+        .rigntside .entertainment li p{
+            width: 140px;
+            height: 45px;
+            margin-top:10px;
+            display:block;
+            float:right;
+            font-size:13px;
+            line-height:25px;}
+            
+     .rigntside .entertainment .seajul li{
+            margin-top:5px;
+            width: 210px;
+            font-size:11px;
+            background:url("http://static.naver.net/newsstand/2015/1217/mkinternet/190213/002.gif")
+            no-repeat 0 3px;
+            padding-left:20px;
+            line-height:15px;}
+        
+     .rigntside .femaletopic{
+             margin-top:10px;
+             width: 234px;
+             height: 114px;}    
+     .rigntside .femaletopic li{
+         margin-right:5px;
+         font-size:12px;
+         width: 112px;
+         height: 114px;
+         position:relative;
+         float:left;
+         overflow:hidden;}
+   
+         .rigntside .femaletopic span{
+        bottom:0px;
+        position:absolute;
+        height: 25px;
+        padding:5px 10px;
+        width:92px;
+        color:#FFF;
+        line-height:13px; 
+        background: black;
+        opacity:0.5;
+        text-align:center;}
+         
+        .webSite{
+            float:right;
+            margin-right:20px;} 
+     
+     
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        
+        <header class="top">
+            <h1 class="logo">
+                <a href="http://www.mk.co.kr/">
+                    <img src="http://static.naver.net/newsstand/up/2013/0813/nsd11421391.gif">
+                </a>
+            </h1>
+            <div class="banner">
+                <a href="http://ad.naver.com/adclick?unit=983F&ac=6753675&src=2729783&br=2177601&rk=VnIebApizUYAABVzW6QAAAB8&eltts=UMABagkXhbqQsB2%2BmtDA0A%3D%3D&oid=&&:::cl:::">
+                    <img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_11450255438238.jpg">
+                </a>
+            </div>
+            <div class="button">
+                <button class="btn1">구독하기</button>
+                <button class="btn2">이용자 한마디</button>
+                <button class="btn3">소셜보내기</button>
+                <span>12-17 10:34 편집</span>
+            </div>
+        </header>
+        
+        <div class="content">
+            <section class="leftside">
+                <article class="headline">
+                    
+                    <ul>
+                        <li>
+                            <a href="http://news.mk.co.kr/sforward.php?domain=news&sc=30000001&year=2015&no=1188918&sID=503">
+                                <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/001.jpg">
+                            </a>
+                            <strong>"집 사려면 빨리 서둘러라"는 부동산 슈퍼우먼들</strong>
+                        </li>
+                        <li>재야 부동산 고수 "내년에 집 산다면 시기는…"</li>
+                        <li>자산 20억 넘는 부자들 "내년 집값 더 오른다"</li>
+                        <li>주택 실수요자 "내집 마련 적기는 2018년 이후"</li>
+                    </ul>
+                </article>
+                
+                <div class="subnews">
+                    <div class="one">
+                        <article class="subfirstnews">
+                            
+                            <ul>
+                                <li>
+                                    <a href="http://news.mk.co.kr/sforward.php?domain=news&sc=30000050&year=2015&no=1188453&mc=">
+                                        <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/003.jpg">
+                                        <strong>7000만원 투자로 돈날린 40대 가장, 만회하려고</strong>
+                                    </a>
+                                </li>
+                                <li> `묻지마` 배당주 투자로 한몫 노리고 계시나요?</li>
+                                <li>증권사가 추천하는 내년 유망 종목 알아보니</li>
+                            </ul>
+                        </article>
+                        <article class="linenews">
+                            <ul>
+                                <li>유망했던 30대 청년 벤처인들의 몰락, 왜?</li>
+                                <li>"30대 명퇴는 쉰떡밥입니다" 20대의 씁쓸한 고백</li>
+                                <li>생각보다 빠른 첫 은퇴…남성 53세·여성 48세</li>
+                                <li>5년 시한부 면세점에 명품브랜드도 화났다</li>
+                                <li>SK 인사-조직개편…70년생 사장 첫 발탁 '파격'</li>
+                                <li>"14광년 밖 별에서 생명체 존재가능 영역 행성 발견"</li>
+                                <li>김현수, MLB 볼티모어와 입단 합의… 2년 700만弗</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <article class="centernews">
+                        <ul>
+                            <li>
+                                <a href="http://news.mk.co.kr/sforward.php?domain=news&year=2015&no=1185945">
+                                    <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/004.jpg">
+                                    새끼 잃은 소, 수년간 같은 버스 가로막아…왜?
+                                </a>
+                            </li>      
+                            <li>
+                            <a href="http://news.mk.co.kr/sforward.php?domain=news&sc=30000051&year=2015&no=1188983">
+                                <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/005.jpg">
+                                이러니 유재석을 외치지 출연프로 전체 트위터 장악
+                            </a>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            
+            <aside class="rigntside">
+                <article class="entertainment">
+                    <ul>
+                        <li>
+                            <a href="http://news.mk.co.kr/sforward.php?domain=news&sc=&cm&year=2015&no=1188326">
+                                <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/006.jpg"></a>
+                                <p>주병진 집공개, 200평 초호화 펜트하우스</p>
+                        </li>
+                        <li>
+                            <a href="http://news.mk.co.kr/sforward.php?domain=news&sc=&cm&year=2015&no=1188553">
+                                <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/007.jpg"></a>
+                                <p>제시 “사유리, 3시간 동안 야동 이야기”</p>
+                        </li>
+                        <li>
+                            <a href="http://news.mk.co.kr/sforward.php?domain=news&sc=&cm&year=2015&no=1189400">
+                                <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/008.jpg"></a>
+                                <p>도도맘 남편 측 “강용석 증인 신청…파장 클 것”</p>
+                        </li>
+                    </ul>
+                    <ul class="seajul">
+                        <li>
+                            <!--<a href="http://news.mk.co.kr/sforward.php?domain=news&sc=&cm&year=2015&no=1187542">-->
+                                전지현 누른 올해를 빛낸 탤런트 1위는?
+                            <!--</a>-->
+                        </li>
+                        <li>
+                            <!--<a href="http://news.mk.co.kr/sforward.php?domain=news&sc=&cm&year=2015&no=1188808">-->
+                                레이양vs예정화, 몸매 대결…승자 누구?
+                            <!--</a>-->
+                        </li>
+                        <li>
+                             <!--<a href="http://news.mk.co.kr/sforward.php?domain=news&sc=&cm&year=2015&no=1188285">-->
+                                 신동엽 “고2 때 가출 후 아버지가 나를…”
+                             <!--</a>-->
+                        </li>
+                    </ul>
+                </article>
+                
+            
+            <article class="femaletopic">
+                <ul>
+                    <li>
+                        <a href="http://news.mk.co.kr/sforward.php?domain=starp&initNo=1184967&filename=list&sc=40500017&year=2015&category=news&group_main=&group_sub=">
+                            <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/009.jpg">
+                            <span>김정민, 하의실종'시선 싹쓸이'</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://news.mk.co.kr/sforward.php?domain=starp&initNo=1184566&filename=list&sc=40500147&year=2015&category=news&group_main=&group_sub=">
+                            <img src="http://static.naver.net/newsstand/2015/1217/mkinternet/132304/010.jpg">
+                            <span>고현정, 방송최초 집 공개 '대박'</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                
+            </article>
+            </aside>
+            
+        </div>
+
+        <div class="webSite">
+            <a href="http://www.etnews.com/">
+                <span><strong>매일경재</strong> 사이트 바로가기</span>
+            </a>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>

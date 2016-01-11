@@ -1,0 +1,175 @@
+/*function*/
+.guide(@color:red){
+    border:1px @color solid;
+}
+.inline-block(){
+    display:inline-block;  
+    *display:inline;
+    *zoom:1;
+}
+.trans-list-auto(@ea:4%){
+    width:100/@ea;
+}
+/*variable*/
+@tabletwidth:769px;
+@mobileWidth:420px;
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+*{margin:0; padding:0;}
+html, body{height:100%;}
+ul{list-style:none;}
+
+.wrap{
+    width: 100%;
+    height: 100%;
+    background-image:url("http://sunmi.jype.com/images/bg-pc.jpg");
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position:top center;
+    // position:relative;
+}
+
+// .mainlogo{
+//     background:url('http://sunmi.jype.com/images/mainlogo.png')no-repeat;
+//     height: 100px;
+//     width: 240px;
+//     border:1px #F00 solid;
+//     position:absolute;
+//     top:33%;
+//     left:500px
+//     margin:0 auto;
+// }
+
+
+header{
+    box-shadow:0 1px 6px rgba(0,0,0,0.3);
+    height: 100px;
+    margin-bottom:10px;
+    background-color: rgba(255,255,255,0.1);
+    
+    >div{
+        height:100%;
+        margin:0 20px;
+        }
+    h1.logo
+    {
+        padding:25px;
+        float:left;
+        >a{
+            display: block;
+            width: 104px;
+            height: 52px;
+            background:url(http://sunmi.jype.com/images/logo-sw.png) no-repeat;
+            transition:1s;
+            &:hover{
+                transform:rotateY(180deg);
+            }
+        }
+    }
+
+        
+
+    
+        nav{
+            float:right;
+            ul{
+                list-style:none;
+            }
+            li{
+                font-family: 'Oswald', sans-serif;
+                float:left;
+                height:100px;
+                overflow:hidden;
+                
+                a{
+                display:block;
+                line-height:100px;
+                padding:0 20px;
+                text-decoration:none;
+                color:#aeaeae;
+                transition:0.2s;
+                    &:hover {
+                        border-top:2px #fff solid;
+                        background-color: rgba(255,255,255,0.3);
+                        box-shadow: inset 0px 3px #fff;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+section.contents{
+    .guide(#FFF);
+    max-width:769px;
+    margin:0 auto;
+}    
+.trans-grid-list{
+    ul{
+        font-size:0;
+    }
+    li{
+        .inline-block();
+        font-size:initial;
+        .trans-list-auto(5%);
+        box-sizing:border-box;
+        padding:2px;
+        img{
+            width:100%; 
+            vertical-align:top;
+        }
+    }
+        
+}
+
+table.table-style1{
+    margin: 30px auto;
+    width:80%;
+    border-collapse:collapse;
+    thead{
+        visibility:hidden;
+        position:absolute;
+        font-size:0;
+        left:-9999px; 
+        top:-9999px;
+    }
+    th,td{
+        border-bottom:1px #000 solid;
+        padding:11px 0 9px;
+        font-size:12px;
+        text-align:center;
+        verticle-align:top;
+    }
+    
+    tr:first-child>td{
+         border-top:4px #000 solid;
+    }
+    tr>td:first-child+td{
+        text-align:left;
+        
+    }
+    td div.read{
+        text-align:left;
+    }
+    tr.view td{
+        background:#CCC;
+    }  
+    
+}
+
+@media all and (max-width:@tabletwidth) {
+    .wrap {
+        background-image:url(http://sunmi.jype.com/images/bg-720.jpg);
+        .trans-grid-list li {
+                .trans-list-auto();
+            }
+    }
+    
+}
+@media all and (max-width:@mobileWidth) {
+    .trans-grid-list li {
+            .trans-list-auto(3%);
+        
+    }
+}

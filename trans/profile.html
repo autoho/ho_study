@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="images/icon/flaticon.css">
+    <title>profile</title>
+        <style type="text/css">
+  
+    @import url(https://fonts.googleapis.com/css?family=Oswald);
+    
+    body{margin:0;}
+    html{overflow-y:hidden;}
+    body,html{height:100%;}
+    ul{list-style:none; padding:0; margin:0;}
+    
+    
+
+    .menu{
+        font-family: 'Oswald', sans-serif;display:none;
+        border:0;
+        display:none;
+        width: 200px;
+        height: 61px;
+        background-color:#252525;
+        color:#FFF;
+        font-size:16px;
+        position:absolute;
+        top:0;
+        right:0;
+    }
+    .wrap{
+        height: 100%;
+        width: 100%;
+        background:url(images/1.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        overflow:hidden;
+    }
+    header {
+        height:100px;
+        box-shadow:0 1px 6px rgba(0,0,0,0.3);
+        width:96%;
+        padding:0 2%;
+        position:absolute;
+        background-color: rgba(255,255,255,0.1);
+        overflow:hidden;
+        z-index:1;
+
+    }
+    header h1{
+        cursor:pointer;
+        width: 104px;
+        height: 52px;
+        background:url(images/logo-s.png) no-repeat center center;
+        transition:1s;
+        float:left;
+    }
+    header h1:hover{
+        transform:rotateY(360deg);
+    }
+    header nav {float:right;}
+    header nav li{float:left; line-height:100px;}
+    header nav li a{
+        padding:0 18px;
+        text-decoration:none;
+        display:block;
+        color:#e1b83d;
+        font-family: 'Oswald', sans-serif;
+        transition:0.5s;
+    }
+     header nav li a:hover{
+        border-top: 2px #feedb8 solid; 
+        color: #feedb8; 
+        background-color: rgba(255, 255, 255, 0.2); 
+        transition: 0.2s;
+        box-shadow: inset 0px 3px #feedb8;
+    }
+     header nav .menu a{
+        text-decoration:none;
+        color:#fff;
+    }
+    
+    section{position:absolute; left:0; right:0; bottom:0; top:0; background-position:center center;
+            -webkit-background-size: cover; transition:1s; opacity:0; background-size: cover;}
+    section:target{opacity:1;}
+#photo1 {background-image: url(http://missa.jype.com/images/profile/large/1.jpg); opacity:1 center center}
+#photo2 {background-image: url(http://missa.jype.com/images/profile/large/2.jpg);}
+#photo3 {background-image: url(http://missa.jype.com/images/profile/large/3.jpg);}
+#photo4 {background-image: url(http://missa.jype.com/images/profile/large/4.jpg);}
+.photo{width: 220px; height: 250px; position:absolute; margin-left:8%; width: 250px; top:23%;text-align:center; z-index:1;}
+.photo ul li img{width: 100px; height: 100px; border:2px #fff solid; opacity:0.9;}
+.photo ul li {float:left;margin:5px;}
+
+    button[type="button"]{border:none; position:absolute; top:50%; text-indent:-99999px; margin:0 10px; z-index:1;}
+    button.rpev{opacity:0.5; width: 50px; height: 50px; background:url(images/prevImgBtn.png) center center no-repeat;}
+    button.next{opacity:0.5; right:0%; width: 50px; height: 50px; background:url(images/prevImgBtn.png) center center no-repeat; transform:rotateY(180deg);}
+    button.rpev:hover{opacity:1;}
+    button.next:hover{opacity:1;}
+     footer{
+         height: 57px;
+         line-height:57px;
+         width: 100%;
+         position:absolute;
+         bottom:0;
+         background-color: rgba(0, 0, 0, 0.3);
+     }
+     footer .jyplogo a{background:url(images/jyplogo-w.png)no-repeat center;
+         display:inline-block;
+         text-indent:-99999px;
+         margin-left:5%;
+         float:left;
+         
+     }
+     footer .snslink a:before{
+         color:#000;
+         text-decoration:none;
+         width: 30px;
+         height: 30px;
+         line-height:30px;
+         text-align:center;
+         border-radius:5px;
+         background-color:#fff;
+         display:inline-block;
+         }
+     
+     footer .snslink{
+         float:right;
+         padding-right:3%;
+     }
+        
+    @media all and (max-width:770px) {
+        .wrap{height: 100%;
+        width: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        overflow:hidden;
+        }
+        header{overflow:visible;}
+        nav .menu{display:block; width: 200px; height: 61px;}
+        
+        nav ul{display:block;
+            float:none;
+            position:absolute;
+            right:0;
+            top:60px;
+            width: 200px;
+        }
+        
+        nav ul li{
+            float:none;
+            line-height:42px;
+        }
+        
+        nav ul li:first-child{
+            border-top:none;
+        }
+        header nav ul{
+            transition:1000ms; height:0; overflow:hidden;
+        }
+    
+        header nav ul:target{
+            transition:1000ms; height:210px; overflow:hidden;
+        }
+        header nav ul li{
+            background-color: rgba(255,255,255,0.3);
+        }
+        header nav ul li a:hover{
+            box-sizing: border-box;
+            border:0;
+            background:none;
+            /*border-top:2px #feedb8 solid; */
+            height: 40px; box-shadow:none; transform:translatex(10%);}
+        header nav ul li:hover{
+            border-top: 2px #feedb8 solid; 
+            color: #feedb8; 
+            background-color: rgba(255, 255, 255, 0.2); 
+        }
+        .photo{width: 220px; height: 188px;}
+        .photo ul li img{width: 80px; height: 80px; border:2px #fff solid; opacity:0.7;}
+        .photo ul li {float:left; margin:4px;}
+    }    
+     
+      @media all and (max-width:480px) {
+        .wrap{
+        }
+        header{height: 40px;}
+        header h1{margin:5px;
+        width: 65px;
+        height: 30px;
+        background-size:cover;
+        }
+        nav .menu {width: 150px;height: 41px; font-size:12px;}
+        nav ul{
+            top:40px;
+            width: 150px;
+        }
+        .photo{width: 250px; height: 60px; text-align:center; z-index:1;}
+        .photo ul li img{width: 50px; height: 50px; border:2px #fff solid; opacity:0.7;}
+        .photo ul li {float:left; margin:4px; display:block;}
+        
+        footer{height: 37px;
+         line-height:37px;
+            
+        }
+        footer .jyplogo a{transform:scale(0.7,0.7);
+            margin:-2px;
+        }
+        /*footer .snslink a{*/
+        /*    padding-right:-2%;*/
+        /*}*/
+        footer .snslink a:before{
+            transform:scale(0.7,0.7);
+            margin:-2%;
+        }
+        
+    }
+
+        
+    </style>
+</head>
+<body>
+        <div class="wrap">
+        <header>
+            <h1 class="logo">
+                
+            </h1>
+            <nav>
+                <a href="#a1"><button class="menu">Main Menu</button></a>
+                <ul id="a1">
+                    <li ><a href="">PROFILE</a></li>
+                    <li ><a href="">DISCOGRAPHY</a></li>
+                    <li ><a href="">GALLERY</a></li>
+                    <li ><a href="">VIDEO</a></li>
+                    <li ><a href="">NOTICE</a></li>
+                    <li ><a href="">SCHEDULE</a></li>
+                </ul>
+            </nav>
+        </header>
+        <a href="#"><button type="button" class="rpev">previous</button></a>
+        <a href="#"><button type="button" class="next">next</button></a>
+        <div class="photo">
+            <ul>
+                <li><a href="#photo1"><img src="http://missa.jype.com/images/profile/thumbs/1.jpg" alt=""></a></li>
+                <li><a href="#photo2"><img src="http://missa.jype.com/images/profile/thumbs/2.jpg" alt=""></a></li>
+                <li><a href="#photo3"><img src="http://missa.jype.com/images/profile/thumbs/3.jpg" alt=""></a></li>
+                <li><a href="#photo4"><img src="http://missa.jype.com/images/profile/thumbs/4.jpg" alt=""></a></li>
+            </ul>
+        </div>
+            <section id="photo1"></section>
+            <section id="photo2"></section>
+            <section id="photo3"></section>
+            <section id="photo4"></section>
+    </div>
+    
+</body>
+</html>

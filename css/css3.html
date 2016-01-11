@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3.html</title>
+    
+    <style type="text/css">
+        .box{width: 200px;
+            height: 200px; 
+            border:1px #f00 solid;
+            box-sizing:border-box;
+            padding:20px;
+        }
+        .wrap{border:1px #f00 solid; width: 400px; height: 200px;}
+        .boxs{height: 200px;
+            width: 50%;
+            float:left;
+            border:1px #F00 solid;
+            box-sizing:border-box;
+            padding:10px;
+        }
+        
+        .bb{
+            border:1px #F00 solid;
+            height: 200px;
+            width: 200px;
+            border-radius:10px 20px 30px 40px;
+            box-shadow:5px 5px 100px #000;
+            /*5px-왼쪽 쉐도우 5px-아래쪽 쉐도우 125px-퍼짐 #F00-칼라*/
+            font-size:20px;
+            text-shadow:5px 5px 5px #F00;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4f5fc+0,bfe8f9+50,9fd8ef+51,2ab0ed+100;Blue+Gloss+%235 */
+            background: #e4f5fc; /* Old browsers */
+            background: -moz-linear-gradient(top, #e4f5fc 0%, #bfe8f9 50%, #9fd8ef 51%, #2ab0ed 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed',GradientType=0 ); /* IE6-9 */
+        }
+        .bbh{
+            border:1px #F00 solid; height:200px;
+            width:200px;
+            font-size:20px;
+            transition:2s cubic-bezier(.89,.05,.05,.93) 0s;
+        }
+        .bbh:hover{
+            background:,#2ab0ed;
+            border-radius:30%;
+            transform:rotate(360deg);
+            /*rotateX , rotateY*/
+            margin-left:250px;
+        }
+        .bbm{
+            border:1px #F00 solid; height:200px;
+            width:200px;
+            font-size:20px;
+            transition:2s cubic-bezier(.89,.05,.05,.93) 0s;
+            overflow:hidden;
+        }
+        .bbm img{
+            height:100%;
+        transition:2s cubic-bezier(1,-0.38,.04,1.36) 0s;
+            
+        }
+        .bbm:hover{
+            transform:matrix(2,0.5,-0.5,2,0,0);
+        }
+
+    </style>
+    
+</head>
+<body>
+    <span>첫번째 박스</span>
+    <div class="box">100px</div>
+    
+    <span>두번째 박스</span>
+    <div class="wrap">
+        <div class="boxs">1</div>
+        <div class="boxs">2</div>
+    </div>
+    
+    <span>세번째 박스</span>
+    <div class="bb">bb shadow</div>
+    
+    <span>네번째 박스</span>
+    <div class="bbh">bb transition</div>
+    
+    <span>다섯번째 박스</span>
+    <div class="bbm">
+        <img src="../images/ugc.jpg">
+        </div>
+    
+    
+</body>
+</html>
