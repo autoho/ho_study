@@ -1,26 +1,137 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta charset="UTF-8">
   <title>Document</title>
   
   <style type="text/css">
-    
+    /*position*/
+    /*  static:기본상태*/
+    /*  relative:상대적*/
+    /*  absolute:절대적*/
+    /*  fixed:고정*/
+      
+    /*  top*/
+    /*  right*/
+    /*  left*/
+    /*  bottom*/
+    /*  z-index:높낮이*/
+    html,body{height:100%;}
+    body{margin:0; padding-top:80px;}
+       /* 
+       position
+            static : 기본상태
+            relative : 상대적
+            absolute : 절대적
+            fixed : 고정적
+            
+            top,right,left,bottom 위치설정
+            z-index 높이 설정
+        */
+        
+        .box{
+            border:1px #F00 solid;
+            position:absolute;
+        }
+        header{height: 80px; width: 100%; background:#000;
+            color:#FFF; position:fixed; top:0; z-index:3;
+        }
+        header h1{margin:0;
+        }
+        section{border:1px #F00 solid; height:100%; position:relative;}
+        section div{
+            border:1px #F00 solid;
+            position:absolute;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: 50%;
+        }
+        .item1{
+            top:0;bottom:50%;right:50%;left:0;
+            background-image: url(http://missa.jype.com/upload/gallery/gallery_15032594325.jpg);
+        }
+        .item2{
+            top:0%;bottom:50%;right:0;left:50%;
+            background-image: url(http://2pm.jype.com/upload/gallery/gallery_150614173343.jpg);
+        }
+        .item3{
+            top:50%;bottom:0;right:50%;left:0;
+            background-image: url(http://2pm.jype.com/upload/gallery/gallery_140912201044.jpg);
+            
+        }
+        .item4{
+            top:50%;bottom:0;right:0;left:50%;
+            background-image: url(http://2pm.jype.com/upload/gallery/gallery_15061417317.jpg);
+            
+        }
+        .inner{
+            border:1px #FFF solid; 
+            position:absolute;
+            left:10px;
+            right:10px;
+            bottom:10px;
+            top:10px;
+            
+        }
+        dl{background-color: rgba(0,0,0,0.5); color:#FFF;
+            left:0;
+            right:0;
+            bottom:0;
+            position:absolute;
+            padding:10px 0;
+        }
+        dt{float:left; margin-left:20px;}
   </style>
+  
 </head>
 <body>
-  <h1>이호림</h1>
-  <hr/>
-  <h2>네이버 뉴스 스텐드</h2>
-  <ul>
-    <li><a href="testing/index.html">파이낸셜뉴스</a></li>
-    <li><a href="naver_news/news_etnews2.html">전자신문</a></li>
-    <li><a href="naver_news/news_mk.html">매일경재</a></li>
-  </ul>
-  <h2>보배드림</h2>
-  <ul>
-    <li><a href="bobae/index.html">보배드림</a></li>
-  </ul>
+    <header>
+        <h1>Profile</h1>
+    </header>
+  
+    <section>
+        <div class="item1">
+            <div class="inner">
+                <dl>
+                    <dt>Title</dt>
+                    <dd>JYP MissA</dd>
+                    <dt>Skill</dt>
+                    <dd>mtnl5/CSS3/Trans</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="item2">
+            <div class="inner">
+                <dl>
+                    <dt>Title</dt>
+                    <dd>JYP MissA</dd>
+                    <dt>Skill</dt>
+                    <dd>mtnl5/CSS3/Trans</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="item3">
+            <div class="inner">
+                <dl>
+                    <dt>Title</dt>
+                    <dd>JYP MissA</dd>
+                    <dt>Skill</dt>
+                    <dd>mtnl5/CSS3/Trans</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="item4">
+            <div class="inner">
+                <dl>
+                    <dt>Title</dt>
+                    <dd>JYP MissA</dd>
+                    <dt>Skill</dt>
+                    <dd>mtnl5/CSS3/Trans</dd>
+                </dl>
+            </div>
+        </div>
+        
+    </section>
   
   
 </body>

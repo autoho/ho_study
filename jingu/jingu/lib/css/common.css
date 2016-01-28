@@ -1,0 +1,92 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+html,body{height:100%; font-size:12px}
+ul,ol{margin:0; padding:0px; list-style: none;}
+img{vertical-align: top;}
+
+
+/* layout */
+body{
+	background-color:#EEEEEC
+	ß}
+.wrapper{
+	max-width:1000px;
+	min-height:100%; 
+	outline:1px #F00 solid; 
+	margin:0 auto; 
+	box-shadow: 0 0 10px #000; 
+	background:#FFF
+	
+	}
+header{
+	max-height:500px;
+}
+header .left-article{
+	width:50%; 
+	height:100%;
+	overflow:hidden;
+	float:left;
+	}
+header .left-article h1{
+	max-height: 430px;
+	}
+header .left-article h1 a{
+	display:block;
+	height:0; 
+	overflow:hidden; 
+	text-indent: -9999px;
+	max-height:430px;
+	padding-bottom:calc(100% - 70px); 
+	background:#F8F8F8 url(../images/logo.png) no-repeat 50%; 
+	background-size:134px 60px;
+	}
+header .left-article nav{height:70px; background:#E6E8E7}
+header .left-article nav ul{height:70px; width:100%;}
+header .left-article nav li{display:table-cell; height:70px; vertical-align: middle; text-align:center}
+header .left-article nav li:hover{background:#ff654c}
+header .left-article nav li a{text-decoration: none; display:block; width: 126px; text-align:center; color:#FFF;}
+
+header .right-article{
+	width:50%;
+	height:100%;
+	float:right;
+}
+
+
+header .right-article .slide {
+	width:100%;
+	max-height:430px; 
+	position:relative;
+	height:0;
+	padding-bottom:calc(100% - 70px);
+}
+header .right-article .slide ul{margin-left:50px}
+header .right-article .slide li{display:inline-block; width:20px}
+header .right-article .slide li img{width:100%;}
+header .right-article .slide li a{position:absolute; z-index: 1; bottom:20px; width:20px; height:20px; border:1px #F00 solid}
+
+header .right-article li div{position:absolute; width:100%; top:0; left:0; }
+header .right-article nav{height:70px; position:relative; z-index: 1;background:#E6E8E7;}
+header .right-article nav ul{display: table; width:100%;}
+header .right-article nav li{display:table-cell; height:70px; vertical-align: middle; width:25%;}
+header .right-article nav li:hover{background:#ff654c}
+header .right-article nav li a{text-align: center; text-align:center; text-decoration: none; color:#FFF; display:block}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

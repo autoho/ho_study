@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        var count = 7;
+        var max = 200;
+        
+        var random = Math.floor(Math.random() * max+1);
+        
+        for(i=1; i <= count; i++){
+            
+            document.write(i+"번째 기회")
+            document.write("<br />")
+            
+            if(count ==i){
+                alert("모든 기회를 다 사용 하였습니다. 다음 기회에...")
+            }
+            else{
+                var uservalue = prompt("숫자를 입력하세요" + 1 +"~"+max)
+                
+                if(uservalue > random){
+                    alert("그 수 보다 작아")
+                }
+                else if(uservalue < random){
+                    alert("그 수 보다 크다 다시 맞춰 봐~");
+                }
+                else if(uservalue == random){
+                    alert("왠욜~ 잘 하네~");
+                    break
+                }
+            }    
+        }
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

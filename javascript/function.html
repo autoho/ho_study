@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+        <!--// void 함수 - 반환값이 없는 함수-->
+        <!--// function msg(){-->
+        <!--//     alert("hello world")-->
+            
+        <!--// }-->
+        
+        <!--// msg{}-->
+        
+        <!--// // 더하기-->
+        
+        <!--// alert(sum(10,20));-->
+        
+        <!--// function sum(x,y){-->
+        <!--//     return x + y ;-->
+        <!--// }-->
+        
+        
+        
+
+    
+</head>
+<body>
+    
+    <script type="text/javascript">
+        
+    var total = prompt("총원을 입력하시오.");
+    var stotal = [];
+    var avg = 0;
+    
+    for (i=0; i<total; i++){
+        var sc = prompt((i+1)+"점수를 입력하세요.");
+        stotal.push(sc);
+        sum(stotal[i]);
+    }
+        
+    function sum(x){
+        avg += Number(x);
+    } 
+    
+    function average(s,t){
+        return s / Number(t)
+    }
+    
+    function number(a){
+        
+    if(a <= 100 && a >80){
+        return "수"
+    }else if(a <= 80 && a >60){
+        return "우"
+    }else if(a <= 60 && a >40){
+        return "미"
+    }else if(a <= 40 && a >20){
+        return "양"
+    }else if(a <= 20 && a >0){
+        return "가"
+    }
+    else{
+        return "입력값이 틀렸습니다."
+    }
+    }
+    var avg2 = average(avg,total);
+    document.write("총인원 : " + total );
+    document.write("<br />");
+    document.write("총 점수 : " + avg );
+    document.write("<br />");
+    document.write("전체 평균 점수는 : " + avg2+ "점 입니다." );
+    document.write("<br />");    
+    document.write("평가 등급은 : " + number(avg2) + " 입니다.");
+    
+        
+        
+    </script>
+    
+</body>
+</html>

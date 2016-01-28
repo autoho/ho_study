@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        var count = 5;
+        var max= 100;
+        var random = Math.floor(Math.random() * max+1);
+        
+        for(x=0,y=4 ; x <= count ; x++,y--){
+            // document.write(x+"번째 기회요");
+            // document.write("<br />");
+
+        if(x == count){
+            alert("기회를 다 소진 하였으니 다음 기회에 또 봅시다...");
+        }
+        
+        else{
+            var userval = prompt("숫자를 입력하시오" + 1 +"~" + max );
+
+            if (userval > random){
+                alert("아니오... 그 수 보다 작소이다." + y +"번 남았소이다.");
+                
+            }
+            else if (userval < random){
+                alert("그 수 보다 크다오 다시 맞춰보시오." + y +"번 남았소이다.");
+                
+            }
+            else if (userval == random){
+                alert("왠욜~ 어떻게 맞췄소이까???");
+                break
+            }
+            document.write(x+1 +"번째 기회였소... " + y +"번의 기회가 남았소이다.");
+            document.write("<br />");
+                
+        }
+        
+        }
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="images/icon/flaticon.css">
+    <title>gallery</title>
+    
+    <style type="text/css">
+
+    @import url(https://fonts.googleapis.com/css?family=Oswald);
+    
+    body{margin:0;}
+    /*html{overflow-y:hidden;}*/
+    body,html{height:100%;}
+    ul{list-style:none; padding:0; margin:0;}
+    
+
+    .menu{font-family: 'Oswald', sans-serif;display:none; border:0; display:none; width: 200px; height: 61px; background-color:#252525; color:#FFF; font-size:16px; position:absolute; top:0; right:0;}
+    .wrap{font-family: 'Oswald', sans-serif; height: 100%; width: 100%}
+    .contents{ position:absolute; top:100px; width: 100%;}
+    .contents .h2{ width: 100%; height: 110px; background-color: rgba(0,0,0,0.04);}
+    .contents h2{ background-image:url("images/missagallery/title-gallery.png"); margin:auto; width: 500px; height: 110px; background-position:center center; background-repeat:no-repeat; text-indent:-99999px;}
+
+    .mainlogo{ background:url(images/mainlogo.png) no-repeat; width: 350px; height: 350px; position:relative; top:15.6%; margin:0 auto; transition:1s; opacity:0.8;}
+    .mainlogo:hover{transform:scale(1.1,1.1);}
+    header { height:100px; box-shadow:0 1px 6px rgba(0,0,0,0.3); width:96%; padding:0 2%; position:absolute; background-color: rgba(255,255,255,0.1); overflow:hidden;}
+    header h1{ cursor:pointer; width: 104px; height: 52px; background:url(images/logo-s.png) no-repeat center center; transition:1s; float:left;}
+    header h1:hover{transform:rotateY(360deg);}
+    header h1 a{color:transparent;}
+    header nav {float:right;}
+    header nav li{float:left; line-height:100px;}
+    header nav li a{ padding:0 18px; text-decoration:none; display:block; color:#000; font-family: 'Oswald', sans-serif; transition:0.5s; position:relative; z-index:3;}
+    header nav li a:hover{ border-top: 2px #000 solid;  color: #000;  background-color: rgba(0.2);  transition: 0.2s; box-shadow: inset 0px 3px #000;}
+    header nav .menu a{ text-decoration:none; color:#fff;}
+    
+    .contents .center{margin:auto; padding:50px 0;}
+    .contents .center .clearfix{font-size:0; margin:0 auto; max-width:769px; padding:40px 11.5%;}
+    .contents .center .clearfix li{display:inline-block; *display:inline; *zoom:1; font-size:initial; width: 20%; box-sizing:border-box; padding:0.246879%;}
+    .contents .center .clearfix li img{width: 100%; vertical-align:top;}
+    
+    .center .list_nav{padding-bottom:30px; height: 20px; width: 100%; margin:auto; text-align:center;}
+    .center .list_nav li{display:inline-block; background:url(images/list-nav.png) no-repeat; cursor:pointer; width: 9px; height: 9px; margin:0; padding:0 2px;}
+    .center .list_nav li:first-child{background:url(images/list-nav-on.png) no-repeat;}
+    .center .list_nav li:hover{background:url(images/list-nav-on.png) no-repeat;}
+
+   
+   footer{ height: 57px; line-height:57px; width: 100%; position:fixed; bottom:0; background-color: rgba(0, 0, 0, 0.3);}
+    footer .jyplogo a{background:url(images/jyplogo-w.png)no-repeat center; display:inline-block; text-indent:-99999px; margin-left:5%; float:left;}
+    footer .snslink a:before{ color:#000; text-decoration:none; width: 30px; height: 30px; line-height:30px; text-align:center; border-radius:5px; background-color:#fff; display:inline-block;}
+    footer .snslink{ float:right; padding-right:3%;}
+  
+    @media all and (max-width:770px) {
+        .wrap{}
+        header{overflow:visible;}
+        nav .menu{display:block; width: 200px; height: 61px;}
+        nav ul{display:block; float:none; position:absolute; right:0; top:60px; width: 200px;}
+        nav ul li{ float:none; line-height:42px;}
+        nav ul li:first-child{}
+        .contents h2{margin:auto; width: 500px; height: 110px; -webkit-background-size: 50%; background-size: 50%;}
+        .mainlogo{ top:10%; width: 250px; height: 250px; background-position:50% 50%; -webkit-background-size: cover; background-size: cover;}
+        header nav ul{ transition:1000ms; height:0; overflow:hidden;}
+        header nav ul:target{transition:1000ms; height:210px; overflow:hidden;}
+        header nav ul li{ background-color: rgba(255,255,255,0.3); position:relative;}
+        header nav ul li a:hover{ box-sizing: border-box; border:0; background:none; height: 40px; box-shadow:none; transform:translatex(10%);}
+        header nav ul li:hover{ border-left: 5px #000 solid;  color: #000;  background-color: rgba(244, 244, 244, 1); z-index:3;}
+        
+        .contents .center {width: 62%; padding:0;}
+        .contents .center .clearfix{padding:40px 0; margin:0;}
+        .contents .center .clearfix li{width: 33.333333%; margin:0;}
+        .contents .center .clearfix li img{max-width: 150px; vertical-align:top;}
+
+    }    
+     
+      @media all and (max-width:480px) {
+        .wrap{ }
+        .contents{top:40px;}
+        .contents .h2{ width: 100%; height: 60px;}
+        .contents h2{margin:auto; width: 300px; height: 60px; -webkit-background-size: 50%; background-size: 50%;}
+        header{height: 40px;}
+        header h1{margin:5px; width: 65px; height: 30px;}
+        nav .menu {width: 150px; height: 41px; font-size:12px;}
+        nav ul{top:40px;width: 150px;}
+        .contents .center{ width: 90%;}
+        .contents .center .clearfix li{width: 25%;}
+        footer{height: 37px; line-height:37px;}
+        footer .jyplogo a{transform:scale(0.7,0.7); margin:-2px;}
+        footer .snslink a{ padding-right:-2;}
+        footer .snslink a:before{transform:scale(0.7,0.7);margin:-2%;}
+    }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo">
+                <a href="index.html">missa</a>
+            </h1>
+            <nav>
+                <a href="#a1"><button class="menu">Main Menu</button></a>
+                <ul id="a1">
+                    <li ><a href="profile.html">PROFILE</a></li>
+                    <li ><a href="discography.html">DISCOGRAPHY</a></li>
+                    <li ><a href="gallery.html">GALLERY</a></li>
+                    <li ><a href="video.html">VIDEO</a></li>
+                    <li ><a href="notice.html">NOTICE</a></li>
+                    <li ><a href="schedule.html">SCHEDULE</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contents">
+            <div class="h2">
+                <h2>GALLERY</h2>
+            </div>
+            <div class="center">
+                <ul class="clearfix">
+                    <li><a href="/upload/gallery/gallery_15032594337.jpg"><img src="images/missagallery/gallery_15032594337(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032594325.jpg"><img src="images/missagallery/gallery_15032594325(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032594314.jpg"><img src="images/missagallery/gallery_15032594314(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_1503259433.jpg"><img src="images/missagallery/gallery_1503259433(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323163513.jpg"><img src="images/missagallery/gallery_150323163513(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323163459.jpg"><img src="images/missagallery/gallery_150323163459(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323163437.jpg"><img src="images/missagallery/gallery_150323163437(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323163424.jpg"><img src="images/missagallery/gallery_150323163424(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323163410.jpg"><img src="images/missagallery/gallery_150323163410(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323163357.jpg"><img src="images/missagallery/gallery_150323163357(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323163343.jpg"><img src="images/missagallery/gallery_150323163343(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162830.jpg"><img src="images/missagallery/gallery_150323162830(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162818.jpg"><img src="images/missagallery/gallery_150323162818(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032316285.jpg"><img src="images/missagallery/gallery_15032316285(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162752.jpg"><img src="images/missagallery/gallery_150323162752(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162739.jpg"><img src="images/missagallery/gallery_150323162739(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162728.jpg"><img src="images/missagallery/gallery_150323162728(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162715.jpg"><img src="images/missagallery/gallery_150323162715(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032316219.jpg"><img src="images/missagallery/gallery_15032316219(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162058.jpg"><img src="images/missagallery/gallery_150323162058(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162047.jpg"><img src="images/missagallery/gallery_150323162047(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162034.jpg"><img src="images/missagallery/gallery_150323162034(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323162022.jpg"><img src="images/missagallery/gallery_150323162022(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032316209.jpg"><img src="images/missagallery/gallery_15032316209(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_150323161933.jpg"><img src="images/missagallery/gallery_150323161933(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032316636.jpg"><img src="images/missagallery/gallery_15032316636(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032316625.jpg"><img src="images/missagallery/gallery_15032316625(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15032316611.jpg"><img src="images/missagallery/gallery_15032316611(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15031622419.jpg"><img src="images/missagallery/gallery_15031622419(1).jpg" alt=""></a></li>
+                    <li><a href="/upload/gallery/gallery_15031622355.jpg"><img src="images/missagallery/gallery_15031622355(1).jpg" alt=""></a></li>
+                </ul>  
+                <ul class="list_nav">
+                    <li><a href="discography.html"></a></li>
+                    <li><a href="http://missa.jype.com/discography.asp?page=2&srchoption=&keyword=&ipage=&iflag=on&lng=KR&vnum="></a></li>
+                    <li><a href="http://missa.jype.com/discography.asp?page=3&srchoption=&keyword=&ipage=&iflag=on&lng=KR&vnum="></a></li>
+                    <li><a href="http://missa.jype.com/discography.asp?page=3&srchoption=&keyword=&ipage=&iflag=on&lng=KR&vnum="></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="jyplogo">
+            <a href="http://www.jype.com/"><span>jyp entertainment</span></a>
+        </div>
+        <div class="snslink">
+            <a href="" class="icon-facebook"></a>
+            <a href="" class="icon-twitter"></a>
+            <a href="" class="icon-youtube"></a>
+            <a href="" class="icon-multiple"></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

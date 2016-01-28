@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style type="text/css">
+        
+        .acodian li ul{display:none; cursor:pointer;}
+        .acodian {cursor:pointer;}
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+                
+            $('.acodian>ul>li').click(function(){
+                    
+                $(this).children('ul').slideToggle();
+                    
+            })
+            
+        })    
+        
+    </script>
+    
+    
+</head>
+<body>
+    
+        <div class="acodian">
+        <ul>
+            <li>menu1
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+            </li>
+            <li>menu2
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+            </li>
+            <li>menu3
+                <ul>
+                    <li>text</li>
+                    <li>text</li>
+                    <li>text</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
