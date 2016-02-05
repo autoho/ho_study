@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style type="text/css">
+    body{margin:0;}
+    html{overflow-y:hidden;}
+    body,html{height:100%;}
+    ul{list-style:none; padding:0; margin:0;}
+
+    .fade{
+        overflow:hidden;
+        width:100%;
+        height: 80%;
+        margin: auto;
+        position: relative;
+        top:80px;
+        text-align:center;
+    }
+    .fade li a{
+        display:block;
+        width: 9px;
+        height: 9px;
+        background-image:url(images/list-nav-on.png);
+        position: relative;
+        z-index: 9;text-indent: -9999px;
+    }
+    .fade li.on a{background:#FFF;}
+    
+    .fade li {
+        margin-top:10px;
+        display: inline-block;
+    
+      
+    }
+    .fade li img{
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        display:none;
+    }
+    .fade li:first-child img{display: block}
+    
+        button[type="button"]{border:none; position:absolute; top:50%; text-indent:-99999px; margin:0 10px; z-index:1;}
+        button.prev{opacity:0.5; left:0%; width: 50px; height: 50px; background:url(images/prevImgBtn.png) center center no-repeat;}
+        button.next{opacity:0.5; right:0%; width: 50px; height: 50px; background:url(images/prevImgBtn.png) center center no-repeat; transform:rotateY(180deg);}
+        button.prev:hover{opacity:1;}
+        button.next:hover{opacity:1;}
+    
+    </style>
+
+<script type="text/javascript">
+    $(function(){
+        
+        $('.next').click(function(){
+            $('.fade .on img').fadeOut(1000).parent().removeClass('on').next().addClass('on').children('img').fadeIn(1000);
+            
+            
+            var on = $('.fade .on').html()
+            
+            if(on == undefined){
+                $('.fade li:first')
+                .addClass('on')
+                .children('img')
+                .fadeIn(1000)
+            }
+        })
+        
+        $('.prev').click(function(){
+            $('.fade .on img').fadeOut(1000).parent().removeClass('on').prev().addClass('on').children('img').fadeIn(1000);
+            
+            
+            var on = $('.fade .on').html()
+            
+            if(on == undefined){
+                $('.fade li:last')
+                .addClass('on')
+                .children('img')
+                .fadeIn(1000)
+            }
+        })
+        
+        
+        $('.fade li a').click(function() {
+            $(this).next('img').fadeIn(1000).parent().addClass('on').siblings().removeClass('on').find('img').fadeOut()
+            return false;
+        })
+        
+        
+        
+    })
+
+    
+    
+    
+</script>
+</head>
+<body>
+    
+    
+    <div class="fade">
+        <ul>
+            <li class="on">
+                <a href="">1</a>
+                <img src="images/1217914-1920x1080-[DesktopNexus.com].jpg" alt="">
+            </li>
+            <li><a href="">2</a><img src="images/2012811-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="">3</a><img src="images/2012814-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="">4</a><img src="images/2024387-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="">5</a><img src="images/2012810-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="">6</a><img src="images/2012809-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="">7</a><img src="images/1199914-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="">8</a><img src="images/1666350-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            
+        </ul>
+            <a href="#"><button type="button" class="next">next</button></a>
+            <a href="#"><button type="button" class="prev">previous</button></a>
+    </div>
+    
+
+    
+</body>
+</html>

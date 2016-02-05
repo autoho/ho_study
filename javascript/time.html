@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    <script>
+    
+    // $ 달러 부호를 사용 할 수 없는 경우... 클로져 함수 사용
+    //(function($){
+        
+    //     $(function(){
+            
+    //     })
+        
+    // })(jQuery)
+    //------------------------------------------------------
+    //aa()()
+    
+    //fundtion aa(){
+    
+    //return fundtion(){}
+    
+    //}
+    
+    //시간을 제어하는 뉴 데이타 w3school        
+
+    $(document).ready(function(){
+         
+         
+         
+         var dayList = ["일","월","화","수","목","금","토"]    
+        
+            
+        function times(){
+            
+            var tt = new Date();
+            var date = tt.getDate()
+            var day = tt.getDay()
+            var year = tt.getFullYear()
+            var month = tt.getMonth()
+            var hours = tt.getHours()
+            var minut = tt.getMinutes()
+            var seconds = tt.getSeconds()
+            
+            var print = "";
+            print += year + "년";
+            print += month+1 + "월";
+            print += date + "일";
+            print += dayList[day] + "요일";
+            print += hours + "시";
+            print += minut +"분";
+            print += seconds + "초"
+            
+            return print
+        }    
+            
+            
+        setInterval(function(){
+            $('.time').text(times())
+        },1000)
+        
+    })
+
+    
+    //셋팅한 시간에 한번 실행...var a = 0
+    
+        // $(document).ready(function(){
+        //  setTimeout(function(){
+        //      console.log(a++)
+        //  },1000) 
+        
+    // 함수로 반복 실행
+    
+    //  $(document).ready(function(){
+        
+    //      var a = 0
+         
+    //      tt()
+    //      function tt(){
+    //          console.log(a++);
+    //         setTimeout(tt,1000);
+    //      }
+    //  }
+    
+    // 반복 실행(함수를 반복 실행) 인터벌은 핸들러로 해제 클리어인터벌 대신 셋인터벌은 변수로 이름 지정 해 줄것
+    // 자바스크립트 내장 메쏘드 임... 
+    // $(document).ready(function(){
+        
+    //   var a = 0
+    //   var aa = setInterval(function(){
+    //       console.log(a++)
+    //   },1000)
+       
+    //   $('.btn').click(function(){
+    //       clearInterval(aa)
+    //   })
+        
+    // })
+    
+    
+    
+    // 실행 시점 var a=1
+    
+    // $(document).ready(function(){
+    //     var a=1
+    //     aa()
+    //     $('.btn').click(function(){
+    //         a=2
+    //     })
+    //     function aa(){
+    //         a=3
+    //     }
+        
+    // })
+    
+    // 로딩을 마친 후 실행
+    
+    // $(window).load(function(){
+        
+    //     var aa = [] 
+        
+    //     $('body div').each(function(i,e){
+    //         aa.push($(e).offset().top)
+    //     })
+    //     console.log(aa)
+    // })
+    
+    
+    </script>
+    
+    
+    
+</head>
+<body>
+    
+        <div class="time"></div>
+    
+    <!--<button class="btn">눌러 </button>-->
+    
+    <!--로딩을 마친 후 실행-->
+    <!--<div><img src="http://cache.desktopnexus.com/cropped-wallpapers/2075/2075154-1024x768-[DesktopNexus.com].jpg?st=bxYhqLz6OMPcDdOLXDPReQ&e=1454378773"></div>-->
+    <!--<div><img src="http://cache.desktopnexus.com/cropped-wallpapers/2075/2075153-1024x768-[DesktopNexus.com].jpg?st=TII6dUW4MXpy9JKXG5E_Bg&e=1454378804"></div>-->
+    <!--<div><img src="http://cache.desktopnexus.com/cropped-wallpapers/2075/2075342-1024x768-[DesktopNexus.com].jpg?st=UVfuyqpR4gxSiGllYHjAiQ&e=1454378837"></div>-->
+    <!--<div><img src="http://cache.desktopnexus.com/cropped-wallpapers/2075/2075154-1024x768-[DesktopNexus.com].jpg?st=bxYhqLz6OMPcDdOLXDPReQ&e=1454378773"></div>-->
+    <!--<div><img src="http://cache.desktopnexus.com/cropped-wallpapers/2075/2075153-1024x768-[DesktopNexus.com].jpg?st=TII6dUW4MXpy9JKXG5E_Bg&e=1454378804"></div>-->
+    <!--<div><img src="http://cache.desktopnexus.com/cropped-wallpapers/2075/2075342-1024x768-[DesktopNexus.com].jpg?st=UVfuyqpR4gxSiGllYHjAiQ&e=1454378837"></div>-->
+    
+    
+    
+</body>
+</html>

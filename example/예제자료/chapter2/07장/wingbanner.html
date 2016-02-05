@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+        
+        .wrap{width:500px; height:1500px; border:1px #F00 solid; margin: 0 auto;}
+        .wing{width:80px; height:250px; border:1px #F00 solid; position:absolute; top:10px;}
+        
+    </style>
+    
+    
+    <script>
+        $(function(){
+            var el = $(".wrap");
+            var offleft = el.offset().left;
+            var elwidth = el.width()
+            $('.wing').css('left', offleft+elwidth+ 10);
+            
+            $(window).scroll(function(){
+                var sct = $(this).scrollTop()
+                
+                 $('.wing').stop().animate({
+                     'top':sct
+                     
+                 })
+                
+            })
+            
+            
+            
+        })
+        
+    </script>
+</head>
+<body>
+    
+    
+    <div class="wrap">
+        
+    </div>
+    
+    <div class="wing">
+        
+    </div>
+    
+</body>
+</html>

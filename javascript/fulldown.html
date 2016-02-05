@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">                
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        
+        ul{list-style: none;}
+        .header{height:80px;background: #000; position:fixed; width:100%; top:0; left:0;}
+        .header ul{text-align:center;}
+        .header li {display:inline-block; line-height:80px; padding:0 10px;font-size:20px;}
+        .header li a{color:#FFF;  text-decoration:none;}
+        .content{height:3000px;}
+        
+    </style>
+    
+    <script>
+        
+        $(function(){
+            console.log($('.header').is('.on'))
+            $(window).scroll(function(){
+                
+                var sct = $(this).scrollTop();
+                console.log($('.header').is('.on'))
+                if(sct > 80 && !$('.header').is('.on')){
+                    $('.header').addClass('on')
+                    console.log($('.header').is('.on'))
+                    $('.header').animate({
+                        height:"40px"
+                    }).find('>ul>li').css({
+                        "line-height":"40px",
+                        "font-size":"16px"
+                    }) 
+                    
+                }else if(sct < 80 && $('.header').is('.on')){
+                    $('.header').removeClass('on')
+                    console.log($('.header').is('.on'))
+                    $('.header').animate({
+                        height:"80px"
+                    }).find('>ul>li').css({
+                        "line-height":"80px",
+                        "font-size":"20px"
+                    }) 
+                }
+                
+            })
+            
+            
+        })
+        
+        
+        
+    </script>
+    
+    
+    
+</head>
+<body>
+<div class="header">
+    <ul>
+        <li><a href="">text</a></li>
+        <li><a href="">text</a></li>
+        <li><a href="">text</a></li>
+        <li><a href="">text</a></li>
+        <li><a href="">text</a></li>
+    </ul>            
+</div>
+
+<div class="content">
+    
+    
+    
+</div>
+    
+    
+    
+</body>
+</html>

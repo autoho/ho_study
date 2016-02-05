@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+ul{list-style: none;}
+
+.slide{
+    overflow:hidden;
+  border:1px #F00 solid; 
+  height:190px;
+  width:350px;
+  margin: 0 auto;
+  position: relative;
+  text-align:center;
+}
+.slide li a{
+  position: relative;
+  z-index: 1;
+  border:1px #F00 solid;
+}
+.slide li {
+  display: inline-block;
+}
+.slide li img{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  display:none;
+}
+.slide li:first-child img{display: block}
+
+</style>
+
+<script type="text/javascript">
+    $(function(){
+        
+        var swidth = $('.slide').width()
+        console.log(swidth)
+        
+        $('.next').click(function(){ //다음버튼 클릭하면 실행해
+            
+            $('.slide .on img').animate({ //슬라이드안에 온클레스 안에 이미지 선택해서 움직이게해
+                left:-swidth //왼쪽으로 부모 넓이 만큼 이동해
+            },1000).parent()// 한단계 부모 위로 올라와서
+            .removeClass('on') // 온클레스를 암살하고..
+            .next()//다음으로 li 한테 가서
+            .addClass('on')//온클레스를 뒤집어 씌워..
+            .children('img')//그의 자식중 이미지를 골라서..
+            .css({ 
+                "display":"block", //눈에 보이게하고
+                "left":swidth // 밀어버려
+            }).animate({ //움직이게해
+                left:0 // 눈에보이는 위치로.
+            },1000)
+            
+            
+        })
+        
+        
+    })
+    
+    
+    
+</script>
+</head>
+<body>
+    
+    
+    <div class="slide">
+        <ul>
+            <li class="on">
+                <a href="">1</a>
+                <img src="http://cache.desktopnexus.com/thumbseg/2074/2074922-bigthumbnail.jpg" alt="">
+            </li>
+            <li><a href="">2</a><img src="http://cache.desktopnexus.com/thumbseg/2075/2075248-bigthumbnail.jpg" alt=""></li>
+            <li><a href="">3</a><img src="http://cache.desktopnexus.com/thumbseg/2074/2074662-bigthumbnail.jpg" alt=""></li>
+            <li><a href="">4</a><img src="http://cache.desktopnexus.com/thumbseg/2074/2074910-bigthumbnail.jpg" alt=""></li>
+        </ul>
+    </div>
+    
+    <button class="next">다음</button>
+    <button class="prev">이전</button>
+    
+    
+</body>
+</html>
+
+
+()
+(){}
+if(재료){정의}
+for(재료){정의}
+function(재료){정의}
+
+({객체})함수
+
+.css
+.css('color','red')
+.css({'color':'red','fontsize':'12px'})
+.attr
+.animate
+
+
+
+
+[]

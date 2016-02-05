@@ -25,20 +25,14 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				$('#nav > ul > #springBtn').bind('click', function(){
-					
-				});
 				
-				$('#nav > ul > #summerBtn').bind('click', function(){
-					
-				});
+				var img = ['spring','summer','fall','winter']
 				
-				$('#nav > ul > #fallBtn').bind('click', function(){
+				$('#nav ul li').click(function(){
 					
-				});
-				
-				$('#nav > ul > #winterBtn').bind('click', function(){
+					var idx = $(this).index();
 					
+					$('#image').removeClass().addClass(img[idx]);
 				});
 			});
 		</script>

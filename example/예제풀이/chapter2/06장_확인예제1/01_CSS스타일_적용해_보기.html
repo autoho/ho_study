@@ -19,23 +19,19 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				var input = $('#input');
-				var select = input.children('.css_prop');
-				var inputText = input.children('.css_prop_value');
-				var button = input.children('.button');
-				var contents = $('#el');
+				var prop;
 				
-				select.change(function(){
-					var cssTypeName = $(this).val();
-					if(cssTypeName != ''){
-						inputText.val(contents.css(cssTypeName));
-					}
-				});
+				$('.css_prop').change(function(){
+					prop = $(this).val();
+					var value = $('#el').css(prop);
+					$('.css_prop_value').val(value);
+				})
 				
-				button.click(function(){
-					var cssTypeName = select.val();
-					contents.css(cssTypeName, inputText.val());
-				});
+				$('.button').click(function(){
+				var value = $('.css_prop_value').val();
+				$('#el').css(prop,value);
+				console.log('#el');
+				})
 			});
 		</script>
 	</head>
