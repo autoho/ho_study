@@ -23,10 +23,10 @@
             $(window).scroll(function(){
                 
                 var sct = $(this).scrollTop();
-                console.log($('.header').is('.on'))
+                // console.log($('.header').is('.on'))
                 if(sct > 80 && !$('.header').is('.on')){
                     $('.header').addClass('on')
-                    console.log($('.header').is('.on'))
+                    // console.log($('.header').is('.on'))
                     $('.header').animate({
                         height:"40px"
                     }).find('>ul>li').css({
@@ -36,7 +36,7 @@
                     
                 }else if(sct < 80 && $('.header').is('.on')){
                     $('.header').removeClass('on')
-                    console.log($('.header').is('.on'))
+                    // console.log($('.header').is('.on'))
                     $('.header').animate({
                         height:"80px"
                     }).find('>ul>li').css({

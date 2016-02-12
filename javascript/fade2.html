@@ -49,16 +49,87 @@
         button.next{opacity:0.5; right:0%; width: 50px; height: 50px; background:url(images/prevImgBtn.png) center center no-repeat; transform:rotateY(180deg);}
         button.prev:hover{opacity:1;}
         button.next:hover{opacity:1;}
+        
+    .blind{
+        position:absolute; background:rgb(0,0,0);
+        top:0; right:0; bottom:0; left:0;
+        display:none;
+    }
+    
+    .pop-box{
+        width: 700px;
+        height: 350px;
+        background:url(images/1209791-1920x1080-[DesktopNexus.com].jpg) center center no-repeat;
+        background-size:100%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        z-index:20;
+        display:none;
+    }
+        
+    .close{position:absolute; top:0; right:0;}
     
     </style>
 
 <script type="text/javascript">
     $(function(){
         
-        $('.next').click(function(){
-            $('.fade .on img').fadeOut(1000).parent().removeClass('on').next().addClass('on').children('img').fadeIn(1000);
+        //블라인드
+        function blind(){
+            $('body').append('<div class="blind"></div>')
+            .children('.blind')
+            .fadeTo("500","0.6");
+        }
+        
+        //팝업 포지션
+        function centerAlign(w,h,tg){
+            tg.css({
+                marginTop:-h/2,
+                marginLeft:-w/2
+            })
+        }
+        
+        //팝업 오픈
+        function popOpen(){
+            
+            $('body').append('<div class="pop-box"><button class="close">닫기</button></div>')
+            .children('.pop-box')
+            .fadeIn(500);
+            
+            var popWidth=$('.pop-box').width()
+            var popHeight=$('.pop-box').height()
+            
+            centerAlign(popWidth,popHeight,$('.pop-box'))
+        }
+        
+        $('.fade li').click(function() {
+            blind();
+            popOpen();
+          
+        })
+        
+        //팝업 클로즈
+        $('body').on('click','.close',function(){
+              
+            $('.pop-box').fadeOut(1000,function(){
+                $(this).remove()
+            })
+            
+             $('.blind').fadeOut(1000,function(){
+                $(this).remove()
+            })
             
             
+        })
+        
+        //클릭 이벤트
+        $('.fade li a').click(function() {
+            $(this).next('img').fadeIn(1000).parent().addClass('on').siblings().removeClass('on').find('img').fadeOut()
+            return false;
+        })
+        $('.next').click(function() {
+            $('.fade .on img').fadeOut(1000).parent().removeClass('on').next().addClass('on').children('img').fadeIn(1000)
             var on = $('.fade .on').html()
             
             if(on == undefined){
@@ -67,6 +138,7 @@
                 .children('img')
                 .fadeIn(1000)
             }
+            
         })
         
         $('.prev').click(function(){
@@ -84,13 +156,6 @@
         })
         
         
-        $('.fade li a').click(function() {
-            $(this).next('img').fadeIn(1000).parent().addClass('on').siblings().removeClass('on').find('img').fadeOut()
-            return false;
-        })
-        
-        
-        
     })
 
     
@@ -104,23 +169,23 @@
     <div class="fade">
         <ul>
             <li class="on">
-                <a href="">1</a>
+                <a href="1217914-">1</a>
                 <img src="images/1217914-1920x1080-[DesktopNexus.com].jpg" alt="">
             </li>
-            <li><a href="">2</a><img src="images/2012811-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
-            <li><a href="">3</a><img src="images/2012814-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
-            <li><a href="">4</a><img src="images/2024387-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
-            <li><a href="">5</a><img src="images/2012810-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
-            <li><a href="">6</a><img src="images/2012809-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
-            <li><a href="">7</a><img src="images/1199914-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
-            <li><a href="">8</a><img src="images/1666350-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="2012811-">2</a><img src="images/2012811-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="2012814-">3</a><img src="images/2012814-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="2024387-">4</a><img src="images/2024387-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="2012810-">5</a><img src="images/2012810-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="2012809-">6</a><img src="images/2012809-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="1199914-">7</a><img src="images/1199914-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
+            <li><a href="1666350-">8</a><img src="images/1666350-1920x1080-[DesktopNexus.com].jpg" alt=""></li>
             
         </ul>
             <a href="#"><button type="button" class="next">next</button></a>
             <a href="#"><button type="button" class="prev">previous</button></a>
+            
     </div>
     
 
-    
 </body>
 </html>

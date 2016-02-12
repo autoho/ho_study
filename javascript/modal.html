@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style type="text/css">
+        html,body{height:100%;}
+        *{margin:0; padding:0;}
+        .pop-box{
+            width:500px; 
+            height:300px; 
+            background: #FFF; 
+            border:1px #F00 solid;
+            position:absolute;
+            left:50%;
+            top:50%;
+            display:none;
+            z-index:10;
+        }
+        
+        .boxone{width: 500px; height: 300px;}
+        .boxtwo{width: 300px; height: 500px;}
+        
+        .blind{
+            position:absolute; background:rgb(0,0,0);
+            left:0; top:0; bottom:0; right:0;
+            display:none;
+        }
+        .close{position:absolute; top:0; right:0;}
+        
+
+        
+        
+     </style>
+     <script>
+         $(function(){
+             //블라인드
+            function blind(){
+                $('body').append('<div class="blind"></div>')
+                .children('.blind')
+                .fadeTo("500","0.6");
+            }
+            
+           //팝업 포지션 
+            function centerAlign(w,h,tg){
+                tg.css({
+                    marginTop:-h/2,
+                    marginLeft:-w/2
+                })
+                
+            }
+            
+            //팝업오픈
+            function popOpen(tg){
+                $('body').append('<div class="pop-box '+tg+'"><button class="close">닫기</button></div>')
+                .children('.pop-box')
+                .fadeIn(1000)
+                
+                var popWidth = $('.pop-box').width()
+                var popHeight = $('.pop-box').height()
+                
+                centerAlign(popWidth,popHeight,$('.pop-box'))
+            }
+            
+            $('[class^=popup]').click(function(){
+                blind();
+                
+                var boxClass = $(this).attr('class')
+                boxClass = boxClass.substring(6,boxClass.length)
+                popOpen(boxClass);
+            })
+            
+            //closeEbent
+            $('body').on('click','.close',function(){
+                $('.pop-box').fadeOut(1000,function(){
+                    $(this).remove()
+                })
+                
+                $('.blind').fadeOut(1000,function(){
+                    $(this).remove()
+                })
+            })
+            
+            
+            
+          })
+         
+     </script>
+</head>
+<body>
+    <button class="popup-boxone" date-role-pop="">팝업</button>
+    <button class="popup-boxtwo" date-role-pop="">팝업</button>
+</body>
+</html>

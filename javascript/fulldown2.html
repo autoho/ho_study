@@ -14,6 +14,11 @@
         .header li a{color:#FFF;  text-decoration:none;}
         .content{height:3000px;}
         
+        .header ul>li>ul{background:black; display:none;position:absolute;}
+        .header ul>li>ul>li{float:left; display:inline-block; padding:0 10px;font-size:20px;color:white;background:black;}
+    
+        
+        
     </style>
     
     <script>
@@ -46,6 +51,28 @@
                         "font-size":"20px"
                     })
                 }
+            })
+            
+
+            $('.header ul li').click(function(){
+                
+                
+                $(this).children('ul')
+                .slideDown()
+                .parent()
+                .siblings()
+                .children('ul')
+                .slideUp()
+                
+
+                
+                return false;
+                
+                
+                
+                
+                
+                
                 
                 
             })
@@ -63,11 +90,41 @@
 <body>
 <div class="header">
     <ul>
-        <li><a href="">text</a></li>
-        <li><a href="">text</a></li>
-        <li><a href="">text</a></li>
-        <li><a href="">text</a></li>
-        <li><a href="">text</a></li>
+        <li><a href="">text</a>
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+        </li>
+        <li><a href="">text</a>
+            <ul>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+        </li>
+        <li><a href="">text</a>
+            <ul>
+                <li>3</li>
+                <li>3</li>
+                <li>3</li>
+            </ul>
+        </li>
+        <li><a href="">text</a>
+            <ul>
+                <li>4</li>
+                <li>4</li>
+                <li>4</li>
+            </ul>
+        </li>
+        <li><a href="">text</a>
+            <ul>
+                <li>5</li>
+                <li>5</li>
+                <li>5</li>
+            </ul>
+        </li>
     </ul>            
 </div>
 
