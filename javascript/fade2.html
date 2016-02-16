@@ -56,9 +56,14 @@
         display:none;
     }
     
+    .boxone{width: 500px; height: 300px;}
+     h2{color:#FFF;}
+    .dpnone{color:#FFF;} 
+    
     .pop-box{
         width: 700px;
         height: 350px;
+        /*border:12px red solid;*/
         background:url(images/1209791-1920x1080-[DesktopNexus.com].jpg) center center no-repeat;
         background-size:100%;
         position:absolute;
@@ -74,6 +79,15 @@
 
 <script type="text/javascript">
     $(function(){
+        
+        //마크업 저장
+        var popupstory={
+            boxone:$('#boxone').html()
+        }
+
+        //마크업 삭제
+        $('#boxone').remove()
+        
         
         //블라인드
         function blind(){
@@ -91,11 +105,12 @@
         }
         
         //팝업 오픈
-        function popOpen(){
+        function popOpen(cont,view){
             
-            $('body').append('<div class="pop-box"><button class="close">닫기</button></div>')
+            view.append('<div class="pop-box"><button class="close">닫기</button></div>')
             .children('.pop-box')
             .fadeIn(500);
+            $('.pop-box').append(cont)
             
             var popWidth=$('.pop-box').width()
             var popHeight=$('.pop-box').height()
@@ -105,7 +120,7 @@
         
         $('.fade li').click(function() {
             blind();
-            popOpen();
+            popOpen(popupstory.boxone,$('.popview'));
           
         })
         
@@ -123,7 +138,7 @@
             
         })
         
-        //클릭 이벤트
+        //a 클릭 이벤트
         $('.fade li a').click(function() {
             $(this).next('img').fadeIn(1000).parent().addClass('on').siblings().removeClass('on').find('img').fadeOut()
             return false;
@@ -159,8 +174,6 @@
     })
 
     
-    
-    
 </script>
 </head>
 <body>
@@ -184,6 +197,12 @@
             <a href="#"><button type="button" class="next">next</button></a>
             <a href="#"><button type="button" class="prev">previous</button></a>
             
+    </div>
+
+    <div class="popview"></div>
+    <div id="boxone" class="dpnone">
+        <h2> 어벤져스-로마노프</h2>
+        <p>나타샤 로마노프-스칼렛 요한슨</p>
     </div>
     
 

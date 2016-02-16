@@ -35,6 +35,16 @@
      </style>
      <script>
          $(function(){
+             
+             // 팝업 박스 내용
+             var poplist = {//마크업 저장
+                 boxone:$('#boxone').html(),
+                 boxtwo:$('#boxtwo').html()
+             }
+             
+             //팝업 마크업 삭제
+             $('#boxone ,#boxtwo').remove()
+             
              //블라인드
             function blind(){
                 $('body').append('<div class="blind"></div>')
@@ -52,10 +62,11 @@
             }
             
             //팝업오픈
-            function popOpen(tg){
-                $('body').append('<div class="pop-box '+tg+'"><button class="close">닫기</button></div>')
+            function popOpen(tg,cont,view){
+                view.append('<div class="pop-box '+tg+'"><button class="close">닫기</button></div>')
                 .children('.pop-box')
                 .fadeIn(1000)
+                $('.'+tg).append(cont)
                 
                 var popWidth = $('.pop-box').width()
                 var popHeight = $('.pop-box').height()
@@ -68,7 +79,7 @@
                 
                 var boxClass = $(this).attr('class')
                 boxClass = boxClass.substring(6,boxClass.length)
-                popOpen(boxClass);
+                popOpen(boxClass,poplist[boxClass],$('.popview'));
             })
             
             //closeEbent
@@ -90,6 +101,18 @@
 </head>
 <body>
     <button class="popup-boxone" date-role-pop="">팝업</button>
+    <div class="popview"></div>
+    <div id="boxone" class="dpnone">
+        <h2>오픈 기념 이벤트</h2>
+        <div><p>오픈 기념 이벤트 팝업 이므니다.</p></div>
+    </div>
+    
     <button class="popup-boxtwo" date-role-pop="">팝업</button>
+    <div class="popview"></div>
+    <div id="boxtwo" class="dpnone">
+        <h2>오픈 기념 이벤트2</h2>
+        <div><p>오픈 기념 이벤트2 팝업 이므니다.</p></div>
+    </div>
+    
 </body>
 </html>

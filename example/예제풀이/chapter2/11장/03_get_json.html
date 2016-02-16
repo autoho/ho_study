@@ -11,22 +11,42 @@
 		</style>
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script>
-			$.get('data/data.json', function(data){
-				console.log(data);
-				var fruits = data.fruits;
-				var table = $('#fruits_data');
-				for(var i in fruits){
-					var fruit = fruits[i];
-					var cnt = 0;
-					for(var prop in fruit){
-						var text = fruit[prop];
-						var tr = table.find('tr').eq(parseInt(i)+1);
-						var td = tr.find('> td').eq(cnt + 1);
-						td.text(text);
-						cnt++;
-					}
-				}
-			}, 'json');
+		
+		$.get('data/data.json',function(data){
+			$.each(data.fruits,function(i,e){
+				var jj =0;
+				$.each(e,function(j,k){
+					
+					console.log(e)
+					
+					$('#fruits_data').find('tr').eq(i+1).children('td').eq(jj).text(k)
+					jj++
+				})
+			})
+		})
+		
+		
+		
+		
+		
+		
+		
+			// $.get('data/data.json', function(data){
+			// 	console.log(data);
+			// 	var fruits = data.fruits;
+			// 	var table = $('#fruits_data');
+			// 	for(var i in fruits){
+			// 		var fruit = fruits[i];
+			// 		var cnt = 0;
+			// 		for(var prop in fruit){
+			// 			var text = fruit[prop];
+			// 			var tr = table.find('tr').eq(parseInt(i)+1);
+			// 			var td = tr.find('> td').eq(cnt + 1);
+			// 			td.text(text);
+			// 			cnt++;
+			// 		}
+			// 	}
+			// }, 'json');
 		</script>
 	</head>
 	<body>

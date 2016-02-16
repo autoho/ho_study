@@ -11,20 +11,45 @@
 		</style>
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script>
-			$.get('data/data.xml', function(data){
-				console.log(data);
-				var fruits = $(data).find('> data > fruits');
-				var table = $('#fruits_data');
-				fruits.each(function(i){
-					var fruit = $(this);
-					fruit.children().each(function(j){
-						var text = $(this).text();
-						var tr = table.find('tr').eq(i+1);
-						var td = tr.find('> td').eq(j + 1);
-						td.text(text);
-					});
-				});
-			}, 'xml');
+		
+		$.get('data/data.xml',function(data){
+			// console.log($(data).find('fruits').text()) 
+			// .html말고 .text를 사용할 수도 있다.
+			var fruits = $(data).find('>data>fruits');
+				// console.log(fruits.length)
+			var $table = $('#fruits_data')
+			fruits.each(function(i,e){
+				console.log(e)
+				
+				$(e).children().each(function(j,k){
+					$table.find('tbody tr').eq(i+1).children('td').eq(j+1).text($(k).text())
+				})
+				
+				
+			})
+			
+		
+		})
+		
+		
+		
+		
+		
+		
+			// $.get('data/data.xml', function(data){
+			// 	console.log(data);
+			// 	var fruits = $(data).find('> data > fruits');
+			// 	var table = $('#fruits_data');
+			// 	fruits.each(function(i){
+			// 		var fruit = $(this);
+			// 		fruit.children().each(function(j){
+			// 			var text = $(this).text();
+			// 			var tr = table.find('tr').eq(i+1);
+			// 			var td = tr.find('> td').eq(j + 1);
+			// 			td.text(text);
+			// 		});
+			// 	});
+			// }, 'xml');
 		</script>
 	</head>
 	<body>
