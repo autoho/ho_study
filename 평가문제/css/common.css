@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);*/
 *{padding:0;margin:0}
 html,body{height:100%}
-body{font-family: 'Nanum Gothic', sans-serif;}
+/*body{font-family: 'Nanum Gothic', sans-serif;}*/
 header{height:100%; background:#CCC;width:250px; position:fixed}
 header h1{font-size:26px; margin-bottom:50px;margin:20px; text-align:center;}
 header nav ul{list-style-position: inside; list-style: none;}
