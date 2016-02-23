@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        html,body{height:100%;}
+       ul{list-style:none;} 
+       header{height:80px; background: #000; width:100%; text-align:center; line-height:80px; position:fixed;}
+       header a{color:#FFF; font-size:20px;}
+       header li{display:inline-block;}
+       div{height:100%; border:1px #F00 solid;}
+       
+    </style>
+    <script type="text/javascript">
+        
+        $(function(){
+            
+            //스크롤 기본
+            // var spot = []
+            
+            // $('.section div').each(function(i,e){
+            //     spot.push($(e).offset().top);
+            // })
+           
+            
+            
+            // $("header li").click(function(){
+                
+            //     var idx = $(this).index();
+                
+            //     $('body,html').animate({
+            //         scrollTop:spot[idx]
+            //     })
+                
+                
+            // })
+            
+            
+            // 새로운 좌표를 다시 찾음
+            // $("header li").click(function(){
+                
+            //     var idx = $(this).index();
+                
+            //     var ss = $('.section div').eq(idx).offset().top
+                
+            //     $('body,html').animate({
+            //         scrollTop:ss
+            //     })
+            //     console.log(ss)
+                
+            // })
+            
+            
+            // 좌표를 새로 고침
+            var spot = []
+            $(window).resize(function(){
+                spot = []
+                $('.section div').each(function(i,e){
+                spot.push($(e).offset().top)
+                })
+                console.log(spot)
+            })
+          $(window).trigger('resize')
+            
+            
+            $("header li").click(function(){
+                
+                var idx = $(this).index();
+                
+                $('body,html').animate({
+                    scrollTop:spot[idx]
+                })
+                console.log(idx)
+                
+            })
+            
+            
+            
+        })
+        
+        
+    </script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="javascript:void(0)">menu1</a></li>
+            <li><a href="javascript:void(0)">menu2</a></li>
+            <li><a href="javascript:void(0)">menu3</a></li>
+            <li><a href="javascript:void(0)">menu4</a></li>
+            <li><a href="javascript:void(0)">menu5</a></li>
+        </ul>
+    </header>
+    
+    <div class="section">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        
+        var cardarr =[];
+        var clubarr=["하트","스페이스","다이아몬드","클로버"];
+        var userarr=[];
+        
+        rrr();
+        
+        function rrr(){
+            
+            cardarr =[];
+            
+            for(i=0; i<clubarr.length ; i++){
+    
+                for(s=1; s<13+1; s++){
+                    
+                        if(s==1){
+                            var a=clubarr[i]+"A"
+                            cardarr.push(a);
+                            
+                        }else if(s==11){
+                            var j=clubarr[i]+"J"
+                            cardarr.push(j);
+                            
+                        }else if(s==12){
+                            var q=clubarr[i]+"Q"
+                            cardarr.push(q);
+                            
+                        }else if(s==13){
+                            var k=clubarr[i]+"K"
+                            cardarr.push(k);
+                            
+                        }else{
+                            cardarr.push(clubarr[i]+s);
+                        }
+                    }
+                }
+        }
+        // console.log(cardarr)
+        
+        function play(){
+            var usernom = prompt("게임에 참여 할 인원수를 넣어주세요.")
+            
+            for(i=0; i<usernom; i++){
+                userarr[i]=new Array();
+            }
+                console.log(userarr)
+        }
+        function cardout(){
+            
+            for(i=0; i<userarr; i++){
+                var rannum = randomcard(cardarr);
+                userarr[i].push(cardarr[rannum]);
+                cardarr.splice(rannum,1)
+            }
+        }    
+            
+        function randomcard(cardlan){
+            
+            return Math.floor(Math.random() * cardlan.length);
+            
+        }    
+            
+        
+        function cardarrSelect(){
+            
+            var rd=null;
+            rd = Math.floor(Math.random() * cardarr.length);
+            alert(cardarr[rd]);
+            cardarr.splice(rd,1);
+            console.log(cardarr);
+        }
+        
+    </script>
+    
+    <button onclick="javascript:play()">게임 시작 </button>
+    <button onclick="javascript:cardout()">카드 나눠주기 </button>
+    <button onclick="javascript:cardarrSelect()">카드 까기 </button>
+    
+</body>
+</html>

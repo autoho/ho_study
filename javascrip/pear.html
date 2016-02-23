@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    <!--모바일에서 동작 하지 않음... 크롬(크롬은 작동파일 설치 하여야 함)과 사파리는 예외임...-->
+    <style type="text/css">
+        
+        *{margin:0; padding:0;}
+        html,body{height:100%;}
+        .wrap{height:100%;}
+        section{
+            background-repeat:none;
+            background-size:cover;
+            background-position: 50% 50%;
+            height:100%;
+            width:100%;
+        }
+        
+        .set1{background-image: url(images/1199914-1920x1080-[DesktopNexus.com].jpg);}
+        .set2{background-image: url(images/2012810-1920x1080-[DesktopNexus.com].jpg);}
+        .set3{background-image: url(images/2012811-1920x1080-[DesktopNexus.com].jpg);}
+        .set4{background-image: url(images/1598036-1920x1080-the_avengers_agent_coulson-wallpaper-1920x1080.jpg);}
+        .set5{background-image: url(images/1666350-1920x1080-[DesktopNexus.com].jpg);}
+    </style>
+    
+    <script>
+        var spot=[];
+        var Wheight=0;
+            $(window).load(function(){
+                
+            $('.wrap section').each(function(i){
+                
+                spot.push($(this).offset().top);
+                
+                $(this).css('top',spot[i]);
+                
+                Wheight += $(this).height();
+                
+            }).css('position','fixed')
+        
+            $('.wrap').height(Wheight);
+                
+            $(window).scroll(function(){
+                
+                var sct = $(this).scrollTop()
+               
+              
+              
+              
+            //   $('.wrap section').each(function(i){
+                    //  var tt =   spot[i] - sct
+                                    
+                                    
+                //                     spot[0] - sct
+                //                     spot[1] - sct
+                //                     spot[2] - sct
+                //                     spot[3] - sct
+                //                     spot[4] - sct
+                                    
+                     
+                //       if(sct > spot[i]  ) {
+                          
+                //         (spot[0] - sct)*=0.5
+                //         (spot[1] - sct)*=0.5
+                //         (spot[2] - sct)*=0.5
+                //         (spot[3] - sct)*=0.5
+                //         (spot[4] - sct)*=0.5
+                        
+                //       tt *=0.5   
+                       
+                //       }
+                     
+                //     $(this).css('top', tt )
+                    
+                // })
+               
+               
+               
+               
+               
+               
+               
+                $('.wrap section').each(function(i){
+                     var tt = -1 * sct + spot[i] 
+                     
+                     if(sct > spot[i]  ) tt *=0.5
+                     
+                    $(this).css('top',tt )
+                    
+                })
+                
+            })    
+                
+            })
+            
+            // $(function(){
+                
+            // function sum(x,y)
+            //   z = x + y 
+               
+            //  if(true) z = 1
+            //  else if(true) z = 2
+            //  else if(true) z = 3
+            //  else if(true) z = 4
+               
+               
+            //   return z ? z : "없음"
+                
+            // })
+        
+        
+        
+    </script>
+    
+</head>
+<body>
+<div class="wrap">
+    <section class="set1"><button>버튼</button></section>
+    <section class="set2"></section>
+    <section class="set3"></section>
+    <section class="set4"></section>
+    <section class="set5"></section>
+</div>
+    
+    
+    
+</body>
+</html>

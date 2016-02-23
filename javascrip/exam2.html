@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        var username = prompt("이름을 입력하시오.")
+        
+        document.write("어디한번 "+ username +"를 만들어볼까?")
+        
+        var text1 = ["우선", "어디보자", "음..."]
+        var text2 = ["못생김","잘난척","자신감","싸가지"]
+        var text3 = ["한 바가지","한 티스푼","쥐 꼬리만큰","이건 넣지 말자..."]
+        
+        var random1 = (Math.random() * text1.length);
+        var random2 = (Math.random() * text2.length);
+        var random3 = (Math.random() * text3.length);
+
+        var lentext1 = (Math.floor(random1));
+        var lentext2 = (Math.floor(random2));
+        var lentext3 = (Math.floor(random3));
+        
+        document.write(<br />);
+        document.write(text1[lentext1]+text2[lentext2]+text3[lentext3] );
+        
+        document.write(<br />);
+        document.write('그리고'+text2[lentext2]+text3[lentext3] );
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

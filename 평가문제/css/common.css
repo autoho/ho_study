@@ -15,13 +15,13 @@ div.content>section>div{margin:20px;}
 div.content>section>div>h2{margin-bottom:30px;}
 div.content>section>div>ol{list-style-position:inside; font-size:14px; line-height:150%; margin-bottom:50px;}
 
-.slidebanner{border:1px #F00 solid;  width:500px; height:260px; margin:0 auto; position:relative;}
-.slidebanner ul{ width:500px; height:260px;overflow:hidden;  position:relative; text-align:center; font-size:0}
+.slidebanner{border:1px #F00 solid; overflow:hidden; width:500px; height:260px; margin:0 auto; position:relative;}
+.slidebanner ul{ width:500px; height:260px;  position:relative; text-align:center; font-size:0}
 .slidebanner li{display: inline-block;}
 .slidebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
-.slidebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
-.slidebanner li:first-child a{background:#E8B482}
-.slidebanner li:first-child img{display: block}
+.slidebanner li a{position:relative ; z-index: 3; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
+.slidebanner li.on a{background:#E8B482}
+.slidebanner li.on img{display: block}
 .slidebanner button{position:absolute; top:0; cursor: pointer}
 .slidebanner button.next{right: 0; top:50%;}
 .slidebanner button.prev{left: 0; top:50%;}
@@ -31,14 +31,15 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .fadebanner li{display: inline-block;}
 .fadebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
 .fadebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
-.fadebanner li:first-child a{background:#E8B482}
+.fadebanner li.on a{background:#E8B482}
 .fadebanner li:first-child img{display: block}
 
 .movie-view .view{width:800px; height:442px; margin: 30px  auto 30px;}
 .movie-view ul {list-style: none; text-align: center}
 .movie-view ul li{display: inline-block;}
+.movie-view ul li.on a{opacity:0.5;}
 
-.wing{ width:100px; height:250px; position: absolute; right:0 ; top:0 ;margin-top:100px; }
+.wing{ width:100px; height:250px; position:absolute; right:0 ; top:0 ;margin-top:100px; }
 
 .btngroup{text-align: center}
 
@@ -47,4 +48,5 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .event2{width:200px;height:400px;}
 .event3{width:400px;height:400px;}
 .event4{width:300px;height:500px;}
-.blind{position:absolute; top:0; left:0; right:0; bottom:0; display: none; background-color: #000}
+.blind{position:absolute; top:0; left:0; right:0; bottom:0; display: none; background:rgb(0,0,0)}
+.close{position:absolute; top:0; right:0;}

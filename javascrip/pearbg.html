@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    <style type="text/css">
+        
+        *{margin:0; padding:0;}
+        html,body{height:100%;}
+        .wrap{height:100%;}
+        section{
+            background-repeat:none;
+            background-size:cover;
+            background-position: 50% 50%;
+            width:100%;
+            text-align:center;
+            font-size:40px;
+            
+        }
+        .set0{height: 600px; background-image: url(images/1199914-1920x1080-[DesktopNexus.com].jpg); background-attachment: fixed;}
+        .set1{ height:500px; }
+        .set2{height: 600px; background-image: url(images/2012810-1920x1080-[DesktopNexus.com].jpg); background-attachment: fixed;}
+        .set3{ height:500px; }
+        .set4{height: 600px; background-image: url(images/2012811-1920x1080-[DesktopNexus.com].jpg); background-attachment: fixed;}
+        .set5{ height:500px; }
+        .set6{height: 600px; background-image: url(images/1598036-1920x1080-the_avengers_agent_coulson-wallpaper-1920x1080.jpg); background-attachment: fixed;}
+        .set7{ height:500px; }
+        .set8{height: 600px; background-image: url(images/1666350-1920x1080-[DesktopNexus.com].jpg); background-attachment: fixed;}
+
+    </style>
+    
+    <script>
+    
+    $(function(){
+        
+        var spot = []
+        
+        $('.wrap .per').each(function(i){
+            spot.push($(this).offset().top)
+        })
+        
+        $(window).scroll(function(){
+            var sct = $(this).scrollTop()
+            
+            $('.wrap .per').each(function(i){
+                var tt  = spot[i] - sct  
+                
+                if(sct+$(window).height() > spot[i] ) tt *=  0.3
+                
+                $(this).css('background-position-y',tt)
+                
+                
+            })
+            
+        })
+        
+    })
+    
+    
+     
+    </script>
+    
+    
+</head>
+<body>
+<div class="wrap">
+    <section class="set0"></section>
+    <section class="set1">section1</section>
+    <section class="set2 per"></section>
+    <section class="set3">section2</section>
+    <section class="set4 per"></section>
+    <section class="set5">section3</section>
+    <section class="set6 per"></section>
+    <section class="set7">section4</section>
+    <section class="set8 per"></section>
+    <section class="set0"></section>
+
+
+</div>
+    
+    
+    
+</body>
+</html>
