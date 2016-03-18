@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DaehanSteel 대한제강</title>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <style type="text/css">
+
+*{padding:0; margin:0;}
+body{color:#6d6e71; font-size: 13px; line-height: 1.692; min-width:1040px; background-color: #f3f2ef;}
+
+ul{list-style:none;}
+a{text-decoration:none;}
+a:hover{color:#f05a28;}
+
+/*해더*/
+.header{width: 100%; height:643px;position:relative;}
+.header .all_nav{width: 1010px; margin:0 auto;}
+.header .header_nav_wrap{position: relative; float:left; width: 820px; height: 90px; background: url('../../lib/img/bg_nv_w_close.png')right top no-repeat;}
+.header .header_nav_wrap>span.icon{display:none; left:23px;}
+.header h1.logo{position:absolute; left:30px; bottom:20px; width: 173px; height: 22px;  float:left; text-indent:-9999px; background:url('../../lib/img/logo.png');}
+.header .icon{display:block;position: absolute; top: 10px; z-index: 4; width: 23px; height: 23px; background:url('../../lib/img/set_icon_nv_close.png');}
+
+.header .len{display:block;overflow:hidden; position:absolute;right: 25px;top: 10px; z-index: 15;}
+.header .len li{float:left;}
+.header .len li a{font-size:11px; color: #6d6e71;  display: inline-block;padding: 0 10px 0 8px;}
+.header .len li:first-child a{color:#f05a28;;}
+.header .len li:first-child+li a{background:url('../../lib/img/bar_gnb.gif')left 48% no-repeat; text-align:center;}
+
+.header .b_manu{position:absolute; right: 52px;; top:53px; z-index: 2;}
+.header .b_manu li{float:left; padding: 0 27px; text-align:center;}
+.header .b_manu li a{color:#6d6e71; height: 37px; font-size: 16px;}
+.header .b_manu li a:hover{color:#f05a28;}
+
+.header .s_manu{ display:none; position:relative; top:25px; z-index:1;} 
+.header .s_manu li{float:none; text-align:left;}
+.header .s_manu li a{font-size:13px;}
+
+/*주황색메뉴바*/
+.header .right_manu{ position: relative; height: 90px; width: 180px; float:right; background:url('../../lib/img/bg_nv_o.png');}
+.header .right_manu a img{width: 125px; height: 16px;}
+.header .right_manu a {position: absolute; right: 30px; bottom: 20px;}
+.header .right_manu>.icon{background-position: 0 -40px; right:25px;}
+
+/*밑으로나오는 메뉴창*/
+.header .bottom_manu_wrap{display:none; width: 820px; height: 160px; top: 90px;  z-index: 1; background: url('../../lib/img/bg_nv_w_open.png')right bottom no-repeat; position:absolute;}
+.header .bottom_manu_wrap span{position:absolute; width: 370px; height: 160px; padding-left:14px; z-index: 1;}
+
+
+.content{position: relative; outline:1px solid red; width: 950px; height:auto; margin:0 auto; padding:30px 0 0px;}
+.content .top_btn{position:fixed; right: 160px; bottom: 330px;  padding:30px 0 0px;}
+.content .con_wrap1{height: 668px; outline:1px solid ; padding:5px 0 20px;}
+.content .con_wrap2{height: 321px; outline:1px solid red ; padding:50px 0 40px;}
+
+/*푸터*/
+.footer{background: url('../../lib/img/bg_footer.gif'); width: 100%; height: 210px; padding-top:16px;}
+.footer a{color: #b0b0b0;}
+.footer .footer_wrap{width: 950px; margin:0 auto; position:relative;}
+.footer .footer_gnb1 a{font-size:15px; }
+.footer .footer_gnb1 ul.b_manu li{float:left; width: 160px;}
+.footer .footer_gnb1 ul.s_manu li a{font-size:12px;}
+
+.footer .footer_gnb2{width: 375px; font-size:12px; position:absolute; right:0; text-align:right;}
+.footer .footer_gnb2 ul{float:right; margin-top:6px;}
+.footer .footer_gnb2 ul li {float:left;padding:0 9px; background:url('../../lib/img/bar_footerutil.gif')left 48% no-repeat;}
+.footer .footer_gnb2 ul:first-child{margin-top:0;}
+.footer .footer_gnb2 ul:first-child+ul+ul{padding-top:10px;}
+.footer .footer_gnb2 ul:first-child+ul+ul+ul em{vertical-align:top; padding-right: 5px;}
+.footer .footer_gnb2 ul li:first-child{background:none;}
+
+.footer .footer_wrap2{clear: left;height: 21px; position:relative;  top: 43px; }
+.footer .footer_gnb3{display:inline; font-size:11px; color:#b0b0b0;background:url('../../lib/img/footer_bi.png') no-repeat; padding: 3px 0 0 167px;}
+.footer .footer_gnb3 p{display:inline;}
+
+.footer .footer_gnb4{position:absolute; right:0; top:-6px; }
+.footer .footer_gnb4>a{display:block; width: 189px; height: 19px; padding: 4px 0 0 9px; border: 1px solid #666667; font-size: 11px; background:url('../../lib/img/bg_x1_family.gif') no-repeat right 9px }
+.footer .footer_gnb4 ul.family{display:none; font-size:11px; border: 1px solid #666667; background: #414143; padding: 5px 0 5px 9px; width: 189px; position:absolute; right:0; top:-83px;}
+/*-----------------공통부분끝---------------------*/
+
+.header .main_imgAll .ma-0{background: url('../../lib/img/mbg_0.jpg');}
+.header .main_imgAll .ma-1{display:none;background: url('../../lib/img/mbg_1.jpg'); }
+.header .main_imgAll .ma-2{display:none;background: url('../../lib/img/mbg_2.jpg');}
+.header .main_imgAll .ma-3{display:none;background: url('../../lib/img/mbg_3.jpg');}
+.header .main_imgAll .ma-4{display:none;background: url('../../lib/img/mbg_4.jpg');}
+.header .main_imgAll .ma{min-width: 950px; width: 100%;height: 598px;position:absolute; left:0; top:0; background-position: center top; background-repeat: no-repeat; overflow:hidden;}
+
+
+.header .main_imgAll span.mainT{display:none; position:absolute; z-index:1; top:178px; display:block; width:5000px; height: 280px; background-position: -1813px top; background-repeat: no-repeat;}
+.header .main_imgAll span.main-text-0{background-image: url('../../lib/img/mbg_line_0.png');}
+.header .main_imgAll span.main-text-1{background-image: url('../../lib/img/mbg_line_1.png');background-position:-1735px top;;}
+.header .main_imgAll span.main-text-2{background-image: url('../../lib/img/mbg_line_2.png');}
+.header .main_imgAll span.main-text-3{background-image: url('../../lib/img/mbg_line_3.png');}
+.header .main_imgAll span.main-text-4{background-image: url('../../lib/img/mbg_line_4.png');}
+
+
+.header .main_imgAll .ma p{position:absolute; z-index:9;top:440px; left:200px;}
+.header .main_imgAll .ma a{display:inline-block; background:url('../../lib/img/set_btn_go.png') right 2px no-repeat;; padding-right:33px; font-size:18px; color:#fff;}
+.header .main_imgAll .ma a:hover{background-position:right -58px;}
+.header .main_imgAll .ma-0 p{font-size:18px; color:#fff;}
+.header .main_imgAll .ma-1 p{top:426px; left:530px;}
+.header .main_imgAll .ma-2 p{ top:396px;left:205px; }
+.header .main_imgAll .ma-3 p{ top:348px;left:205px;}
+.header .main_imgAll .ma-4 p{ top:348px;left:210px; }
+
+.header ul.main_button{position: absolute;left: 50%;bottom: 0;width: 950px; margin-left: -475px; overflow: hidden;}
+.header ul.main_button li{float: left; width: 230px; margin-left: 10px;}
+.header ul.main_button li:first-child{margin-left:0px;}
+.header ul.main_button li a{display: block;height: 66px; color: #fff; padding: 14px 0 0 18px; background:url('../../lib/img/set_slider_btn.png');}
+.header ul.main_button li.on , ul.main_button li a:hover{ background-position:0 -120px; color:#fff;}
+.header ul.main_button li a strong{display:block; margin: 0 0 2px; font-size: 18px; letter-spacing: 0.03em}
+
+/*컨텐츠내용*/
+.content .con_wrap1 .main_ds{width: 638px;}
+.content h2 a[class^="h2"] {height: 30px;display: block; line-height: 30px;font-size: 28px; color: #5b5c5e; letter-spacing: 0.03em; height: 30px;}
+.content h2{padding-bottom: 7px;height: 47px;}
+.content .main_ds{float:left;}
+.content .main_ds ul{width: 643px} 
+.content .main_ds ul li{float:left; margin:3px;}
+.content .main_ds ul li:first-child li img{width: 297px; height: 297px;}
+.content .main_ds ul li:first-child~li img{width:146px; height:146px;}  
+.content .main_ds ul li.main_face{width: 298px;height: 298px; margin-top: 3px; outline:1px solid;}
+
+.content .main_cs{float:right; width: 310px; height: 655px;}
+.content .main_cs ul li{background-color: #fff; margin-bottom: 6px; width: 310px;  height: 305px ;text-align: left;}
+.content .main_cs ul li a{display:block;}
+.content .main_cs ul li img{width: 310px; height: 146px;position:absolute;}
+.content .main_cs span.main_cs_img{position:relative; display: block; margin:0;}
+.content .main_cs ul li img.off{display:none;}
+.content .main_cs ul li p{padding: 0 5px 0 10px; position:relative; top:153px;}
+.content .main_cs ul li p strong{font-size: 16px;font-weight: bold; white-space: nowrap;text-overflow: ellipsis; width: 100%;display: block;}
+.content .main_cs ul li p span{margin-top: 15px; display: block; line-height:20px; letter-spacing: -1.5px;}
+.content .main_cs ul li p em{padding-top: 10px;display: block;}
+   
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="main_imgAll">
+        
+        <div class="ma-0 ma">
+          <span class="main-text-0 mainT"></span>
+          <p>끝없는 도전과 혁신으로 미래를 만들어 갑니다</p>
+        </div>
+        <div class="ma-1 ma">
+            <span class="main-text-1 mainT"></span>
+            <p><a href="#">60년 역사, 대한제강의 발자취</a></p>
+        </div>
+        <div class="ma-2 ma">
+            <span class="main-text-2 mainT"></span>
+            <p><a href="#">대한제강 사업장 위치정보</a></p>
+        </div>
+        <div class="ma-3 ma">
+            <span class="main-text-3 mainT"></span>
+            <p><a href="#">대한제강의 탄탄한 경영실적</a></p>
+        </div>
+        <div class="ma-4 ma">
+            <span class="main-text-4 mainT"></span>
+            <p><a href="#">국내 유일의 Steel Advisor</a></p>
+        </div>
+    </div>
+    
+   
+    
+    
+    
+    <div class="all_nav">
+        <div class="header_nav_wrap">
+             <span class="icon"></span>
+            <h1 class="logo"><a href="#">DaehanStell</a></h1>
+                <div class="len">
+                    <ul>
+                        <li><a href="#">KR</a></li>
+                        <li><a href="#">EN</a></li>
+                    </ul>
+                </div>
+            
+                <ul class="b_manu">
+                    <li>
+                        <a href="#">About Us</a>
+                            <ul class="s_manu">
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Networks</a></li>
+                                <li><a href="#">IR</a></li>
+                                <li><a href="#">CI</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="#">Business</a>
+                             <ul class="s_manu">
+                                <li><a href="#">Steel Library</a></li>
+                                <li><a href="#">Product</a></li>
+                                <li><a href="#">Sustainability</a></li>
+                           </ul>   
+                    </li>
+                    <li>
+                        <a href="#">People</a>
+                            <ul class="s_manu">
+                                <li><a href="#">CEO</a></li>
+                                <li><a href="#">Persona</a></li>
+                                <li><a href="#">Life</a></li>
+                                <li><a href="#">Recruit</a></li>
+                            </ul>
+                    </li>
+                </ul>
+        </div>
+        
+        <div class="right_manu">
+           <span class="icon"></span>
+            <a href="#">
+                <img src="../../lib/img/nv_frameworks.gif" alt="frameworks" />
+            </a>
+        </div>
+       
+        <div class="bottom_manu_wrap">
+            <span><img src="../../lib/img/nv_symbol_1.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_2.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_3.jpg" alt="" /></span>
+        </div>
+        
+     </div>
+     <div class="title_wrap">
+         <h2 class="title">Steel Library</h2>
+         <a class="prev" href="#">Sustainability</a>
+         <a class="next" href="#">Product</a>
+     </div>
+     
+     <ul class="main_button">
+        <li>
+            <a href="#">
+                <strong>History</strong>
+                60년 역사, 대한제강의 발자취
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <strong>Networks</strong>
+                사업장 위치정보
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <strong>IR</strong>
+                대한제강의 탄탄한 경영실적
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <strong>Frameworks</strong>
+                국내 유일의 Steel Advisor
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="content">
+   <div class="top_btn">
+            <img src="../../lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+        </div>
+    <div class="con_wrap1">
+        <div class="main_ds">
+            <h2><a href="#" class="h2_title">Daehan Story</a></h2>
+                <ul>
+                    <li><a href="#"><img src="../../lib/img/main_st01.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="../../lib/img/main_st02.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="../../lib/img/main_st03.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="../../lib/img/main_st04.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="../../lib/img/main_st05.jpg" alt="" /></a></li>
+                    <li class="main_face"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+        </div>
+        <div class="main_cs">
+            <h2><a href="#" class="h2_title">Case Study</a></h2>
+                <ul>
+                    <li>
+                        <span class="main_cs_img">
+                            <a href="#"><img class="on" src="../../lib/img/main_cs0101.jpg" alt="" /></a>
+                            <a href="#"><img class="off" src="../../lib/img/main_cs01.jpg" alt="" /></a>
+                        </span>
+                        <p>
+                            <strong>부산 남∙북항대교(영도구간)현장</strong>
+                            
+                           <span> 부산 남∙북항대교(영도구간)는 동∙서부를 가깝게 잇는 길목이 되어 부산을 한층 편리한 생활권으로 묶어주고 있습니다. 특히 부산 남항대교는 영도와 21세기 동북아 국제 </span>
+                            <em>2015.11.27</em>
+                        </p>
+                    </li>
+                    <li>
+                        <span class="main_cs_img">
+                            <a href="#"><img class="on" src="../../lib/img/main_cs0202.jpg" alt="" /></a>
+                            <a href="#"><img class="off" src="../../lib/img/main_cs02.jpg" alt="" /></a>
+                        </span>
+                        <p>
+                            <strong>대방건설 디엠시티 오피스텔 현장</strong>
+                            
+                            <span>서울 마곡지구의 대방 디엠시티 오피스텔 신축현장은 2014년부터 당사 일반철근이 지속적으로 납품된 현장입니다. 대방건설 각 현장의 가공 Process는 외주계약을 통한 </span>
+                            <em>2015.10.27</em>
+                        </p>
+                    </li>
+                    
+                </ul>
+        </div>
+    </div>
+    <div class="con_wrap2">
+        
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer_wrap">
+        <div class="footer_gnb1">
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                        <ul class="s_manu">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Networks</a></li>
+                            <li><a href="#">IR</a></li>
+                            <li><a href="#">CI</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Steel Library</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">People</a>
+                        <ul class="s_manu">
+                            <li><a href="#">CEO</a></li>
+                            <li><a href="#">Persona</a></li>
+                            <li><a href="#">Life</a></li>
+                            <li><a href="#">Recruit</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Frameworks</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Solution</a></li>
+                            <li><a href="#">Case Study</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer_gnb2">
+            <ul>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank">개인정보 취급방침</a></li>
+                <li><a href="#" target="_blank">이메일 무단 수집 거부</a></li>
+             </ul>
+             <ul>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award.jpg" alt="웹사이트부문 GRAND PRIX수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award2.jpg" alt="레드닷 디자인어워드 수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_logo2.jpg" alt="국가공인 웹 접근성 품질인증마크_(사)한국시각장애인연합회 (2015.10.08~2016.10.07)" /></a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank"><em>Brochure</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+                <li><a href="#" target="_blank"><em>Webzine</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+             </ul>
+        </div>
+        
+        <div class="footer_wrap2">
+            <div class="footer_gnb3">
+                <p class="copyright">Copyright DaehanSteel. All rights reserved.</p>
+            </div>
+            <div class="footer_gnb4">
+                <a href="#">FAMILY SITE</a>
+                    <ul class="family">
+                        <li><a href="#">e-Transportation</a></li>
+                        <li><a href="#">e-Procurement</a></li>
+                        <li><a href="#">e-Sales</a></li>
+                        <li><a href="#">대한 네트웍스</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

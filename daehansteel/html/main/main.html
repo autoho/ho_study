@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DaehanSteel 대한제강</title>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="shortcut icon" href="/lib/img/favicon.ico">
+	<link rel="stylesheet" href="/lib/css/common.css" media="all" />
+	<link rel="stylesheet" href="/lib/css/master.css" media="all" />
+	<script type="text/javascript" src="/lib/js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="/lib/js/script.js"></script>
+
+    <style type="text/css">
+
+*{padding:0; margin:0;}
+body{color:#6d6e71; font-size: 13px; line-height: 1.692; min-width:1040px; background-color: #f3f2ef;}
+
+ul{list-style:none;}
+a{text-decoration:none;}
+a:hover{color:#f05a28;}
+
+
+.fullwrap{overflow:hidden}
+.content{position: relative; width: 950px; height:auto; margin:0 auto; padding:30px 0 0px;}
+.content .top_btn{position:fixed; right: 160px; bottom: 330px;  padding:30px 0 0px; z-index: 1;}
+.content .con_wrap1{height: 668px; padding:5px 0 20px;}
+.content .con_wrap2{height: 321px;  padding:50px 0 40px;}
+
+
+.mainheader{height: 600px; position:relative;}
+.mainheader .main_inner{position:absolute; overflow:hidden; width: 500%; height:600px;}
+.mainheader .main_imgAll .ma-0{display:block; background: url('../../lib/img/mbg_0.jpg'); left:0}
+.mainheader .main_imgAll .ma-1{display:block;background: url('../../lib/img/mbg_1.jpg'); left:20%}
+.mainheader .main_imgAll .ma-2{display:block;background: url('../../lib/img/mbg_2.jpg'); left:40%}
+.mainheader .main_imgAll .ma-3{display:block;background: url('../../lib/img/mbg_3.jpg'); left:60%}
+.mainheader .main_imgAll .ma-4{display:block;background: url('../../lib/img/mbg_4.jpg'); left:80%}
+.mainheader .main_imgAll .ma{min-width: 950px; width: 20%;height: 598px; position:absolute;  background-position: center top; background-repeat: no-repeat; overflow:hidden;}
+
+.mainheader .main_imgAll span.mainT{display:none;position:absolute; z-index:1; top:178px; display:block; width:5000px; height: 280px; background-position: -1500px top; background-repeat: no-repeat;}
+.mainheader .main_imgAll span.main-text-0{background-image: url('../../lib/img/mbg_line_0.png');}
+.mainheader .main_imgAll span.main-text-1{background-image: url('../../lib/img/mbg_line_1.png');}
+.mainheader .main_imgAll span.main-text-2{background-image: url('../../lib/img/mbg_line_2.png');}
+.mainheader .main_imgAll span.main-text-3{background-image: url('../../lib/img/mbg_line_3.png');}
+.mainheader .main_imgAll span.main-text-4{background-image: url('../../lib/img/mbg_line_4.png');}
+
+
+.mainheader .main_imgAll .ma p{position:absolute; top:440px; left:525px;}
+.mainheader .main_imgAll .ma a{position: relative; z-index:1;left: 255px;display:inline-block; background:url('../../lib/img/set_btn_go.png') right 2px no-repeat;; padding-right:33px; font-size:18px; color:#fff;}
+.mainheader .main_imgAll .ma a:hover{background-position:right -58px;}
+.mainheader .main_imgAll .ma-0 p{font-size:18px; color:#fff;}
+.mainheader .main_imgAll .ma-1 p{top:426px; left:530px;}
+.mainheader .main_imgAll .ma-1 a{left:170px;}
+.mainheader .main_imgAll .ma-2 p{ top:396px;left:205px; }
+.mainheader .main_imgAll .ma-3 p{ top:348px;left:205px;}
+.mainheader .main_imgAll .ma-4 p{ top:348px;left:210px; }
+
+.mainheader ul.main_button{position: absolute; z-index: 5; left: 50%; bottom: -40px;width: 950px; margin-left: -475px; overflow: hidden;}
+.mainheader ul.main_button li{float: left; width: 230px; margin-left: 10px;}
+.mainheader ul.main_button li:first-child{margin-left:0px;}
+.mainheader ul.main_button li a{display: block;height: 66px; color: #fff; padding: 14px 0 0 18px; background:url('../../lib/img/set_slider_btn.png');}
+.mainheader ul.main_button li.on , ul.main_button li a:hover{ background-position:0 -120px; color:#fff;}
+.mainheader ul.main_button li.on a{ background-position:0 -120px; color:#fff;}
+.mainheader ul.main_button li a strong{display:block; margin: 0 0 2px; font-size: 18px; letter-spacing: 0.03em}
+
+/*컨텐츠내용*/
+.content{padding-top: 60px;}
+.content .con_wrap1 .main_ds{width: 638px;}
+.content h2 a[class^="h2"] {height: 30px;display: block; font-family: 'frame_bold'; line-height: 30px;font-size: 28px; color: #5b5c5e; letter-spacing: 0.03em; height: 30px;}
+.content h2{padding-bottom: 7px;height: 47px;}
+.content .main_ds{float:left;}
+.content .main_ds ul{width: 643px}
+.content .main_ds ul li{float:left; margin:3px; line-height: 1px;overflow: hidden;font-size: 0px;}
+.content .main_ds ul li:first-child img{width: 298px; height: 298px;}
+.content .main_ds ul li:first-child~li img{width:146px; height:146px;}
+.content .main_ds ul li.main_face{width: 298px;height: 298px; margin-top: 3px; overflow: auto;}
+.content .main_ds ul li.main_vido{width: 300px; height: 146px; background-color: #000;}
+.content .main_ds ul li.main_vido iframe{margin: 0 auto;display: block;}
+
+.content .main_cs{float:right; width: 310px; height: 655px;}
+.content .main_cs ul li{background-color: #fff;  margin-top: 3px;margin-bottom: 6px; width: 310px;  height: 298px ;text-align: left;}
+.content .main_cs ul li:first-child+li{margin-top:6px;}
+.content .main_cs ul li a{display:block;}
+.content .main_cs ul li img{width: 310px; height: 146px;position:absolute;}
+.content .main_cs span.main_cs_img{position:relative; display: block; margin:0;}
+.content .main_cs ul li img.off{display:none;}
+
+.content .main_cs ul li p{padding: 0 5px 0 10px; position:relative; top:153px;}
+.content .main_cs ul li p strong{font-size: 16px;font-weight: bold; white-space: nowrap;text-overflow: ellipsis; width: 100%;display: block;}
+.content .main_cs ul li p span{margin-top: 15px; display: block; line-height:20px; letter-spacing: -1.5px;}
+.content .main_cs ul li p em{padding-top: 10px;display: block;}
+.content .main_cs ul li .main_cs_img:hover .off{display:block}
+.content .main_cs ul li .main_cs_img:hover .on{display:none}
+
+.content .con_wrap2 .main_pr li{float:left;display: inline;width: 230px;height: 268px; margin-left:10px;}
+.content .con_wrap2 .main_pr li:first-child{margin-left:0;}
+.content .con_wrap2 .main_pr li>img{width: 230px; height: 111px;}
+.content .con_wrap2 .main_pr li a {display: inline-block; padding-right: 32px; background: url('../../lib/img/mainbtn_link.gif') right 2px no-repeat; font-size: 19px;font-weight: normal;color: #5b5c5e;}
+.content .con_wrap2 .main_pr li a srtong {display: block; margin: 13px 0 10px; height: 32px;}
+.content .con_wrap2 .main_pr li span{ display: block; padding: 10px 36px 0 0;}
+
+.cont2{width: 100%;background-color: #fff; padding-top:0}
+.cont2 .con_wrap2{width: 950px; margin: 0 auto; }
+.cont2 .con_wrap2 .main_pr li a{background:url('../../lib/img/btn_link.gif') right 2px no-repeat; background-position-y: 6px;}
+.cont2 .con_wrap2 .main_pr li a:hover{color:#f05a28; background:url('../../lib/img/btn_link_over.gif') right 2px no-repeat; background-position-y: 6px;}
+
+
+.footer:hover a{color: #b0b0b0;}
+
+#container{position:relative; width: 950px; height:auto; margin:0 auto; padding:50px 0 120px;}
+.top_btn{position:fixed; width: 30px; height: 65px; right: 160px; bottom: 330px;}
+
+/* 모달팝업 1*/
+
+.blind{position: fixed; background:rgb(0,0,0);left:0; top:0; width: 100%; height: auto ;display:none; z-index:30; }
+
+#modal_box1{width: 760px; background-color: #fff; margin:0 auto;}
+#modal_box1 .in{padding:50px;}
+#modal_box1 .in h3{color:#44403d; font-size: 28px; line-height: 1.429em; margin-bottom: 22px; font-weight: normal}
+#modal_box1 .in [class^="box"]{padding:40px 0 35px}
+#modal_box1 .in .boxb,.boxc{border-top:1px solid #ebebeb;}
+
+#modal_box1 .in .boxa .imgg1{position: relative; float:left; margin: 0 30px 10px 0;}
+#modal_box1 .in .boxa .imgg1 img{width: 330px;}
+#modal_box1 .in .boxa .imgg1 i{position: absolute; bottom: 7px; display:block; color:#fff; padding:13px 20px 11px 20px; background: url('../../lib/img/bg_board_off.png');}
+#modal_box1 .in .boxa .texx{font-weight: bold; line-height: 1.692em;text-align: justify; word-break: break-all;}
+
+#modal_box1 .in .boxb .imgg2{position: relative;}
+#modal_box1 .in .boxb .imgg2 img{width: 670px;}
+#modal_box1 .in .boxb .imgg2 i{position: absolute; bottom: 7px; display:block; color:#fff; padding:13px 20px 11px 20px; background: url('../../lib/img/bg_board_off.png');}
+#modal_box1 .in .boxb .texx{line-height: 1.692em;text-align: justify; word-break: break-all;}
+
+
+#modal_box1 .in .boxc .imgg3{position: relative;}
+#modal_box1 .in .boxc .imgg3 img{width: 670px;}
+#modal_box1 .in .boxc .imgg3 i{position: absolute; bottom: 7px; display:block; color:#fff; padding:13px 20px 11px 20px; background: url('../../lib/img/bg_board_off.png');}
+
+.modalfull{position: absolute; top: 0; z-index: 99; margin-left: -330px; left: 50%;}
+#modal_box1 .close{cursor: pointer; position: absolute; right: -160px; top: 20px; width: 61px; height: 60px; background: url('../../lib/img/btn_lyr_close.png') no-repeat; z-index:90}
+.close{cursor: pointer; position:absolute; right: 20px; top: 20px; width: 61px; height: 60px; background: url('../../lib/img/btn_lyr_close.png') no-repeat; z-index:90}
+
+/* 모달팝업2 */
+#modal_box2 .modal_con{width: 660px;
+    	position:absolute;
+	    left:50%;
+	    top:0;
+	    z-index: 1;
+    	padding:50px;
+    	background:white;
+    	font-size: 13px;
+    	color: #6D6E71;
+    	font-family:'nanumbarungothic';
+    	line-height: 1.692em;
+    }
+#modal_box2 .modal_con h3{
+    	color: #44403D;
+		font-size: 28px;
+		line-height: 1.429em;
+		margin-bottom: 22px;
+		font-weight: normal;
+		font-family:'nanumbarungothic';
+    }
+
+   #modal_box2 .modal_con [class^="type_"]{
+    	padding: 40px 0px 35px;
+    	border-top: 1px solid #EBEBEB;
+    }
+
+   #modal_box2 .modal_con [class^="type_"] .tx{
+    	word-break: break-all;
+		text-align: justify;
+    }
+
+	#modal_box2 .modal_con [class^="img_"] img{
+		width: 670px;
+		margin-bottom:27px;
+	}
+
+	#modal_box2 .modal_con [class^="img_"]{
+		position:relative;
+	}
+	#modal_box2 .modal_con span i{
+		position:absolute;
+		bottom:31px;
+		display:block;
+		font-style: normal;
+		padding: 13px 20px 11px;
+		background:url('../../lib/img/bg_board_off.png');
+		color:#fff;
+	}
+	#modal_box2 .modal_con .type_1{border:none;}
+
+
+    </style>
+
+<script>
+
+
+$(document).ready(function(){
+
+	$('ul.main_button li').click(function(){
+
+		var idx = $('ul.main_button li').size();
+
+		$(this).addClass('on').siblings().removeClass('on')
+		var aa = $('ul.main_button li.on').index()
+		var divsin = $('.mainheader .main_imgAll .ma').size()
+
+
+		var th=$('.mainheader .main_imgAll .main_inner .ma.on').index()
+		var thth=$(this).index()
+
+
+
+		if(aa==0){
+			$('.mainheader .main_imgAll .main_inner').animate({
+				'left':'-100%'
+			},1000)
+			$('.main_inner .main-text-1').animate({
+				'left': '-50px'
+			},2000).parent().siblings().children('span').css('left','0')
+
+			$('.mainheader .main_imgAll .ma-1').addClass('on').siblings().removeClass('on')
+		}else if(aa==1){
+			$('.mainheader .main_imgAll .main_inner').animate({
+				'left':'-200%'
+			},1000)
+			$('.main_inner .main-text-2').animate({
+				'left': '-50px'
+			},2000).parent().siblings().children('span').css('left','0')
+
+			$('.mainheader .main_imgAll .ma-2').addClass('on').siblings().removeClass('on')
+		}else if(aa==2){
+			$('.mainheader .main_imgAll .main_inner').animate({
+				'left':'-300%'
+			})
+			$('.main_inner .main-text-3').animate({
+				'left': '-50px'
+			},2000).parent().siblings().children('span').css('left','0')
+
+			$('.mainheader .main_imgAll .ma-3').addClass('on').siblings().removeClass('on')
+		}else if(aa==3){
+			$('.mainheader .main_imgAll .main_inner').animate({
+				'left':'-400%'
+			})
+			$('.main_inner .main-text-4').animate({
+				'left': '-50px'
+			},2000).parent().siblings().children('span').css('left','0')
+			$('.mainheader .main_imgAll .ma-4').addClass('on').siblings().removeClass('on')
+		}
+
+
+
+	})
+
+	
+	
+	
+	window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1077596098953004',
+	      xfbml      : true,
+	      version    : 'v2.5'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	
+	  
+
+})
+
+
+
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+<div class="fullwrap">
+<div class="header"></div>
+
+
+<div class="mainheader">
+	<div class="main_imgAll">
+       <div class="main_inner">
+	        <div class="ma-0 ma on">
+	          <span class="main-text-0 mainT"></span>
+	          <p>끝없는 도전과 혁신으로 미래를 만들어 갑니다</p>
+	        </div>
+	        <div class="ma-1 ma">
+	            <span class="main-text-1 mainT"></span>
+	            <p><a href="/html/about_us/history/his_2010.html">60년 역사, 대한제강의 발자취</a></p>
+	        </div>
+	        <div class="ma-2 ma">
+	            <span class="main-text-2 mainT"></span>
+	            <p><a href="/html/about_us/network/net_do.html">대한제강 사업장 위치정보</a></p>
+	        </div>
+	        <div class="ma-3 ma">
+	            <span class="main-text-3 mainT"></span>
+	            <p><a href="/html/about_us/ir/ir_sum2015.html">대한제강의 탄탄한 경영실적</a></p>
+	        </div>
+	        <div class="ma-4 ma">
+	            <span class="main-text-4 mainT"></span>
+	            <p><a href="/html/frame works/frame_works.html">국내 유일의 Steel Advisor</a></p>
+	        </div>
+       </div>
+    </div>
+    <ul class="main_button">
+        <li>
+            <a href="javascript:void(0)">
+                <strong>History</strong>
+                60년 역사, 대한제강의 발자취
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <strong>Networks</strong>
+                사업장 위치정보
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <strong>IR</strong>
+                대한제강의 탄탄한 경영실적
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <strong>Frameworks</strong>
+                국내 유일의 Steel Advisor
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="content">
+   <div class="con_wrap1">
+        <div class="main_ds">
+            <h2><a href="#" class="h2_title">Daehan Story</a></h2>
+                <ul>
+                    <li><a href="/html/People/persona/pers_optimizer.html"><img src="/lib/img/main_st01.jpg" alt="" /></a></li>
+                    <li><a href="/html/business/sustain/manufacturing.html"><img src="/lib/img/main_st02.jpg" alt="" /></a></li>
+                    <li><a href="/html/People/persona/pers_explorer.html"><img src="/lib/img/main_st03.jpg" alt="" /></a></li>
+                    <li><a href="/html/People/persona/pers_explorer.html"><img src="/lib/img/main_st04.jpg" alt="" /></a></li>
+                    <li><a href="/html/People/persona/pers_advisor.html"><img src="/lib/img/main_st05.jpg" alt="" /></a></li>
+                    <li class="main_face">
+                    	<div
+						  class="fb-like"
+						  data-share="true"
+						  data-width="298"
+						  data-show-faces="true">
+						  <!-- <div class="fb-post"data-href="{https://www.facebook.com/DaehansteelFrameWorks/?fref=ts}"></div> -->
+						  <div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-post" data-href="https://www.facebook.com/DaehansteelFrameWorks/posts/787555391350285" data-width="298"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DaehansteelFrameWorks/posts/787555391350285"><p>[&#xd604;&#xc7a5;&#xc5d0; &#xb2f5;&#xc774; &#xc788;&#xb2e4;] Solution Center - LG &#xc0ac;&#xc774;&#xc5b8;&#xc2a4; &#xd30c;&#xd06c; &#xb9c8;&#xace1; &#xc9c0;&#xad6c; &#xd604;&#xc7a5;&#x2018;&#xd604;&#xc7a5;&#xc5d0; &#xb2f5;&#xc774; &#xc788;&#xb2e4;&#x2019; &#xcf54;&#xb108;&#xc5d0;&#xc11c;&#xb294; &#xb300;&#xd55c;&#xc81c;&#xac15;&#xc774; &#xb2e4;&#xc591;&#xd558;&#xac8c; &#xc811;&#xd558;&#xb294; &#xd604;&#xc7a5;&#xc758; &#xbaa8;&#xc2b5;&#xc744; &#xd0d0;&#xad6c;&#xd558;&#xace0;, &#xadf8; &#xacf3;&#xc5d0;&#xc11c; &#xace0;&#xac1d;&#xc774; &#xc6d0;&#xd558;&#xb294; &#xbc14;&#xb97c; &#xc2e4;&#xd604;&#xd560; &#xc218;...</p><a href="https://www.facebook.com/DaehansteelFrameWorks/">대한제강</a>에 의해 게시 됨&nbsp;<a href="https://www.facebook.com/DaehansteelFrameWorks/posts/787555391350285">2016년 3월 7일 월요일</a></blockquote></div></div>
+						</div>
+                    </li>
+                    <li class="main_vido">
+                        <iframe width="267" height="150" src="https://www.youtube.com/embed/HcdH5n1uVIM?autoplay=1&loop=5 rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </li>
+                    <li class="main_vido">
+                       <iframe width="267" height="150" src="https://www.youtube.com/embed/tPy07Zu-848?autoplay=1&loop=5 rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </li>
+                </ul>
+        </div>
+        <div class="main_cs">
+            <h2><a href="#" class="h2_title">Case Study</a></h2>
+                <ul>
+                    <li>
+                        <span class="main_cs_img 1-modal">
+                            <a href="javascript:void(0)"><img class="on" src="/lib/img/main_cs0101.jpg" alt="" /></a>
+                            <a href="javascript:void(0)"><img class="off" src="/lib/img/main_cs01.jpg" alt="" /></a>
+                        </span>
+                        <p>
+                            <strong>부산 남∙북항대교(영도구간)현장</strong>
+
+                           <span> 부산 남∙북항대교(영도구간)는 동∙서부를 가깝게 잇는 길목이 되어 부산을 한층 편리한 생활권으로 묶어주고 있습니다. 특히 부산 남항대교는 영도와 21세기 동북아 국제 </span>
+                            <em>2015.11.27</em>
+                        </p>
+                    </li>
+                    <li>
+                        <span class="main_cs_img 2-modal">
+                            <a href="javascript:void(0)"><img class="on" src="/lib/img/main_cs0202.jpg" alt="" /></a>
+                            <a href="javascript:void(0)"><img class="off" src="/lib/img/main_cs02.jpg" alt="" /></a>
+                        </span>
+                        <p>
+                            <strong>대방건설 디엠시티 오피스텔 현장</strong>
+
+                            <span>서울 마곡지구의 대방 디엠시티 오피스텔 신축현장은 2014년부터 당사 일반철근이 지속적으로 납품된 현장입니다. 대방건설 각 현장의 가공 Process는 외주계약을 통한 </span>
+                            <em>2015.10.27</em>
+                        </p>
+                    </li>
+
+                </ul>
+
+
+        </div>
+    </div>
+
+</div>
+<div class="content cont2">
+    <div class="con_wrap2">
+        <div class="main_pr">
+            <h2><a href="/html/business/product/square_b" class="h2_title">Product</a></h2>
+                <ul>
+                    <li>
+                        <img src="/lib/img/main_biz_1.jpg" alt="Square Billet">
+                        <a href="/html/business/product/square_b.html"><strong>Square Billet</strong></a>
+                        <span>스크랩을 녹여 만들어지는 빌릿은 반제품 형태로 후가공을 거쳐 다양한 철제품으로 만들어집니다.</span>
+                   </li>
+                   <li>
+                        <img src="/lib/img/main_biz_2.jpg" alt="Deformed Bar">
+                        <a href="/html/business/product/defomed_b.html"><strong>Deformed Bar</strong></a>
+                        <span>건설현장에서 콘크리트로 건물 토대를 다질 때에 흔히 사용되는 것으로 대표적인 철근 콘크리트용 봉강입니다 .</span>
+                   </li>
+                   <li>
+                        <img src="/lib/img/main_biz_3.jpg" alt="Processed Rebar">
+                        <a href="/html/business/product/processed_r.html"><strong>Processed Rebar</strong></a>
+                        <span>코일철근과 직선철근을 자동절단절곡기를 통해 빠르고 다양한 모양으로 가공한 철근입니다.</span>
+                   </li>
+                   <li>
+                        <img src="/lib/img/main_biz_4.jpg" alt="Bar in Coil">
+                        <a href="/html/business/product/bar_in.html"><strong>Square Billet</strong></a>
+                        <span>철근의 가공손실 및 생산성향상, 공간의 효율적 사용 등의 다양한 이점을 가진 신개념 철근입니다.</span>
+                   </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+	<div class="footer"></div>
+
+	<div class="top_btn">
+	    <img src="../../lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib/css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/ui_style.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/common.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-1.11.2.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            /* Tap Menu */
+            $(".tapMenu li").on("click", function(e){
+                $(".tapMenu li").removeClass("on");
+                $(this).addClass("on");
+            });
+
+            /* scroll 반응 */
+            $(".list_style").on("click", "li",  function(e){
+                var content_top = $(".content").position().top;
+                var tap_top = $(".tap_wrap").position().top;
+                var tapScroll_top = content_top + tap_top;
+
+                $(".list_style li").removeClass("on");
+                $(this).addClass("on");
+
+                $("html, body").animate({scrollTop:tapScroll_top}, 'slow');
+            });
+
+            /* 더 보기 */
+            var listCnt = 0;
+            $(".list_style li").hide();
+            $(".list_style li[data-index='"+0+"']").show();
+            $(".btn_more").on("click", function(e){
+                listCnt ++;
+                if(listCnt == listCnt){
+                    $(".list_style li[data-index='"+listCnt+"']").show();
+                }
+                
+            }); 
+
+            /* list가 10개 미만일떄 더 보기 버튼 안보이게*/
+            var list_len = $(".list_style li").length;
+            if(list_len <= 9){
+                $(".btn_more").hide();
+            }else{
+                $(".btn_more").show();
+            }
+
+        })
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <div class="all_nav">
+        <div class="header_nav_wrap">
+             <span class="icon"></span>
+            <h1 class="logo"><a href="#">DaehanStell</a></h1>
+            <div class="len">
+                <ul>
+                    <li><a href="#">KR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+        
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="s_manu">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Networks</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">CI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                     <ul class="s_manu">
+                        <li><a href="#">Steel Library</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                   </ul>   
+                </li>
+                <li>
+                    <a href="#">People</a>
+                    <ul class="s_manu">
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="#">Persona</a></li>
+                        <li><a href="#">Life</a></li>
+                        <li><a href="#">Recruit</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="right_manu">
+           <span class="icon"></span>
+            <a href="#">
+                <img src="../../lib/img/nv_frameworks.gif" alt="frameworks" />
+            </a>
+        </div>
+       
+        <div class="bottom_manu_wrap">
+            <span><img src="../../lib/img/nv_symbol_1.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_2.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_3.jpg" alt="" /></span>
+        </div>
+        
+     </div>
+     <div class="title_wrap">
+         <h2 class="title">Steel Library</h2>
+         <a class="prev" href="#">Sustainability</a>
+         <a class="next" href="#">Product</a>
+     </div>
+</div>
+
+
+<div class="content_line">
+    <ul>
+        <li class="on"><a href="#">Manufacturing Process</a></li>
+        <li><a href="#">Basic Knowledge</a></li>
+        <li><a href="#">Terminology</a></li>
+    </ul>
+</div>
+<div class="content terminology">
+   
+    <div class="con_wrap">
+        <div class="top_btn">
+            <img src="../../lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+        </div>
+    </div>
+    <!-- section-->
+    <section class="section">
+        <h3>철근의 기본상식과 용어에 대한 궁금증을 해결해드립니다.</h3>
+        <!-- tap_type1 -->
+        <div class="tap_wrap type1">
+            <!-- tap_header -->
+            <div class="tap_header">
+                <ul class="tapMenu type1">
+                    <li class="on"><a href="#noLink">전체</a></li>
+                    <li><a href="#noLink">철근품질</a></li>
+                    <li><a href="#noLink">공정용어</a></li>
+                    <li><a href="#noLink">설비용어</a></li>
+                    <li><a href="#noLink">철강제품</a></li>
+                    <li><a href="#noLink">기타</a></li>
+                </ul>
+            </div>
+            <!-- //tap_header -->
+
+            <!-- tap_body -->
+            <div class="tap_body">
+                <ul class="list_style type1 mar_t20">
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">탈산반응(C-injection)</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">제강 제련 과정에서 탄소, 규소, 인 등의 불순물을 산화하여 가스 또는 슬래그로 만든 후, 용강에 과잉되게 가해져있는 산소를 제거하는 조작을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">가이드</span>
+                            <i>설비용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">압연재가 Roll 공형에 치입될 때 정확한 유도를 하는 작업으로 매우 중요합니다. 이 유도 장치의 설치여하에 따라 제품의 품질, 회수율, 생산성이 좌우되며, 유도 장치는 사용법에 따라 차이가 있겠지만 다음과 같은 요구 사항들이 충족이 되어야 합니다.<br />
+                            <br />Guide 요구조건<br /><br />1. 조립 해체가 용이해야 한다.<br /><br />2. 수명이 길어야 한다.<br /><br />3. 열 충격에 의한 변형이 없어야 한다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">핀 다이아(Pin Dia)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">철근 가공할 때 굽히는 과정에서 사용하는 롤과 비슷한 설비입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">압연기(Roll Stand)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">금속의 압연을 위해 사용하는 공작기계를 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">슬라그(Slag)</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">광석으로부터 금속을 빼내고 남은 찌꺼기이며 산성 산화물과 염기성 산화물의 혼합물을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">몰드 (Mould / Mold)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">융해 금속(쇳물)을 흘려 넣어 주물(鑄物)을 만드는 형(型)을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">버너(Burner)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">가스 ·기름 ·미분체(微粉體)와 같은 기체 ·액체 ·분체 연료를 고속으로 내뿜는 장치. 가스나 액체 연료의 연소 기구로서 연료와 공기를 적당량 배합하여 그 분출구에 점화하는 것을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">제강</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">용광로에서 만들어진 선철은 탄소량 외에 규소, 인, 황 등의 불순물이 많으므로, 이들을 조정해서 기계적인 강도를 높이기 위해 실행하는 공정을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">출강</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">전기로, 고로 등에서 용강을 꺼내는 작업입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">전극봉</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">금속의 절단, 용접이나 전기로(電氣爐)의 전극 등에 사용되는 전도성이 높은 스테인리스강의 봉을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">규격</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">생산하거나 사용하는 데 편리하도록 주로 공업생산품에 대해서 정한 기술적 표준을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">강종</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">강재의 종류. 주로 항복점이나 인장 강도 등 기계적 성질이나 화학 성분에 따라 분류됩니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">턴디쉬 (Tundish)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">연주에서 용강이 들어있는 래들에서 용강을 주입하는 1차적 용기 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">래들 (Laddle)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">래들은 전로에서 취련이 완료된 용강을 담는 그릇입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">내화물</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">고온에 견디는 물질로, 적어도 1,000 ℃ 이상 고온에서 연화(軟化) 하지 않고 그 강도를 충분히 유지하며, 화학적 작용 등에도 견딜 수 있는 재료입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">버블링 (Bubbling)</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">액체 중의 가스체가 기포형태로 되어 상승하는 형상 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">빌릿 (Square Billet)</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">형강으로 압연하기 전의 각형 단면 강재로서 긴 것을 빌릿, 짧은 것을 슬라브라 합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">전기로 (Electric Arc Furnace)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">전열을 이용해 철스크랩을 가열하는 설비 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">절단</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">고객이 원하는 규격으로 절단하는 과정입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">압연 (소성 가공)</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">고객이 원하는 규격과 형태의 제품을 만드는 단계. 조압연, 중간 압연, 사상 압연으로 구분된 약 22개의 스탠드(롤)를 통과시키면서 형성하게 됩니다.</span>
+                        </div>
+                    </li>
+
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">가열로</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">800도의 빌릿을 넣어 섭씨 1,200도의 온도까지 재가열하기 위한 것으로, 압연을 용이하게 합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">연속주조 (CCM)</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">정련로를 통해 2차 정련된 용강을 압연공정에서 사용하기 위해 빌릿으로 만드는 과정 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">정련 (LF)</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">필요성분(Si, Mn, P, S, V, Nb)을 규정에 맞도록 성분을 조정하는 과정 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">용해</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">전열을 이용해 철스크랩을 가열하는 과정 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">장입</span>
+                            <i>공정 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">주원료인 철스크랩을 전기로에 넣는 과정 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">Bar In Coil (BIC)</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">바(Bar)가 아닌 후프(Hoop) 형태로 제조한 철근인 '코일(Coil)철근' 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">이형철근</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">SD(Steel Deformed) 표면에 마디와 리브의 돌기로 이루어진 철근을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">원형철근</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">SR(Steel Round) 표면에 마디와 리브의 돌기가 없는 철근을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">황 (Sulfur)</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">철과 FeS 화합물을 형성하여 고온취성 유발 , 강재취화(인장략, 신율, 충격치의 감소) 유발 및 가공시 파괴원인이 됩니다. 취화방지책 : Mn을 첨가하여 고융점의 MnS를 형성(Mn/S≥10 관리) Mn, Zr, Ti, Mo 등과 결합하여 피삭성을 향상, 용접성과 단접성을 악화시키는 역할입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">인 (Phosphorus)</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">경도와 인장강도를 다소 증가시키나 단면수축율은 감소시키고 Fe3P화합물 형성에 의한 충격저항 감소 및 상온취성 유발, P는 응고시 편석이 심하여 Fe3P로 응고, 입계에 편석하고 고온가열에도 확산이 어려 BAND STRUCTURE 로 잔류하며 가공시 그 방향으로 연신되어 충격치를 감소시키고 파열의 중심이 됩니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">망간(Manganese)</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">Mn은 강의 연신율을 감소시키지 않고 소입성과 강도를 높여주며 고온에서는 소성을 증가시키며 주조성을 좋게 하여 Mn을 합금시 열처리에 민감하지 않아 용접성 구조용 강재로 적합 합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">실리콘 (Silicon)</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">경도, 탄성계수, 인장력을 증대하고 연신율, 충격치를 감소시키고 용접성을 감소시켜 제강시 탈산제로서 가장 유효하며 용강중에 산화물은 Mn산화물과 결합하여 SiO2 또는 규산 개재물을 형성, 분리부상이 용이합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">탄소 (Carbon)</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">Fe, Cr, Mo, V 등과 탄화물을 형성하여 강도를 증대시고 탄화물의 증가에 따라 강도는 향상되나 연성 및 인성은 저하됨으로 알려져 있습니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">탄소 당량 (Carbon Equivalent)</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">철강에서 합금원소는 경화능이나 내식성 및 내열성을 증가시키기 위해 각 원소들을 첨가할 수 있습니다. 이들은 임계 냉각 속도와 변태온도를 낮추기 때문에 마르텐자이트로의 변태를 용이하게 하여 경화능을 높이게 됩니다. 이러한 원소들의 경화능(이것이 높으면 균열을 발생시킴)을 탄소함유량의 효과로 환산한 것이며, 강재의 용접시 예열 및 층간 온도로서 균열을 피할 수 있으므로 탄소 당량은 바로 이 예열 및 층간 온도 설정의 기준이 됩니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">마디 & 리브</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">마 디 : 철근의 직선의 수직 방향으로 원주에 형성하고 있는 띠를 지칭합니다. 리 브 : 철근의 직선 방향과 수평하게 직선을 이루고 있는 띠를 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">공칭둘레</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">원형봉강으로 환산하였을 때 둘레를 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">단위중량</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">단중 = 단위무게 = 원형봉강으로 환산하였을 때 단위중량(Kg/m)을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">공칭단면적[S]</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">원형봉강으로 환산하였을 때 단면적을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">공칭지름[d]</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">원형봉강으로 환산하였을 때 지름을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">물림간격</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">시험편을 시험기에 설치했을 때 시험기 물림장치 사이의 시험편 길이를 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">물림부</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">시험편의 끝부분으로서 시험기의 물림 장치에 물려지는 부분입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">표점거리</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">평행부에 찍어놓은 2개의 표점 사이의 거리로서, 연신율 측정에 기준이 되는 길이입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">항복 연신율</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">인장시험 과정 중, 시험편 평행부가 항복하기 시작할 때부터 거의 일정한 응력상태에서 변형이 증가하고 다음에 평활하게 응력이 증가하기 시작할 때까지의 표점간 길이 변화를 표점거리에 대한 백분율로 나타냅니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">파단 연신율</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">시험편 파단 후의 영구 연신율.(혼동 우려가 없을시 “연신율” 이라 표시) 최초 표점거리를 파단 후 표점거리에 대한 백분율로 나타낸 것으로 KS규격에 강종별, SIZE별로 최소치 규제가 있습니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">항복강도</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">인장시험 과정 중, 시험편 평행부가 항복을 일으키기 이전의 최대하중을 평행부의 공칭단면적으로 나눈 값. 항복이란 철근이 탄성변형의 하중을 넘어 영구 변형의 단계로 넘어가는 가중을 받은것으로 KS규격에 강종 별로 최소치의 규제가 있습니다. SD300(연강) : 300 N/㎟, SD400(고강) : 400 N/㎟, SD500(초고강) : 500 N/㎟</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">인장강도</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">최대인장하중을 평행부의 공칭단면적으로 나눈 값으로 KS규격에 강종별로 인장강도의 최소치 규제가 있습니다. SD300(연강) : 440 N/㎟, SD400(고강) : 560 N/㎟, SD500(초고강) : 620 N/㎟</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">스케일</span>
+                            <i>기타</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">철강·구리 합금과 같은 금속을 고온으로 가열하였을 때 표면에 형성되는 산화물 층. 철근 또한 압연하기 위해 고온으로 가열되었던 제품이 식으면서 공기와 반응하여 표면에 산화물 층(스케일)을 형성합니다. 철근표면을 금속물체로 타격하면 껍질처럼 벗겨지는데 이는 제품이 이상이 있는 것이 아니며 오히려 표면에 산화물 층이 형성되어 있으면서 철근이 산화(부식)되는것을 방지합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="4">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">ㅊ ㅚ대 인장 하중</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">인장시험 과정 중 시험편이 견딘 최대하중을 지칭합니다. 철근을 만능재료시험기를 이용하여 인장시험을 하는데 파단되기 전 철근이 최대로 견딘 하중을 최대인장하중이라 한다. (단위 : N)</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="btn_wrap">
+                    <a href="#this" class="btn_more">
+                        <i>더보기</i>
+                    </a>
+                </div>
+            </div>
+            <!-- //tap_body -->
+        </div>
+        <!-- //tap_type1 -->
+    </section>
+    <!-- //section-->
+
+
+</div>
+
+<div class="footer">
+    <div class="footer_wrap">
+        <div class="footer_gnb1">
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                        <ul class="s_manu">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Networks</a></li>
+                            <li><a href="#">IR</a></li>
+                            <li><a href="#">CI</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Steel Library</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">People</a>
+                        <ul class="s_manu">
+                            <li><a href="#">CEO</a></li>
+                            <li><a href="#">Persona</a></li>
+                            <li><a href="#">Life</a></li>
+                            <li><a href="#">Recruit</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Frameworks</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Solution</a></li>
+                            <li><a href="#">Case Study</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer_gnb2">
+            <ul>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank">개인정보 취급방침</a></li>
+                <li><a href="#" target="_blank">이메일 무단 수집 거부</a></li>
+             </ul>
+             <ul>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award.jpg" alt="웹사이트부문 GRAND PRIX수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award2.jpg" alt="레드닷 디자인어워드 수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_logo2.jpg" alt="국가공인 웹 접근성 품질인증마크_(사)한국시각장애인연합회 (2015.10.08~2016.10.07)" /></a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank"><em>Brochure</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+                <li><a href="#" target="_blank"><em>Webzine</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+             </ul>
+        </div>
+        
+        <div class="footer_wrap2">
+            <div class="footer_gnb3">
+                <p class="copyright">Copyright DaehanSteel. All rights reserved.</p>
+            </div>
+            <div class="footer_gnb4">
+                <a href="#">FAMILY SITE</a>
+                    <ul class="family">
+                        <li><a href="#">e-Transportation</a></li>
+                        <li><a href="#">e-Procurement</a></li>
+                        <li><a href="#">e-Sales</a></li>
+                        <li><a href="#">대한 네트웍스</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

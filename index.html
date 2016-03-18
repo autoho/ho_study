@@ -30,105 +30,107 @@
         */
         
         .box{
-            border:1px #F00 solid;
+            border:1px #FFF solid;
             position:absolute;
         }
         header{height: 80px; width: 100%; background:#000;
-            color:#FFF; position:fixed; top:0; z-index:3;
+            color:#FFF; position:fixed; top:0; z-index:10;
         }
         header h1{margin:0;
         }
-        section{border:1px #F00 solid; height:100%; position:relative;}
-        section div{
-            border:1px #F00 solid;
-            position:absolute;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: 50%;
-        }
-        .item1{
-            top:0;bottom:50%;right:50%;left:0;
-            background-image: url(http://missa.jype.com/upload/gallery/gallery_15032594325.jpg);
-        }
-        .item2{
-            top:0%;bottom:50%;right:0;left:50%;
-            background-image: url(http://2pm.jype.com/upload/gallery/gallery_150614173343.jpg);
-        }
-        .item3{
-            top:50%;bottom:0;right:50%;left:0;
-            background-image: url(http://2pm.jype.com/upload/gallery/gallery_140912201044.jpg);
-            
-        }
-        .item4{
-            top:50%;bottom:0;right:0;left:50%;
-            background-image: url(http://2pm.jype.com/upload/gallery/gallery_15061417317.jpg);
-            
-        }
-        .inner{
-            border:1px #FFF solid; 
-            position:absolute;
-            left:10px;
-            right:10px;
-            bottom:10px;
-            top:10px;
-            
-        }
-        dl{background-color: rgba(0,0,0,0.5); color:#FFF;
-            left:0;
-            right:0;
-            bottom:0;
-            position:absolute;
-            padding:10px 0;
-        }
+        section{border:1px #000 solid; height:100%; position:relative;}
+        section div{ border:1px #000 solid; position:absolute; -webkit-background-size: cover; background-size: cover; background-position: 50% 0; }
+        .item1{ top:0;bottom:50%;right:66%;left:0; background-image: url(http://missa.jype.com/upload/gallery/gallery_15032594325.jpg); }
+        .item2{ top:0%;bottom:50%;right:34%;left:34%; background-image: url("images/daehansteel.jpg"); }
+        .item3{ top:0%;bottom:50%;right:0;left:66%; background-image: url("images/HERBALIFEmain.jpg"); }
+        .item4{ top:50%;bottom:0;right:66%;left:0; background-image: url("bobae/images/bobae.jpg"); }
+        .item5{ top:50%;bottom:0;right:34%;left:34%; background-image: url("jingoo/lib/img/jingooMain.jpg"); }
+        .item6{ top:50%;bottom:0;right:0;left:66%; background-image: url("images/navernews.jpg"); }
+        .inner{ border:3px #FFF solid; position:absolute; left:10px; right:10px; bottom:10px; top:10px; z-index:9; }
+        a:hover .inner{border:3px #EBF938 solid;}
+        a:hover dl{background-color: rgba(0,0,0,1);}
+        dl{background-color: rgba(0,0,0,0.8); color:#FFF; left:0; right:0; bottom:0; position:absolute; padding:10px 0; }
         dt{float:left; margin-left:20px;}
   </style>
   
 </head>
 <body>
     <header>
-        <h1>Profile</h1>
+        <h1>LEE HOLIM PORTFOLIO</h1>
     </header>
   
     <section>
         <div class="item1">
-            <div class="inner">
-                <dl>
-                    <dt>Title</dt>
-                    <dd>JYP MissA</dd>
-                    <dt>Skill</dt>
-                    <dd>mtnl5/CSS3/Trans</dd>
-                </dl>
-            </div>
+            <a href="https://ho-study-autoho.c9users.io/trans/index.html">
+                <div class="inner">
+                    <dl>
+                        <dt>Title </dt>
+                        <dd> JYP MissA</dd>
+                        <dt>Skill </dt>
+                        <dd> HTML5/CSS3/Media query</dd>
+                    </dl>
+                </div>
+            </a> 
         </div>
         <div class="item2">
-            <div class="inner">
-                <dl>
-                    <dt>Title</dt>
-                    <dd>JYP MissA</dd>
-                    <dt>Skill</dt>
-                    <dd>mtnl5/CSS3/Trans</dd>
-                </dl>
-            </div>
+            <a href="http://autoho.dothome.co.kr/html/main/main.html">
+                <div class="inner">
+                    <dl>
+                        <dt>Title </dt>
+                        <dd> DAEHANSTEEL</dd>
+                        <dt>Skill </dt>
+                        <dd> HTML5/CSS3/javascript/jQuery</dd>
+                    </dl>
+                </div>
+            </a> 
         </div>
+        <div class="item5">
+            <a href="https://ho-study-autoho.c9users.io/jingoo/html/main/main.html">
+                <div class="inner">
+                    <dl>
+                        <dt>Title </dt>
+                        <dd> YEO JINGOO</dd>
+                        <dt>Skill </dt>
+                        <dd> HTML5/CSS3/PHP</dd>
+                    </dl>
+                </div>    
+            </a>    
+        </div>        
         <div class="item3">
-            <div class="inner">
-                <dl>
-                    <dt>Title</dt>
-                    <dd>JYP MissA</dd>
-                    <dt>Skill</dt>
-                    <dd>mtnl5/CSS3/Trans</dd>
-                </dl>
-            </div>
+            <a href="#">
+                <div class="inner">
+                    <dl>
+                        <dt>Title </dt>
+                        <dd> HERBALIFE</dd>
+                        <dt>Skill </dt>
+                        <dd> DESIGN</dd>
+                    </dl>
+                </div>
+            </a> 
         </div>
         <div class="item4">
-            <div class="inner">
-                <dl>
-                    <dt>Title</dt>
-                    <dd>JYP MissA</dd>
-                    <dt>Skill</dt>
-                    <dd>mtnl5/CSS3/Trans</dd>
-                </dl>
-            </div>
+            <a href="https://ho-study-autoho.c9users.io/bobae/index.html">
+                <div class="inner">
+                    <dl>
+                        <dt>Title </dt>
+                        <dd> BOBAE DREAM</dd>
+                        <dt>Skill </dt>
+                        <dd> HTML5/CSS3</dd>
+                    </dl>
+                </div>    
+            </a>    
+        </div>
+        <div class="item6">
+            <a href="https://ho-study-autoho.c9users.io/testing/index.html">
+                <div class="inner">
+                    <dl>
+                        <dt>Title </dt>
+                        <dd> NAVER NEWS PAPER</dd>
+                        <dt>Skill </dt>
+                        <dd> HTML5/CSS3</dd>
+                    </dl>
+                </div>    
+            </a>    
         </div>
         
     </section>

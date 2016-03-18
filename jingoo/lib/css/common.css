@@ -1,72 +1,139 @@
 /*초기화*/
-html,body{height: 100%;}
-ul,ol{list-style:none;}
-*{margin:0; padding:0;}
-::selection {background:#ff654c; color: #FFF; text-shadow: none;}
-::-moz-selection {background:#ff654c; color: #FFF; text-shadow: none;}
-::-webkit-selection {background:#ff654c; color: #FFF; text-shadow: none;}
 
-/*layout*/
-body{}
-.wrapper{background-color:#FFF; max-width: 1000px; margin:0 auto; min-height:100%;
-    -webkit-box-shadow: 0 0 10px #000;
-    -moz-box-shadow: 0 0 10px #000;
-    box-shadow: 0 0 10px #000;
+*{padding:0;margin:0;}
+html,body {height:100%;}
+ol,ul {list-style:none;}
+
+/*레이아웃*/
+body {background-color:#ccc; font-size:12px;}
+.wrapper {max-width:1000px; height:1450px; margin:0 auto; outline:0px red solid;
+          position:relative;
+          background-color:white;
+          box-shadow: 0 0 10px #000;
+          -webkit-box-shadow: 0 0 10px #000;
+          -moz-box-shadow: 0 0 10px #000;
+         }
+header {width:100%; position:relative;  background-color:white; outline:0px red solid;}
+header .h-left{width:50%; position:relative; outline:0px red solid;}
+header .h-left .logo {width:100%;}
+header .h-left .logo a {display:block;
+                        padding-bottom:86%; background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/logo.png');
+                        background-repeat:no-repeat; background-size:134px 60px; background-position:center;
+                        }
+header .h-left .category {width:100%; height:70px; ouline:1px red solid; position:relative; background: #ddd;}
+header .h-left .category .num1 {width:50%; height:100%; position:absolute; top:0; left:0;}
+header .h-left .category .num2 {width:50%; height:100%; position:absolute; top:4%; left:48%;} 
+/*48*/
+/*header .h-left .category .num1 ul {width:100%; height:100%;}*/
+header .h-left .category nav li {float:left; width:50%;}
+header .h-left .category nav li a {padding:15px 0; width:100%; display:inline-block; vertical-align:top; text-align:center; text-decoration:none; color:white; font-size:15px;}
+header .h-left .category .num1 li a:hover{background-color:#ff654c;}
+/*header .h-left .category .num2 ul {width:100%;*/
+/*header .h-left .category .num2 ul {float:right;}*/
+header .h-left .cateogry .num2 ul {position:absolute; width:80%; height:100%; float:right;}
+header .h-left .category .num2 li {display:inline-block; width:17%; margin-right:1%; margin-left:1%; float:left;}
+header .h-left .category .num2 li:first-child {margin-left:40%;}
+header .h-left .category .num2 li a {display:block; padding:30px 0;}
+header .h-left .category .num2 li:first-child a {background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/btn_weibo.png'); background-position:center; background-size:30px 30px; background-repeat:no-repeat;}
+header .h-left .category .num2 li:first-child+li a {background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/btn_instagram.png'); background-position:center; background-size:30px 30px; background-repeat:no-repeat;}
+header .h-left .category .num2 li:last-child a {background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/btn_facebook.png'); background-position:center; background-size:30px 30px; background-repeat:no-repeat;}
+
+header .h-right{width:50%; position:absolute; top:0; right:0; outline:0px blue solid;}
+header .h-right .slide {position:relative;}
+header .h-right .slide ul {position:relative; padding-bottom:86%; }
+/*header .h-right .slide ul {padding:43%; margin:0;}*/
+header .h-right .slide li {overflow:hidden; z-index:1;}
+header .h-right .slide li img {width:100%; z-index:1; position:absolute; top:0; right:0;}
+/*header .h-right .slide li img#visible {position:static; visibility:hidden;}*/
+/*header .h-right .btns {width:100px; height:20px; border:1px red solid; position:absolute; bottom:15%; left:50px; z-index:10;}*/
+header .h-right .slide li a {float:left; width:10px; position:absolute; bottom:20px; height:10px; text-indent:-9999px; display:block;
+                             z-index:2; background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/dot.png');
+                             background-position:center 0; background-size:10px 20px; background-repeat:no-repeat; margin-right:5px; z-index:9999;
+                            }
+header .h-right .slide .num1 a {top:90%; left:50px; background-position:0 -10px;}
+header .h-right .slide .num2 a {top:90%; left:65px;}
+header .h-right .slide .num3 a {top:90%; left:80px;}
+header .h-right .slide button.play {width:20px; height:20px; position:absolute; top:88.5%; left:20px;
+                                    background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/controller.png');
+                                    background-position:0 0;
+                                    background-repeat:no-repeat;
+                                    background-size:cover;
+                                    -webkit-background-size:cover;
+                                    z-index:10;
+                                    border:none;
+                                    }
+header .h-right .slide span {position:absolute; top:86%; right:2%; font-size:30px; z-index:10; color:white;}
+header .h-right .slide span a {text-decoration:none; color:white;}
+header .h-right .slide li img {opacity:0; transition:1s;}
+header .h-right .slide li #awy {opacity:1;}
+header .h-right .slide li img:target {opacity:1;}
+/*header .h-right .slide li img {width:100%; z-index:1;}*/
+/*header .h-right .slide li a {position:relative; margin-right:20px;z-index:3; top:-20px; display:block; width:20px; height:20px;}*/
+header .h-right .category {width:100%; height:70px; outline:0px red solid; position:relative;}
+header .h-right .category nav {width:100%; height:100%; background:#ddd;}
+header .h-right .category nav ul {width:100%; height:100%;}
+header .h-right .category nav li {float:left; width:25%;}
+header .h-right .category nav li:hover {background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/cursor.png'); background-position:center 0; background-repeat:no-repeat;}
+header .h-right .category nav li a {padding:25px 0;width:100%; height:100%;display:inline-block;text-align:center; text-decoration:none; color:white; font-size:15px;}
+header .h-right .category nav li:first-child a {background-color:#ff654c;}
+header .h-right .category nav li a:hover{background-color:#ff654c;}
+/*background-color:#ff654c;*/
+header .h-right .category nav li:first-child a {margin-left:0;}
+header  #subcate {width:12.5%;  margin-left:25%; position:absolute; right:25%; z-index:10; display:none;}
+header  #subcate li {width:100%; font-size:16px;  background-color:#ccc;}
+header  #subcate li a {padding:8%; display:block; text-decoration:none; color:white; text-align:center; }
+header  #subcate li a:hover {background-color:#ff654c;}
+
+
+
+
+section {width:100%; position:absolute; z-index:4;}
+section .s-left {width:50%; outline:0px red solid; display:block; position:relative; left:0; top:0; bottom:0; right:0;}
+section .s-left img {width:100%; position:relative;}
+section .s-right {width:46%; height:100%; padding:2% 2% 0; outline:0px red solid; position:absolute; right:0px; top:0;}
+section .s-right h2 {color:#ff654c; margin-bottom:3%; font-weight:bold; font-size:2em;}
+section .s-right li strong {color:#888888; font-size:12px;}
+section .s-right li:first-child strong{font-size:12px; line-height: 1.8em; color:#ff654c;}
+section .s-right span {font-size:12px; color:#bbb; line-height: 1.8em; }
+
+
+footer {width:100%; position:absolute; min-height:70px; max-height:150px; bottom:0; outline:0px red solid; background-color:#ddd; z-index:10;}
+footer address li {float:left;}
+footer .num1 {width:48%; float:left; outline:0px red solid; line-height:20px; margin-top:10px; padding-left:2%;}
+footer .num2 {width:48%; float:right; outline:0px red solid; text-align:right; line-height:20px; margin-top:10px; padding-right:2%;}
+footer address {margin:0; padding:0; font-size:12px; font-style:normal; color:white;}
+
+@media all and (max-width:620px){
+    .wrapper {height:1600px;}
+    header .h-left {width:100%; height:50px; transition:0.7s;}
+    header .h-left .logo {width:100%; height:50px; position:absolute; top:0; z-index:5; background-color:#ccc;}
+    header .h-left .logo a {background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/logo_m.png'); background-size:90px 40px; width:100px; height:50px; padding:0; margin:0 auto;}
+    header .h-left .category {width:100%; position:absolute; top:100px; height:50px; background-color:#ccc;}
+    header .h-left .category .num1 li a {padding:5px 0;}
+    header .h-left .category .num2 {display:none;}
+    header .h-right {width:100%; position:absolute; transition:0.7s;}
+    header .h-right .slide ul, header .h-right .slide button {display:none;}
+    header .h-right .slide>span {position:absolute; top:14px; right:10px; z-index:5; font-size:13px; font-weight:bold; text-shadow: 1px 1px 5px rgba(255, 255, 255, .65);}
+    header .h-right .category {width:100%; height:50px; position:absolute; top:50px; z-index:5;}
+    header .h-right .category nav li a {padding:15px 0;}
+    header .h-right .category nav li:first-child a {background-color:#ff654c;}
+    
+    header  #subcate {width:25%; opacity:0; position:absolute; top:200%; z-index:10; right:50%;}
+    header  #subcate ul {}
+    header  #subcate li {width:100%; font-size:16px;  background-color:#ccc;}
+    header  #subcate li a {padding:8%; display:block; text-decoration:none; color:white; text-align:center; }
+    
+    section {width:100%; position:absolute; top:150px; transition:0.7s;}
+    section .s-left {width:100%; height:100%; position:absolute; transition:0.7s;}
+    section .s-left img {width:100%;}
+    section .s-right {width:100%; padding:0; height:0; position:absolute; z-index:20; top:500px; right:0; transition:0.7s;}
+    section .s-right .bgcolor {width:92%; background-color:white;padding:4%;}
+    footer {width:100%; min-height:100px; max-height:130px; position:absolute; bottom:0; z-index:15; padding:0;}
+    footer address {font-size:11px; padding:0;}
+    footer .num1 {width:96%; height:50%;}
+    footer .num1 li {float:normal;}
+    footer .num2 {width:96%; height:50%; float:left;  text-align:left; padding-left:2%;}
+    footer .num2 li {width:100%; height:50%; float:left;}
+    
+    
 }
-    header{max-height:500px;}
-/*메인 왼쪽*/
-    header .company-view{ width:50%; height:100%; position:absolute;  left:0;  top:0;}
-    header .company-view .logo{width: 100%; min-height:430px; background:#F8F8F8 
-            url(http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/logo.png) no-repeat 50%;
-            -webkit-background-size: 134px 60px; background-size: 134px 60px;}
-    header .company-view nav.cnt{ height:70px;}
-    header .company-view nav{background:#ddd;}
-    header .company-view nav .cnt{}    
-    
-    
-    header .cover-view{width:50%;position:absolute; right:0; top:0; }
-    header .cover-view .slide{height:430px; position:relative; overflow:hidden;}
-    header .cover-view .slide img{width: 100%; position:absolute; top:0; left:0;}
-    header .cover-view .slide a{position:relative; z-index:1; top:400px; left:30px; display:block; width:10px;height:10px;
-           background-image: url(http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/dot.png); text-indent:-9999px;
-            background-size:100%;}
-    header .cover-view h3 a{display: block; text-decoration: none; color: #FFF;}
-    header .cover-view h3.star_name{height: 35px; width: 100%; position: absolute; z-index: 10; top:75%; right: 0; font-size: 30px; text-shadow: 0 0 10px rgba(0,0,0,0.4); text-align:right; padding-right:20px;}
-/*메인메뉴 온 버튼*/
-    header .cover-view .slide li{display:inline-block;}
-    header .cover-view .slide li.on a{background-position:0 -10px;}
-    button.play{border:none; width: 20px; height: 20px;background:url(../images/controller.png); position:absolute; bottom:15px; left:5px; z-index:11; text-indent:-999999px;background-size:100%;}
-
-/*네비 왼쪽*/
-    header .cover-view nav.gnb ul{height:70px;}
-    /*header .cover-view nav.gnb ul.pr ul{padding-top:7px; border:1px red solid; background-image:url(../images/cursor.png); color:red;}*/
-    header .cover-view nav,
-    header .cover-view nav{background:#ddd;}
-    /*header .cover-view nav.gnb .pr>a{ height: 50px; background-image: url(images/common/navi_0.png); background-position: 50% 50%; background-size: 105px 11px; }*/
-
-
-
-/*네비 오른쪽*/
-    header div nav li{width: 125px; text-align:center; display:table-cell; vertical-align:middle; height:70px;}
-    header div nav li a{color:#FFF; text-decoration:none;}
-    header div nav li:hover{background:#FF654C;}
-    
-/*하단 컨텐츠*/
-
-    section{height: 897px; position:relative;}
-    section .contents{width: 500px; height: 897px; position:absolute; top:0; left:0; overflow:hidden;}
-    section .contents img{width: 100%;}
-    section .profile{width: 500px; height: 897px;  position:absolute; top:0; right:0;}
-    section aside.profile h1{font-size:24px;}
-    section aside.profile{padding:20px; width:460px; font-size:12px; line-height:20px; color:#BBB;}
-    section aside.profile ul{margin-bottom :10px;}
-    
-    
-    footer{height: 70px; position:relative; color:#FFF; font-size:12px; background:#ddd;}
-    footer .address{width: 460px; height: 40px; position:absolute; top:0; left:0; padding: 15px 20px; line-height:20px;}
-    footer .copyright{width: 460px; height: 40px; position:absolute; top:0; right:0; padding: 15px 20px; line-height:20px; text-align:right;}
-    
-@media all and (max-width:1028px) {
-    .wrapper{width:100%;}
-    header
- }

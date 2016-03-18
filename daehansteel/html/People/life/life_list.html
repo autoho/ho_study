@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>life &gt; People &gt; DaehanSteel 대한제강</title>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="/lib/img/favicon.ico">
+<link rel="stylesheet" href="/lib/css/common.css" media="all" />
+<link rel="stylesheet" href="/lib/css/master.css" media="all" />
+<script type="text/javascript" src="/lib/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="/lib/js/script.js"></script>
+
+<style type="text/css">
+
+.header{width: 100%; height: 360px; background: url('../../../lib/img/vs_3_3.jpg')center top no-repeat;background-attachment: fixed;}
+
+.cont_life_list .life_list {font-family: 'nanumbarungothic','돋움', dotum, verdana, arial; color: #5b5c5e;}
+.cont_life_list .life_list .life_list_title h3{font-size: 28px; line-height: 1.429em; margin-bottom: 22px; font-weight: normal;}
+.cont_life_list .life_list .life_list_option {width: 950px; height: 40px; position:relative;}
+.cont_life_list .life_list .life_list_option .search {border:1px #cacbcd solid; width: 310px; height: 39px;}
+
+.cont_life_list .life_list .life_list_option .search input[type="text"]{border:none; height: 38px;width: 164px; padding-left:10px; font-size:13px; color:#5b5c5e; vertical-align:middle;}
+.cont_life_list .life_list .life_list_option .search button{text-indent:-9999px; font-size:0; border:none; background-image:url(../../../lib/img/people_ceo_mes_btn_search.gif); width: 39px; height:38px;background-position:center center; cursor:pointer; vertical-align:middle; float:right}
+.cont_life_list .life_list .life_list_option .sort {position:absolute; right:0; top:0; text-indent:-9999px; font-size:0; }
+.cont_life_list .life_list .life_list_option .sort .list{float: left; display: block; width: 40px; height: 40px; margin-left: 5px; background: #f05a28 url('../../../lib/img/people_ceo_mes_set_optsort.gif') no-repeat; text-indent: -5000em;}
+.cont_life_list .life_list .life_list_option .sort .thumb{float: left; display: block; width: 40px; height: 40px; margin-left: 5px; background: #747578 url('../../../lib/img/people_ceo_mes_set_optsort.gif') no-repeat; background-position:-45px 0px; text-indent: -5000em; overflow: hidden;}
+.cont_life_list .life_list .life_list_option .sort .thumb:hover {background-color: #f05a28}
+.cont_life_list .life_list .listSump {overflow:hidden; height: 950px; width: 950px; padding-top:10px; padding-bottom:20px;}
+.cont_life_list .life_list .listSump li {display:inline-block; margin-top:10px; list-style: none; background: #e7e6e0; cursor: pointer;}
+.cont_life_list .life_list .listSump li a {text-decoration: none; color: #5b5c5e;}
+.cont_life_list .life_list .listSump li img {height: 150px; float:left;}
+.cont_life_list .life_list .listSump li span.cont {width: 740px; height: 129px; padding:21px 30px 0px 30px; display:inline-block; font-size:13px; line-height:26px;}
+.cont_life_list .life_list .listSump li span:hover {background-color:rgb(240, 90, 40); color:#FFF;}
+.cont_life_list .life_list .listSump .tit {overflow: hidden; display: block; font-size: 16px; line-height: 1.625em; font-family: 'nanumbarungothicbold';font-weight:bold;}
+.cont_life_list .life_list .listSump .txt {margin-top:16px; display:block;}
+
+.cont_life_list .de_select{float:left;line-height:40px; border-right:1px #cacbcd solid}
+.cont_life_list .de_select strong{display:block; width: 70px; font-weight: normal; margin-right:-10px; padding:0 20px 0px 10px; background-position: 75px 16px;}
+
+.cont_life_list .life_list .btnMore {}
+.cont_life_list .life_list .btnMore a {overflow: hidden; display: block; height: 26px; padding: 9px 0 5px; font-size: 16px; color: #747578; text-align: center; background: url('../../../lib/img/people_set_btnmore.gif') no-repeat;}
+.cont_life_list .life_list .btnMore a:hover {color:#FFF; background: url('../../../lib/img/people_set_btnmore.gif') no-repeat; background-position: 0 -80px;}
+.cont_life_list .life_list .btnMore i {font-size: 16px; color: #747578; text-align: center;}
+.cont_life_list .life_list .btnMore:hover i{color:#FFF;}
+.cont_life_list .life_list .btnMore:hover i{background:url('../../../lib/img/set_x1_morelist_o.gif') 100% center no-repeat;}
+
+</style>
+
+
+</head>
+<body>
+<div class="header"></div>
+	 <!-- <h2>life</h2> -->
+<div class="conWrap">
+	<div id="container" class="cont_life_list" >
+	 <!--본문 내용 -->
+	 	<div class="life_list">
+	 		<div class="life_list_title">
+	 		<h3>대한제강의 새로운 소식을 가장 빠르게 전합니다.</h3>
+	 		</div>
+	 		<div class="life_list_option">
+                <fieldset>
+                    <legend>대한제강 life 검색어 입력</legend>
+                    <div class="search">
+                    	<div class="de_select">
+	                    	<strong class="icone-1">제목+내용</strong>	
+	                    	<ul>
+	                    		<li>제목+내용</li>
+	                    		<li>제목</li>
+	                    		<li>내용</li>
+	                    	</ul>
+                    	</div>
+                    	<form action="">
+                            <input type="text" title="검색어" name="keyword" value=""><button type="button">검색</button>
+                        </form>
+                    </div>
+                    <div class="sort">
+                        <a href="/html/People/life/life_list.html" class="list">리스트로보기</a>
+                        <a href="/html/People/life/life_thumb.html" class="thumb">썸네일로보기</a>
+                    </div>
+                </fieldset>
+	 		</div>
+	 		<div class="listSump">
+	 			<ul>
+	 				<li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20151217164245615.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">과거와 현재의 연결- 2015 Demo Day</em>
+                            <span class="txt">대한제강에서는 임직원 개발을 위해 리더십과 전문성이라는 두 가지 주제를 바탕으로 교육을 진행하고 있습니다. 그 중 연간 진행된 리더십 프로그램 과정의 wrap-up을 위해 경영진과 팀장, 교육생이 함께 참석하여 진행하는 Demo ...  </span>
+                                <i class="date">2015.12.11</i>
+                            </span>
+                        </a>
+                    </li>
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20151208173214635.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">2015 대한제강 사랑의 김치나누기 행사 실시</em>
+                            <span class="txt">부산에 첫눈이 내린 11월 26일, 올해도 어김없이 '대한제강 사랑의 김치나누기 행사'가 부산 강서노인종합복지관에서 열렸습니다. 당사는 지역간 유대관계를 강화하고, 어려운 이웃을 돕기 위한 일환으로 매년 진행되어 오고있습니다....  </span>
+                                <i class="date">2015.11.26</i>
+                            </span>
+                        </a>
+                    </li>	 				
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20151106154621568.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">대한제강 우동정 상무, 제23회 부산시 산업평화상 수상</em>
+                            <span class="txt">11월 6일 오전 11시 부산시청 12층 국제회의장에서 열린 '2015년도 제23회 산업평화상' 시상식에서 대한제강(주) 우동정 상무이사가 산업평화상 기업인 부문에서 수상했습니다. 올해 기업인 부문에서는 당사 우동정 상무 외...  </span>
+                                <i class="date">2015.11.06</i>
+                            </span>
+                        </a>
+                    </li>	 				
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20151105160652305.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">[Multi Class] 스쿠버다이빙 자격증반 이야기</em>
+                            <span class="txt">대한제강에서는 일과 여가의 균형있는 조화를 위해 직원들의 문화생활을 이끄는 미니클래스 및 멀티클래스를 운영하고 있습니다. 이번은 생산직군을 대상으로 한 멀티클래스 첫 프로그램으로, 스쿠버 다이버 자격증 과정을 개설하였습니다...  </span>
+                                <i class="date">2015.11.05</i>
+                            </span>
+                        </a>
+                    </li>	 				
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20151030170033740.png" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">KBC광주방송과 함께하는 대한제강 공익 캠페인</em>
+                            <span class="txt">- KBC 광주방송과 함께하는 안전캠페인 - 대한제강은 KBC광주방송과 함께 TV와 라디오를 통한 안전캠페인을 진행하고 있습니다. 사회도처에서 안전사고가 끊이질 않습니다. '설마', '이정도쯤이야','그동안 별 문제없...  </span>
+                                <i class="date">2015.09.01</i>
+                            </span>
+                        </a>
+                    </li>	 				
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20150827180304329.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">대한제강 리브랜딩, 2015 레드닷 디자인 어워드 수상</em>
+                            <span class="txt">대한제강 리브랜딩 프로젝트가 레드닷 어워드 커뮤니케이션 디자인 브랜드 아이덴티티 부문에서 수상하였습니다. 레드닷 디자인 어워드(Red Dot Design Award)는 IF, IDEA와 함께 세계 3대 디자인 어워드로 1955년 창...  </span>
+                                <i class="date">2015.08.24</i>
+                            </span>
+                        </a>
+                    </li>
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20150824183740923.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">사내동호회(7) 낚싯대가 주는 팔딱팔딱 싱싱한 체험, F3 낚시동호회</em>
+                            <span class="txt">낚시의 묘미를 아세요? 홀로 기나긴 기다림의 시간후에 찾아오는 찌의 반가운 신호와 월척을 낚아 올리는 그 손맛은 절대 잊을 수 없다는 사람들, 삼삼오오 모였다 하면 ... </span>
+                                <i class="date">2015.08.24</i>
+                            </span>
+                        </a>
+                    </li>
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20150731171900354.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">사내동호회(6) 인생의 홀인원을 꿈꾼다! - 스크린골프동호회 &lt;홀인원&gt; </em>
+                            <span class="txt">골프, 하면 흔히 귀족적인 스포츠라고 생각하기 쉽지만, 이제는 직장인들 사이에서도 여가활동과 취미생활로 즐길 수 있을만큼 대중적인 스포츠가 되었습니다. 어쩌면 '스크린... </span>
+                                <i class="date">2015.07.30</i>
+                            </span>
+                        </a>
+                    </li>
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20150724165444838.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">오완수 회장, 부산상공회의소에서 특별공로상 수상</em>
+                            <span class="txt">부산상공회의소(회장 조성제)는 지난 17일 오전 10시 국제회의장에서 창립 126주년을 맞아 지역경제 발전을 위한 구심체로서의 역할과 각오를 새롭게 다지는 창립기념식을 가졌습니다. 본 행사에서 당사 오완수 회장님께서는 대한제강... </span>
+                                <i class="date">2015.07.17</i>
+                            </span>
+                        </a>
+                    </li>
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20150724134754815.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">대한제강 서울지사 이전</em>
+                            <span class="txt">지난 7월 13일 대한제강 서울지사가 서울 메트로 타워로 이전하여 새로운 모습으로 시작합니다. 이 곳 서울지사는 무역, 전략, 영업 및 SMG, Technical Center, 경영지원 부서의 첨단기지로 출장, 외근이 많아지... </span>
+                                <i class="date">2015.07.13</i>
+                            </span>
+                        </a>
+                    </li>
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20150629162030474.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">사내동호회 (5)산을 오르며 인생을 배운다. 해암산악회</em>
+                            <span class="txt">흔히 삶은 산을 오르는 것에 비유되기도 합니다. 묵묵히 걸어나가다 보면 때론 오르막도 만나고, 내리막길도 걷고 나무도 보고, 사람도 지나치고, 길가에 핀 꽃도... </span>
+                                <i class="date">2015.06.29</i>
+                            </span>
+                        </a>
+                    </li> 
+                    <li><a href="/html/People/life/life_list_sub.html">
+                            <img src="/lib/img/people_life_20150617175931967.jpg" alt="시장대응속도 강화 및 수익성/TOP효과 극대화를 위해">
+                            <span class="cont"><em class="tit">문화가 있는 사무실, 대한제강 부산지사 미니클래스</em>
+                            <span class="txt">작년 9월 입주한 대한제강 부산지사에는 다른 곳과 차별화된 부분이 있습니다. 바로 사내 문화 활동 중 하나인 ‘미니클래스’입니다. 사실 회사라는 공간은 개인에게 있어 하루 24시간 중 가장 많은 시간을 보내고 있는 곳이라고 해... </span>
+                                <i class="date">2015.06.17</i>
+                            </span>
+                        </a>
+                    </li>                                                                                                     
+	 			</ul>
+	 		</div>
+	 		<div class="btnMore">
+	 			<a href="#"><i class="icone-1" >더보기</i></a>
+	 		</div>
+	 			 	
+	 	</div>    
+	 
+	 
+	 <div class="con_wrap"></div>
+	 </div>
+</div>
+
+<div class="footer"></div>
+<div class="top_btn">
+  <img src="/lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+</div>
+</body>
+</html>

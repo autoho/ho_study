@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+body,html{padding:0; margin:0;  font-family: 'nanumbarungothic';}
+ul, ol {list-style: none; text-decoration: none;}
+i, em {font-style: normal;}
+legend{font-size:0; text-indent:-99999px;}
+fieldset{border:0;}
+ul{list-style:none;}
+*{margin:0; padding:0;}
+img{border:none}
+
+
+@font-face {
+    font-family: 'frame_bold';
+    src: url('../font/frame_bold.eot');
+    src: url('../font/frame_bold.eot?#iefix') format('embedded-opentype'),
+         url('http://www.idaehan.com/kr/font/frame_bold.woff') format('woff'),
+         url('../font/frame_bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'nanumbarungothic';
+    src: url('../font/nanumbarungothic.eot');
+    src: url('../font/nanumbarungothic.eot?#iefix') format('embedded-opentype'),
+         url('http://www.idaehan.com/kr/font/nanumbarungothic.woff') format('woff'),
+         url('../font/nanumbarungothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nanumbarungothicbold';
+    src: url('../font/nanumbarungothicbold.eot');
+    src: url('../font/nanumbarungothicbold.eot?#iefix') format('embedded-opentype'),
+         url('http://www.idaehan.com/kr/font/nanumbarungothicbold.woff') format('woff'),
+         url('../font/nanumbarungothicbold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*iconeList*/
+.icone-1{background-image:url("../../lib/img/people_set_x1_morelist.gif");
+    background-repeat:no-repeat;
+    background-position:60px -6px;;
+    padding-right:15px;
+    width: 89px;
+}
+
+.hide{position:absolute; left:-9999px;}

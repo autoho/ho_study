@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib/css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/ui_style.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/common.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-1.11.2.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            /* Tap Menu */
+            $(".tapMenu li").on("click", function(e){
+                $(".tapMenu li").removeClass("on");
+                $(this).addClass("on");
+            });
+
+            /* scroll 반응 */
+            $(".list_style").on("click", "li",  function(e){
+                var content_top = $(".content").position().top;
+                var tap_top = $(".tap_wrap").position().top;
+                var tapScroll_top = content_top + tap_top;
+
+                $(".list_style li").removeClass("on");
+                $(this).addClass("on");
+
+                $("html, body").animate({scrollTop:tapScroll_top}, 'slow');
+            });
+
+            /* 더 보기 */
+            var listCnt = 0;
+            $(".list_style li").hide();
+            $(".list_style li[data-index='"+0+"']").show();
+            $(".btn_more").on("click", function(e){
+                listCnt ++;
+                if(listCnt == listCnt){
+                    $(".list_style li[data-index='"+listCnt+"']").show();
+                }
+                
+            }); 
+
+            /* list가 10개 미만일떄 더 보기 버튼 안보이게*/
+            var list_len = $(".list_style li").length;
+            if(list_len <= 9){
+                $(".btn_more").hide();
+            }else{
+                $(".btn_more").show();
+            }
+
+        })
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <div class="all_nav">
+        <div class="header_nav_wrap">
+             <span class="icon"></span>
+            <h1 class="logo"><a href="#">DaehanStell</a></h1>
+            <div class="len">
+                <ul>
+                    <li><a href="#">KR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+        
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="s_manu">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Networks</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">CI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                     <ul class="s_manu">
+                        <li><a href="#">Steel Library</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                   </ul>   
+                </li>
+                <li>
+                    <a href="#">People</a>
+                    <ul class="s_manu">
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="#">Persona</a></li>
+                        <li><a href="#">Life</a></li>
+                        <li><a href="#">Recruit</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="right_manu">
+           <span class="icon"></span>
+            <a href="#">
+                <img src="../../lib/img/nv_frameworks.gif" alt="frameworks" />
+            </a>
+        </div>
+       
+        <div class="bottom_manu_wrap">
+            <span><img src="../../lib/img/nv_symbol_1.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_2.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_3.jpg" alt="" /></span>
+        </div>
+        
+     </div>
+     <div class="title_wrap">
+         <h2 class="title">Steel Library</h2>
+         <a class="prev" href="#">Sustainability</a>
+         <a class="next" href="#">Product</a>
+     </div>
+</div>
+
+
+<div class="content_line">
+    <ul>
+        <li class="on"><a href="#">Manufacturing Process</a></li>
+        <li><a href="#">Basic Knowledge</a></li>
+        <li><a href="#">Terminology</a></li>
+    </ul>
+</div>
+<div class="content terminology">
+   
+    <div class="con_wrap">
+        <div class="top_btn">
+            <img src="../../lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+        </div>
+    </div>
+    <!-- section-->
+    <section class="section">
+        <h3>철근의 기본상식과 용어에 대한 궁금증을 해결해드립니다.</h3>
+        <!-- tap_type1 -->
+        <div class="tap_wrap type1">
+            <!-- tap_header -->
+            <div class="tap_header">
+                <ul class="tapMenu type1">
+                    <li class="on"><a href="#noLink">전체</a></li>
+                    <li><a href="#noLink">철근품질</a></li>
+                    <li><a href="#noLink">공정용어</a></li>
+                    <li><a href="#noLink">설비용어</a></li>
+                    <li><a href="#noLink">철강제품</a></li>
+                    <li><a href="#noLink">기타</a></li>
+                </ul>
+            </div>
+            <!-- //tap_header -->
+
+            <!-- tap_body -->
+            <div class="tap_body">
+                <ul class="list_style type1 mar_t20">
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">규격</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">생산하거나 사용하는 데 편리하도록 주로 공업생산품에 대해서 정한 기술적 표준을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">강종</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">강재의 종류. 주로 항복점이나 인장 강도 등 기계적 성질이나 화학 성분에 따라 분류됩니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">빌릿 (Square Billet)</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">형강으로 압연하기 전의 각형 단면 강재로서 긴 것을 빌릿, 짧은 것을 슬라브라 합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">Bar In Coil (BIC)</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">바(Bar)가 아닌 후프(Hoop) 형태로 제조한 철근인 '코일(Coil)철근' 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">이형철근</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">SD(Steel Deformed) 표면에 마디와 리브의 돌기로 이루어진 철근을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="2">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">원형철근</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">SR(Steel Round) 표면에 마디와 리브의 돌기가 없는 철근을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="3">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">마디 & 리브</span>
+                            <i>철강 제품</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">마 디 : 철근의 직선의 수직 방향으로 원주에 형성하고 있는 띠를 지칭합니다. 리 브 : 철근의 직선 방향과 수평하게 직선을 이루고 있는 띠를 지칭합니다.</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="btn_wrap">
+                    <a href="#this" class="btn_more">
+                        <i>더보기</i>
+                    </a>
+                </div>
+            </div>
+            <!-- //tap_body -->
+        </div>
+        <!-- //tap_type1 -->
+    </section>
+    <!-- //section-->
+
+
+</div>
+
+<div class="footer">
+    <div class="footer_wrap">
+        <div class="footer_gnb1">
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                        <ul class="s_manu">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Networks</a></li>
+                            <li><a href="#">IR</a></li>
+                            <li><a href="#">CI</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Steel Library</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">People</a>
+                        <ul class="s_manu">
+                            <li><a href="#">CEO</a></li>
+                            <li><a href="#">Persona</a></li>
+                            <li><a href="#">Life</a></li>
+                            <li><a href="#">Recruit</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Frameworks</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Solution</a></li>
+                            <li><a href="#">Case Study</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer_gnb2">
+            <ul>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank">개인정보 취급방침</a></li>
+                <li><a href="#" target="_blank">이메일 무단 수집 거부</a></li>
+             </ul>
+             <ul>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award.jpg" alt="웹사이트부문 GRAND PRIX수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award2.jpg" alt="레드닷 디자인어워드 수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_logo2.jpg" alt="국가공인 웹 접근성 품질인증마크_(사)한국시각장애인연합회 (2015.10.08~2016.10.07)" /></a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank"><em>Brochure</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+                <li><a href="#" target="_blank"><em>Webzine</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+             </ul>
+        </div>
+        
+        <div class="footer_wrap2">
+            <div class="footer_gnb3">
+                <p class="copyright">Copyright DaehanSteel. All rights reserved.</p>
+            </div>
+            <div class="footer_gnb4">
+                <a href="#">FAMILY SITE</a>
+                    <ul class="family">
+                        <li><a href="#">e-Transportation</a></li>
+                        <li><a href="#">e-Procurement</a></li>
+                        <li><a href="#">e-Sales</a></li>
+                        <li><a href="#">대한 네트웍스</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

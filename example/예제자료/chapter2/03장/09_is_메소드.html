@@ -13,6 +13,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
+				var el = $('#el > ul > li').is('#nextEl');
+					if(el){
+					alert('존재 합니다.');
+				} else {
+					alert('존재하지 않습니다.');
+				}
 				
 			});
 		</script>

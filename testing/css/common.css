@@ -73,11 +73,13 @@ body{font-size:12px;
 .wrap .todaytopic ul li:first-child{margin-right:30px; margin-top:0;}
 .wrap .content{width: 840px; height: 342px; margin:0 30px;border:none;}
 .wrap .content .leftside{width: 264px; height: 335px; padding-right:12px; overflow:hidden; border-right:1px #e0e0e0 solid; float:left;}
+.wrap .content .leftside img {width: 264px; height: 120px;}
 .wrap .content .leftside strong{font-size:17px; }
 .wrap .content .leftside p{overflow:hidden; height: 31px; color:#666666; margin:7px 0;}
 .wrap .content .leftside ul>li strong{font-size:12px; line-height:25px;}
 .wrap .content .leftside ul>li.blue strong{color:blue;}
-.wrap .content .incenter{width: 260px; height: 335px; padding:0 12px; float:left; border-right:1px #e0e0e0 solid;}
+.wrap .content .incenter {width: 260px; height: 335px; padding:0 12px; float:left; border-right:1px #e0e0e0 solid;}
+.wrap .content .incenter img{width: 260px; height: 120px;}
 .wrap .content .incenter strong{font-size:17px; line-height:27px;}
 .wrap .content .incenter p{overflow:hidden; height: 31px; color:#666666; margin:7px 0;}
 .wrap .content .incenter li{width: 260px; height: 40px; margin-top:8px;}
@@ -100,20 +102,21 @@ button.next:hover{width: 21px; height: 42px; margin-left:500px; background:url("
 button.prev:hover{width: 21px; height: 42px; margin-left:-530px; background:url("images/sp_nwstd.png")no-repeat -146px -20px;}
 
 .bottom{width: 891px; height: 110px; margin:0 auto;}
-.bottom .autoskip{float:left; line-height:23px; vertical-align:middle;}
-.bottom .autoskip span{display:inline-block; width: 43px; height: 12px; border:1px #F00 solid; text-indent:-99999px; background:url("images/sp_nwstd.png")no-repeat -525px -299px;}
-.bottom .autoskip select{width: 90px; background:url("images/sp_nwstd.png")no-repeat;}
-.bottom .autoskip select.fast{background-position:-435px -485px;}
-.bottom .autoskip select.norma{background-position:-435px -510px;}
-.bottom .autoskip select.slow{background-position:-435px -535px;}
-.bottom .autoskip select.off{background-position:-435px -560px;}
+.bottom .autoskip{float:left; vertical-align:middle; width: 140px;}
+.bottom .autoskip span{display:inline-block; vertical-align:middle; width: 43px; height: 23px;text-indent:-99999px; background:url("images/sp_nwstd.png")no-repeat -525px -295px;}
+.bottom .autoskip .select{ float:right; height: 23px; width: 90px; background:url("images/sp_nwstd.png")no-repeat -435px -365px; border:none;}
 
-.bottom .pages{font-size:0px; float:right;}
-.bottom .pages button{ height: 22px; border:none; background:url("images/sp_nwstd.png")no-repeat;}
-.bottom .pages button.backarrow{width: 22px; background-position:-435px -585px;}
-.bottom .pages button.prevarrow{width: 22px; background-position:-460px -585px;}
-.bottom .pages button.backarrow:hover{background-position:-535px -585px;}
-.bottom .pages button.prevarrow:hover{background-position:-560px -585px;}
+.bottom .pages{font-size:0px; float:right; width: 100px; display: block;}
+.bottom .pages span{margin-top: 3px; text-indent: -99999px; float:left; display: block; font-size: 12px; width: 12px; background: url("images/sp_nwstd.png")no-repeat;}
+.bottom .pages .seven {background-position:-266px -112px;}
+.bottom .pages .slash {background-position:-318px -128px;}
+.bottom .pages .fore {background-position:-198px -128px;}
+.bottom .pages .nine {background-position:-295px -128px;}
+.bottom .pages button{float:right; height: 22px; border:none; background:url("images/sp_nwstd.png")no-repeat;}
+.bottom .pages button.backarrow{width: 22px; background-position:-460px -585px;}
+.bottom .pages button.prevarrow{width: 22px; background-position:-435px -585px;}
+.bottom .pages button.backarrow:hover{background-position:-560px -585px;}
+.bottom .pages button.prevarrow:hover{background-position:-535px -585px;}
 
 .othercompany{height:98px; position:relative; overflow:hidden; padding-left:35px; padding-right:35px;background-image:url(http://static.naver.net/newsstand/img/20140716/bg_nv.png);}
 .othercompany ul{height: 77px; margin:13px auto 0px;}
@@ -130,7 +133,8 @@ button.prev:hover{width: 21px; height: 42px; margin-left:-530px; background:url(
 .copyright{height:80px; border-top: 1px #2c2721 solid; color:#FFF ; text-align:center; font-size:10px; line-height:17px; background-color:#473e33;background-image:url(http://static.naver.net/newsstand/img/20131014/bg_ft.png);}
 .copyright a{color:#aca69f;}
 .copyright a:hover{text-decoration:underline;}
-.copyright .notice{margin-top:9px; margin-bottom:9px;}
-.copyright .notice strong{padding-right:6px; background:url("images/arrow.png") no-repeat right center;}
-.copyright .notice a{padding-left:5px;}
-.copyright .gray{color:#aca69f;}
+.copyright .notice{margin-top:9px; margin-bottom:9px; font-size: 12px;}
+.copyright .notice strong{color: #ddc196; width: 45px; height: 13px;padding-right:6px; background:url("images/arrow.png") no-repeat right center;}
+.copyright .notice a{padding-left:5px;color: #e4e2e0;}
+.copyright p{color:#aca69f; overflow:hidden; width: 100%; font-size: 11px;}
+.copyright strong a{font-size: 11px; font-weight: bold;color: #c7c2bc;}

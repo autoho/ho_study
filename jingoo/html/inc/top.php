@@ -1,30 +1,18 @@
-<header>
-      <div class="company-view">
-        <h1 class="logo">logo</h1>  
-        <nav class="cnt">
-          <ul>
-            <li><a href="">STAR<br/>PAN CLUB</a></li>
-            <li><a href="">JAPAN<br/>OFFICIAL</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="cover-view">
-        <div class="slide">
-        <ul>
-            <li class="on"><a href="">1</a><img src="../../lib/images/gallery_2.jpg" alt=""></li>
-            <li class=""><a href="">2</a><img src="../../lib/images/gallery_1.jpg" alt=""></li>
-            <li class=""><a href="">3</a><img src="../../lib/images/gallery_0.jpg" alt=""></li>
-        </ul>
-        <button class="play">재생버튼</button>
-        </div>
-          <nav class="gnb">
-            <ul>
-              <li><a href="">PROFILE</a></li>
-              <li><a href="">MEDIA</a></li>
-              <li><a href="">NOTICE</a></li>
-              <li><a href="">NEWS</a></li>
-            </ul>
-            
-          </nav>  
-      </div>
-    </header>
+header .cover-view {width:50%; height:86%; outline:1px blue solid; display:table-cell; vertical-align:top;}
+header .cover-view .slide {height:430px; outline:1px blue solid; position:relative;}
+header .cover-view .slide img {width:100%; position:absolute; top:0; left:0;}
+header .cover-view .slide a {position:relative; z-index:1; top:400px; display:block; border:1px red solid; 
+                             width:20px; height:20px;
+                             background-image:url('http://janusent.com/star/yeo_jingoo/wp-content/themes/janus-star/images/common/dot.png');
+                             text-indent:-9999px;
+                            }
+header .cover-view .slide li {display:inline-block;}
+header .cover-view .slide li.on a {background-position:0 -20px;}
+header .cover-view .slide .play {position:absolute; bottom:0; left:50%; margin-left:-15px; z-index:1;}
+
+
+header .cover-view nav.gnb {height:70px; outline:1px pink solid;}
+header .cover-view nav {background-color:#ddd;}
+header .cover-view nav li{display:table-cell; width:125px; text-align:center; height:70px; vertical-align:middle;}
+header .cover-view nav li a {color:white; text-decoration:none;}
+header .cover-view nav li:hover {background-color:#FF654C;}

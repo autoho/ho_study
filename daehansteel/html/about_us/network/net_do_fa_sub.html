@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="/lib/img/favicon.ico">
+<link rel="stylesheet" href="/lib/css/common.css" media="all" />
+<link rel="stylesheet" href="/lib/css/master.css" media="all" />
+<script type="text/javascript" src="/lib/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="/lib/js/script.js"></script>
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=e482ac4ce3221d2406442a2a4d5a518a"></script>
+<style>
+
+.header{background: url('../../../lib/img/au_net_fa_header.jpg') center top no-repeat; background-attachment:fixed;}
+#container {padding-bottom:0;color: #5b5c5e;}
+.cont_net_do2_sub .do2_sub_wrap {width: 950px;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con {width: 710px; padding-left:240px; position:relative;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .gtit {position:absolute; top:0; left:0; font-size:0;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .gtit h3 {font-size:28px; margin-bottom:22px; margin-top: -3px; font-weight:normal;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con h4 {font-size:22px; margin-bottom:9px; line-height: 1.545em; font-weight:normal;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .pic {position:relative; overflow:hidden; width: 710px; height: 197px; margin:34px 0 37px;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .pic img {height: 197px; margin-left:10px;float:left;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .pic img:first-child{ margin-left:0; }
+.cont_net_do2_sub .do2_sub_wrap .consection {position:relative; width: 710px; margin-top:60px; padding-left:240px;}
+.cont_net_do2_sub .do2_sub_wrap .consection .gtit {position:absolute; top:0; left:0;}
+.cont_net_do2_sub .do2_sub_wrap .consection .gtit h3 {font-size:28px; margin-bottom:22px; margin-top: -3px; font-weight:normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection h4 {font-size:22px; line-height:1.54em; margin-bottom:9px; font-weight:normal;}
+
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .gtit .selectbox_title {font-size:13px; margin-top:-10px; vertical-align: middle; width:108px; height:16px; line-height: 1.3em; text-align: left; padding: 6px 25px 6px 9px; border: 1px solid #cacbcd; background: #fff url('../../../lib/img/people_ceo_mes_bul_selectbox.gif') no-repeat 100% 0;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .gtit .selectbox_title strong {font-weight:normal; padding-top:1px;}
+.cont_net_do2_sub .do2_sub_wrap .do2_sub_first_con .gtit .btn-type1 {width:52px; height:28px; font-size: 13px; background: #747578; display:inline-block; margin: -10px 0 0 -1px; color:#FFF;border: 1px solid #747578; text-align: center; line-height: 29px; vertical-align: bottom;}
+
+
+.cont_net_do2_sub .do2_sub_wrap .consection caption{display: none;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data {border-collapse: collapse; font-style: normal; font-family: 'nanumbarungothic';border-bottom: 1px solid #a7a9ac;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data caption{display: none;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data thead {border-top: 1px solid #a7a9ac; border-bottom: 1px solid #a7a9ac; font-family: 'nanumbarungothicbold'; font-size: 14px; font-weight: normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data thead tr {width:950px; height:46px; font-family: 'nanumbarungothicbold';}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data thead .links {height:23px; padding:11px 10px 9px; text-align:right;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody {font-size:13px; border-bottom: 1px solid #a7a9ac;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody .name {width:65px; height:23px; text-align:left; padding:13px 10px 11px; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody .type {width:321px; height:45px; border-bottom:1px solid #ebebeb; font-style: normal;text-align:center;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody .code {width:109px; height:45px; text-align:center; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody .date {width:85px; height:45px; text-align:center; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody .links {width:90px; height:23px; padding:11px 10px 9px; text-align:right; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody .links a{color: #f05a2b; padding-right:14px; background: url('../../../lib/img/network_net_set_x1_dvlinks.gif')no-repeat 100% 3px;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tbScoll .tb-data tbody .tablB {border-bottom: 1px solid #a7a9ac;}
+
+.cont_net_do2_sub .do2_sub_wrap .consection .tb-data2 {border-top: 1px solid #a7a9ac;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tb-data2 tbody {text-align:left;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tb-data2 tbody .add {width:130px; height:23px; text-align:left; padding:13px 10px 11px; text-align:left; border-bottom:1px solid #ebebeb; font-family: 'nanumbarungothic'; font-size: 14px; font-weight: normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tb-data2 tbody .pho {width:540px; height:23px; text-align:left; padding:13px 10px 11px; text-align:left; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_net_do2_sub .do2_sub_wrap .consection .tb-data2 tbody .tablB {border-bottom: 1px solid #a7a9ac; text-align:left;}
+
+#map {height: 480px; margin-top:60px;}
+
+
+</style>
+</head>
+<body>
+<div class="header"></div>
+
+<div class="content_line">
+    <ul>
+        <li><a href="/html/about_us/network/net_do.html">Domestic</a></li>
+        <li><a href="/html/about_us/network/net_glo.html">Global</a></li>
+        <li class="on"><a href="/html/about_us/network/net_fa.html">Family</a></li>
+    </ul>
+</div>
+
+<div class="conWrap">
+	<div id="container" class="cont_net_do2_sub">
+
+	 <!--본문 내용 -->
+		<div class="do2_sub_wrap">
+			<div class="do2_sub_first_con">
+				<div class="gtit">
+				<h3>서울지사</h3>
+                <span class="opt selectbox_title" style="width: 108px; vertical-align: middle; cursor: pointer; display: inline-block;"><strong>서울지사</strong></span>
+                <select class="opt" title="국내 사업장 선택" style="position: absolute; left: -100000px;">
+                    <option value="5">부산지사</option>
+                    <option value="4" selected="selected">서울지사</option>
+                    <option value="1">신평공장/본사</option>
+                    <option value="2">녹산공장</option>
+                    <option value="3">평택공장</option>
+					<option value="6">대한제강 제주(주)</option>
+                </select>
+                <a href="" class="btn-type1">확인</a>
+            	</div>
+            	<h4>전략의 중심, 비지니스의 심장</h4>
+            	<p>서울, 경기 지역의 건설사와 유통 대리점 고객을 응대하는, 마케팅의 첨단 기지입니다. <br />철근 콘크리트용 봉강 영업 기능을 비롯해 신규 사업 개발을 주도하며, 미래 초일류 기업으로의 도약을 위한 거점입니다. <br />항상 친절한 서비스와 신속한 솔루션으로 차별화된 전략을 수행합니다.  </p>
+            	<div class="pic">
+                	<img src="/lib/img/network_do2_subdomestic_so1.jpg" alt="서울지사 사무실 모습입니다.">
+                	<img src="/lib/img/network_do2_domestic_so2.jpg" alt="서울지사 사무실 모습입니다.">
+            	</div>
+			</div>
+			<div class="consection">
+	            <div class="gtit">
+	                <h3>인증 현황</h3>
+	            </div>
+	            <h4>ISO 인증</h4>
+	            <div class="tbScoll list-iso">
+	                <table class="tb-data" summary="이 테이블은 서울지사 ISO 인증 정보를 제공하며, 인증명, 규격,인증번호,인증일자, 인증서로 구성되어 있습니다.">
+	                    <caption>서울지사 ISO 인증</caption>
+	                    <thead>
+	                    <tr>
+	                        <th scope="col" class="name">인증명</th>
+	                        <th scope="col" class="type">규격</th>
+	                        <th scope="col" class="code">인증번호</th>
+	                        <th scope="col" class="date">인증일자</th>
+	                        <th scope="col" class="links">인증서</th>
+	                    </tr>
+	                    </thead>
+	                    <tbody>
+	                    <tr>
+	                        <td class="name">품질경영</td>
+	                        <td class="type">KS Q ISO 9001(2009) / ISO 9001(2008)</td>
+	                        <td class="code">QMS-0526</td>
+	                        <td class="date">2000.04</td>
+	                        <td class="links"><a class="mlink" title="새창 열림" target="_blank" href="/kr/download/ISO_9001_2014.pdf">자세히 보기</a></td>
+	                    </tr>
+	                    <tr>
+	                        <td class="name tablB">환경경영</td>
+	                        <td class="type tablB">KS I ISO 14001(2009) / ISO 14001(2004)</td>
+	                        <td class="code tablB">EEMS-0652</td>
+	                        <td class="date tablB">2008.11</td>
+	                        <td class="links tablB"><a class="mlink" title="새창 열림" target="_blank" href="/kr/download/ISO_14001_2014.pdf">자세히 보기</a></td>
+	                    </tr>
+	                    </tbody>
+	                </table>
+	            </div>
+        	</div>
+        	<div class="consection">
+	            <div class="gtit">
+	                <h3>사업장 개요</h3>
+	            </div>
+	            <table class="tb-data2" summary="이 테이블은 서울지사 사업장 개요정보를 제공하며, 주소,전화/팩스 구성되어 있습니다.">
+	                <caption>서울지사 사업장 개요</caption>
+	                <tbody>
+	                <tr>
+	                    <th scope="row" class="add">주소</th>
+	                    <td class="pho">서울특별시 중구 퇴계로 10 메트로타워 8층</td>
+	                </tr>
+	                <tr>
+	                    <th scope="row" class="add tablB">전화/팩스</th>
+	                    <td class="pho tablB">1670-3300 / 02-2051-3185</td>
+	                </tr>
+	                </tbody>
+	            </table>
+        	</div>
+		</div>
+
+
+	</div>
+		<div id="map" style="width:100%;height:400px;"></div>
+</div>
+
+    <script type="text/javascript">
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new daum.maps.LatLng(37.5563255, 126.9744568), //지도의 중심좌표.
+        level: 2 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new daum.maps.Map(container, options);
+
+        // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+        var mapTypeControl = new daum.maps.MapTypeControl();
+
+        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        // daum.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+        map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
+
+        // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+        var zoomControl = new daum.maps.ZoomControl();
+        map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+        // 버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
+function setZoomable(zoomable) {
+    // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+    map.setZoomable(zoomable);
+
+}
+    setZoomable(false)
+
+    // 마커가 표시될 위치입니다
+var markerPosition  = new daum.maps.LatLng(37.5563255, 126.9744568);
+
+// 마커를 생성합니다
+var marker = new daum.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+
+var iwContent = '<div style="padding:5px;">서울지사:02)472-7451 <br><a href="http://map.daum.net/link/map/서울지사,37.5563255, 126.9744568" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/토성식당,37.5563255, 126.9744568" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    iwPosition = new daum.maps.LatLng(37.5563255, 126.9744568); //인포윈도우 표시 위치입니다
+
+// 인포윈도우를 생성합니다
+var infowindow = new daum.maps.InfoWindow({
+    position : iwPosition,
+    content : iwContent
+});
+
+// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+infowindow.open(map, marker);
+    </script>
+
+<div class="footer"></div>
+<div class="top_btn">
+  <img src="/lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+</div>
+</body>
+</html>

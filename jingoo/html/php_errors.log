@@ -1,0 +1,12 @@
+[14-Jan-2016 05:17:49 UTC] PHP Warning:  include(/html/inc/top.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/jingoo/html/main/main.php on line 15
+[14-Jan-2016 05:17:49 UTC] PHP Stack trace:
+[14-Jan-2016 05:17:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/jingoo/html/main/main.php:0
+[14-Jan-2016 05:17:49 UTC] PHP Warning:  include(): Failed opening '/html/inc/top.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/jingoo/html/main/main.php on line 15
+[14-Jan-2016 05:17:49 UTC] PHP Stack trace:
+[14-Jan-2016 05:17:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/jingoo/html/main/main.php:0
+[14-Jan-2016 05:18:23 UTC] PHP Warning:  include(../html/inc/top.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/jingoo/html/main/main.php on line 15
+[14-Jan-2016 05:18:23 UTC] PHP Stack trace:
+[14-Jan-2016 05:18:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/jingoo/html/main/main.php:0
+[14-Jan-2016 05:18:23 UTC] PHP Warning:  include(): Failed opening '../html/inc/top.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/jingoo/html/main/main.php on line 15
+[14-Jan-2016 05:18:23 UTC] PHP Stack trace:
+[14-Jan-2016 05:18:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/jingoo/html/main/main.php:0

@@ -22,20 +22,20 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				$('#springBtn').click(function(){
-					$('#image > img').attr('src','images/spring.jpg');
+				$('#nav > ul > #springBtn').bind('click', function(){
+					$('#image > img').attr({src:"images/spring.jpg", alt:"봄"})
 				});
 				
-				$('#summerBtn').click(function(){
-					$('#image > img').attr('src','images/summer.jpg');
-				})
-				
-				$('#fallBtn').click(function(){
-					$('#image > img').attr('src','images/fall.jpg')
+				$('#nav > ul > #summerBtn').bind('click', function(){
+					$('#image > img').attr({src:"images/summer.jpg", alt:"봄"})
 				});
 				
-				$('#winterBtn').click(function(){
-					$('#image >img').attr('src','images/winter.jpg')
+				$('#nav > ul > #fallBtn').bind('click', function(){
+					
+				});
+				
+				$('#nav > ul > #winterBtn').bind('click', function(){
+					
 				});
 			});
 		</script>

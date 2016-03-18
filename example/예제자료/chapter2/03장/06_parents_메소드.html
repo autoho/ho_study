@@ -13,7 +13,9 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				var childEl=$('#childEl')
+				var parentEl=childEl.parents('.parentEl')
+				parentEl.css('color','red')
 			});
 		</script>
 	</head>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Frameworks > DaehanSteel 대한제강</title>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="/lib/img/favicon.ico">
+<link rel="stylesheet" href="/lib/css/common.css" media="all" />
+<link rel="stylesheet" href="/lib/css/master.css" media="all" />
+<script type="text/javascript" src="/lib/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="/lib/js/script.js"></script>
+
+<style type="text/css">
+
+.conWrap{width: 100%;background: url('../../lib/img/bg_frameworks.jpg') no-repeat; background-color: #2c2d2f;}
+
+.conWrap .bgg{ width: 100%; height: 100%; background-attachment: fixed;background: url('../../lib/img/bg_frameworks_pt.png');}
+.cont_frame_works h2{padding-bottom: 46px;}
+.cont_frame_works h2 img{display:block; margin:0 auto; }
+
+.cont_frame_works .overview{position: relative; color:#fff; padding-left:315px; height: 60px;}
+.cont_frame_works .overview strong{position: absolute; left:0; font-size:44px; letter-spacing:0.02em;font-family: 'frame_bold';}
+.cont_frame_works .overview span{color: #d7d7d7; font-size: 18px;}
+.cont_frame_works .overview ul{width: 100%; margin-top: 25px}
+.cont_frame_works .overview ul li{cursor: pointer; float:left; margin-right:20px ;background:url('../../lib/img/set_btn_last.png') no-repeat; font-family:'nanumbarungothicbold'; color:#959597; width: 171px; height: 28px; padding:7px 0 0 19px; font-size:14px;}
+.cont_frame_works .overview ul li:hover{background-position: 0 -160px; color:#fff;}
+.cont_frame_works .overview ul li.on{background-position: 0 -80px; color:#fff;}
+
+.cont_frame_works [class^="box"] .box_over{position: relative; width: 1010px; left: -34px; color:#fff; overflow:hidden; height: 600px; margin-top: 90px;}
+.cont_frame_works [class^="box"] .box_over .in{position: absolute;  left: 30px; top: 50px; height: 500px;}
+.cont_frame_works [class^="box"] .box_over .in h3{font-weight: normal; font-size: 28px; line-height: 1.429em; margin-bottom: 22px;}
+.cont_frame_works [class^="box"] .box_over .in strong{font-family: 'frame_bold'; font-size: 56px; line-height: 1.2; letter-spacing: 0.03em;}
+.cont_frame_works [class^="box"] .box_over .in span{position: absolute;left: 0; bottom: 0px; display: inline-block; padding-top: 13px;font-size: 14px; background: url('../../lib/img/bl_quarry.gif') no-repeat;}
+.cont_frame_works [class^="box"] .box_over span.tex{display: block; padding:113px 50px 0 315px; width: 634px;}
+
+.cont_frame_works .box0{display:none}
+.cont_frame_works .box1{display:none}
+.cont_frame_works .box2{display:none}
+.cont_frame_works [class^="box"].on{display:block}
+
+.cont_frame_works .box0 .box_over{background:url('../../lib/img/frame_box1bg.png') no-repeat 100%; }
+.cont_frame_works .box0 .box_over .button_list{padding:28px 0 0 315px;}
+.cont_frame_works .box0 .box_over .button_list a{display:block;height: 22px; padding: 2px 30px 0 0; margin-right: 20px; font-size:14px; color:#fff; background: url('../../lib/img/btn_fw_go.png') no-repeat;}
+.cont_frame_works .box0 .box_over .button_list a:first-child{background-position: 150px 0;}
+.cont_frame_works .box0 .box_over .button_list a:first-child:hover{background-position: 150px -49px;}
+.cont_frame_works .box0 .box_over .button_list a:first-child+a{background-position: 214px 0;}
+.cont_frame_works .box0 .box_over .button_list a:first-child+a:hover{background-position: 214px -49px;}
+
+.cont_frame_works .box1 .box_over{background:url('../../lib/img/frame_box2bg.png') no-repeat 100%; height: 655px; }
+.cont_frame_works .box1 .box_over .in{height: 550px;}
+.cont_frame_works .box1 .box_over>span img{padding:110px 0 0 335px}
+
+.cont_frame_works .box2 .box_over{background:url('../../lib/img/frame_box3bg.png') no-repeat 100%;}
+.cont_frame_works .box2 .box_over .in{height: 460px; top:60px}
+.cont_frame_works .box2 .box_over .img_list{padding-left:315px; margin-top: 38px;}
+.cont_frame_works .box2 .box_over .img_list span{ display: inline-block; margin-right:8px}
+.cont_frame_works .box2 .box_over span.tex{padding-top:130px}
+.cont_frame_works .box2 .box_over .bi_down a{color:#fff; background: url('../../lib/img/btn_bi.gif') no-repeat; display: block; width: 317px; height: 37px; padding: 17px 0 0 15px; margin:10px 46px 0 0; float:right}
+
+.cont_frame_works .ov2{margin-top:85px}
+.cont_frame_works .box3 .box_over{background:url('../../lib/img/frame_box4bg.png') no-repeat 100%; margin-top: 40px;}
+.cont_frame_works .box3 .box_over p{padding-left: 41px;}
+
+
+.cont_frame_works .box3 .box_over .box_list ol{margin-top:30px; background: url('../../lib/img/bg_orga.jpg') no-repeat; width: 930px; height: 290px; margin: 100px auto; margin-bottom: 25px;}
+.cont_frame_works .box3 .box_over .box_list ol li{display:inline-block;  width: 290px; height: 290px;}
+.cont_frame_works .box3 .box_over .box_list ol li span.non{display:none}
+.cont_frame_works .box3 .box_over .box_list ol li:first-child~li{margin-left:27px}
+.cont_frame_works .box3 .box_over .box_list ol li span[class^="mask"]{display:none; width: 290px; height: 290px;}
+.cont_frame_works .box3 .box_over .box_list ol li:first-child:hover .mask0{display:block}
+.cont_frame_works .box3 .box_over .box_list ol li:first-child+li:hover .mask1{display:block}
+.cont_frame_works .box3 .box_over .box_list ol li:first-child+li+li:hover .mask2{display:block}
+.cont_frame_works .box3 .box_over .box_list h3{display:none; font-size:17px; line-height: 1.429em; margin-bottom: 22px;}
+.cont_frame_works .box3 .box_over .box_list h4{display:none; font-size:21px;line-height: 1.429em; margin-bottom: 22px;}
+.cont_frame_works .box3 .box_over .inn span{position: absolute; bottom: 70px;left: 40px;padding-top: 13px;font-size: 14px; background: url('../../lib/img/bl_quarry.gif') no-repeat;}
+
+.cont_frame_works .box4 .box_over{background:url('../../lib/img/frame_box5bg.png') no-repeat 100%; margin-top: 72px;}
+.cont_frame_works .box4 .box_over .box_list h3{font-size: 28px;line-height: 1.429em; margin-bottom: 22px; font-family: 'frame_bold'; padding:50px 0 0 30px}
+
+.cont_frame_works .wrap2 .ov3{margin-top:22px}
+.cont_frame_works .wrap2 .ov3 .plusbtn{width: 190px;margin-top: 26px;display:block; background: url('../../lib/img/set_btn_last.png') no-repeat;}
+.cont_frame_works .wrap2 .ov3 .plusbtn a{font-size:14px; display:block; width: 171px; height: 28px; padding:7px 0 0 19px; color:#959597;}
+.cont_frame_works .wrap2 .ov3 .plusbtn:hover{background-position: 0 -160px;}
+.cont_frame_works .wrap2 .ov3 .plusbtn:hover a{color:#fff}
+
+.cont_frame_works .wrap2 .ov3 .plusbtn.on{background-position: 0 -160px;}
+.cont_frame_works .wrap2 .ov3 .plusbtn.on a{color:#fff}
+
+.cont_frame_works .wrap2 .box4 .box_over{display:none}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .listbtn{position: absolute;right: 40px;top: 60px; display:block; background: url('../../lib/img/set_btnall.gif'); width: 140px; height: 28px; padding:7px 0 0 14px}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .listbtn:hover{background-position: 0 35px; }
+.cont_frame_works .wrap2 .box4 .box_over .box_list .listbtn:hover a{color:#c9431a;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .listbtn:hover i{background-position: 0 -49px;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .listbtn a{color:#fff;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .listbtn i{padding-left:26px; background:url('../../lib/img/set_btnall_icon.gif') no-repeat 0 1px;}
+
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox{overflow: hidden;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox li{float:left; width: 253px; padding: 0 0 46px;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox li:first-child+li{background:#d64f25 ;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox li a span.imgss{display:block; position:relative}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox ul li a span.imgss{height: 257px; }
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox ul li a span.imgss img{position:absolute; width: 253px; height: 251px;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox ul li:hover .hov{z-index:1}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox strong{display: block; color:#fff; padding:0 24px}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox em{display: block; color:#fff; padding:0 24px}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox strong{display: block;font-size: 16px; margin: 18px 0 11px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox ul li a span.bttn{width: 24px; height: 24px; margin:26px 0 0 20px ;display: block;background: url('../../lib/img/frame_btn1.png') no-repeat;}
+.cont_frame_works .wrap2 .box4 .box_over .box_list .bestbox ul li:hover .bttn{background: url('../../lib/img/frame_btn2.png') no-repeat;}
+
+
+</style>
+
+<script>
+	$(document).ready(function(){
+		
+		$('.over_list li').click(function(){
+			var nn=$(this).index();
+			var box1top = $('#ov1').offset().top;
+			$('body,html').animate({'scroll-top':box1top},500)
+			
+			$(this).addClass('on').siblings().removeClass('on')
+			$('[class="box'+nn+'"]').addClass('on').siblings('[class^="box"]').removeClass('on');
+			
+		})
+		
+		$('.plusbtn').click(function(){
+			var offtop = $('.box4 .box_over .box_list').offset().top;
+			
+			
+			if($('.plusbtn').is('.on') == 0){
+				$('.box4 .box_over').css('display','block').parents('.wrap2').find('.ov3').find('.plusbtn').addClass('on')
+				$('body,html').animate({'scroll-top':offtop+=500},500)
+			}
+			else if($('.plusbtn').is('.on') == 1){
+				$('.box4 .box_over').css('display','none').parents('.wrap2').find('.ov3').find('.plusbtn').removeClass('on')
+				$('body,html').animate({'scroll-top':offtop-=800},500)
+			}
+		})
+		
+		
+		var top1 = $('.ov1').offset().top;
+		var top2 = $('.con2').offset().top;
+		var top3 = $('.ov3').offset().top;
+		
+		
+		$('.header').on('click',".right_manu li",function(){
+			
+			
+			var nnnu =$(this).index();
+			
+			if(nnnu==0){
+				$('body,html').animate({'scroll-top':top1})
+			}else if(nnnu==1){
+				$('body,html').animate({'scroll-top':top2})
+			}else if(nnnu==2){
+				$('body,html').animate({'scroll-top':top3})
+				$('.cont_frame_works .wrap2 .box4 .box_over').show()
+			}
+			
+		}
+			
+		)
+		
+		
+	})
+</script>
+
+
+</head>
+<body>
+<div class="header"></div>
+	 
+<div class="conWrap">
+	<div class="bgg">
+	<div class="framework_container cont_frame_works con1" style="padding-bottom:0; padding-top:200px">
+		<div class="wrap1">
+		<h2><img src="/lib/img/fram_img_fmain_logo.png" alt="Frame Works" /></h2>
+		<div class="overview" id="ov1">
+				<strong>Overview</strong>
+				<span>프레임웍스는 고객의 상황을 예측/분석하여, 최적화된 건설 자재 플랜을 제공하고, 공사 기간 동안 안정적으로 리소스를 공급/관리 해주는 대한제강의 솔루션 브랜드입니다.</span>
+				
+				<div class="over_list">
+					<ul>
+						<li class="on">BRAND STORY</li>
+						<li>ORGANIZATION</li>
+						<li>BI</li>
+					</ul>
+				</div>
+			</div>
+		
+		<div class="box0 on">
+			<div class="box_over">
+				<div class="in">
+					<h3>BRAND STORY</h3>
+					<strong>Your<br />Steel<br />Advisor.</strong>
+					<span>프레임웍스 브랜드 스토리</span>
+				</div>
+				<span class="tex">
+						현재 국내 건설현장은 원가 절감, 안정적 철근 물량 확보, 공정 관리 및 자재 관리 등에 어려움을 겪고 있습니다.<br />
+						프레임웍스는 고객의 상황을 예측, 분석해 그에 맞는 건축 자재 공급 계획과 관리를 책임지는 프로세스를 총괄합니다.<br />
+						기존 '스타즈(Staz)'가 제품을 구입하면 자연스럽게 따라오는 서비스로 인식됐다면, 프레임웍스는 좀 더 전문적이고 글로벌한 비지니스 환경을 만족시키는 명확한 솔루션 브랜드로써 그 입지를 다져나갈 것입니다.
+						<br />
+						<br />
+						대한제강 '프레임웍스'는 고객의 입장에서 생각하고 고객의 필요를 채워주는 브랜드입니다. 건설현장의 주문단계에서부터 철근 제품의 생산, 생산된 제품의 가공 및 물류서비스를 통한 납품에 이르기까지 전 단계에서 고객사에 필요한 솔루션을 제공할 수 있는 국내 유일의 Steel Advisor입니다.
+				</span>
+				
+				<div class="button_list">
+					<a href="javascript:void(0)">프레임웍스 홍보영상 보기</a>
+					<a href="javascript:void(0)">프레임웍스 메이킹스토리(with JOH)</a>
+				</div>
+			</div>
+		</div>
+		<div class="box1">
+			<div class="box_over">
+				<div class="in">
+					<h3>ORGANIZATION</h3>
+					<strong>Brand<br />Platform</strong>
+					<span>프레임웍스 브랜드 스토리</span>
+				</div>
+				<span><img src="/lib/img/Organization_v3_1.jpg" alt="Brand Platform 구성" /></span>
+			</div>
+		</div>
+		<div class="box2">
+			<div class="box_over">
+				<div class="in">
+					<h3>BI</h3>
+					<strong>Brand<br />Identity</strong>
+					<span>로고타입 및 공간규정</span>
+				</div>
+				<span class="tex">
+					철근 가공의 모양을 형상화하고 쇠를 향한 뜨거운 열정을 담은 프레임웍스의 브랜드 아이덴티티는 대한제강의 대표적인 솔루션 브랜드로서 대한제강의 영문 로고타입과 동일한 스타일을 유지하여 기업브랜드와의 연계성을 가져가며, 대한제강의 철에 대한 자부심과 열정 그리고 고객에 대한 신뢰를 표현하고 있습니다. 공간규정은 프레임웍스 시그니처가 옥외광고, 인쇄물 등에 사용 될 때에 가독성 및 로고비율 유지를 위한 최소한의 보호공간으로 사용됩니다.
+				</span>
+				
+				<div class="img_list">
+					<span><img src="/lib/img/img_bi_kr.jpg" alt="frameworks 국문 bi" /></span>
+					<span><img src="/lib/img/img_bi_en.jpg" alt="frameworks 국문 bi" /></span>
+				</div>
+				<div class="bi_down">
+					<a href="javascript:void(0)">프레임웍스 영문 BI</a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<div class="framework_container cont_frame_works con2" id="ov2" style="padding-top:0">	
+		 <div class="wrap2">
+		 	<div class="overview ov2">
+				<strong>Solution</strong>
+				<span>프레임웍스는 고객의 건설자재 주문 단계에서부터 철근 제품의 생산, 생산된 제품의 가공 및 물류서비스를 통한 납품에 이르기까지 전 과정을 관리하며, 고객의 상황을 예측하고 대응하는 솔루션을 제공합니다.</span>
+			</div>
+			 	<div class="box3">
+			 		<div class="box_over">
+						<div class="box_list">
+							<h3>ORGANIZATION</h3>
+							<h4>프레임웍스 브랜드 구성</h4>
+							<ol>
+								<li>
+									<a href="javascript:void(0)">
+										<span class="non">Forecast</span>
+										<span class="non">1 step</span>
+										<span class="mask0"><img src="/lib/img/solution0.jpg" alt="Forecast" /></span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										<span class="non">Optimize</span>
+										<span class="non">2 step</span>
+										<span class="mask1"><img src="/lib/img/solution1.jpg" alt="Forecast" /></span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										<span class="non">Manage</span>
+										<span class="non">3 step</span>
+										<span class="mask2"><img src="/lib/img/solution2.jpg" alt="Forecast" /></span>
+									</a>
+								</li>
+							</ol>
+						</div>
+						<p>프레임웍스는 고객의 상황을 예측/분석하여, 그에 맞는 최적화된 건설 자재 플랜을 제공하고, 공사 기간 동안 안정적으로 리소스를 공급/관리해주는 대한제강의 솔루션 브랜드입니다.</p>
+						<div class="inn">
+							<span>Brand Platform</span>
+						</div>
+					</div>
+			 	</div>
+			 	<div class="overview ov3" id="ov3">
+				<strong>Case Study</strong>
+				<span>체계적인 관리와 연구를 통한 프레임웍스 서비스의 Case Study를 통해 고객 상황에 맞춘 서비스 제공 사례와 효율적이고 안정적인 철근 납품  현장을 소개합니다.</span>
+				<span class="plusbtn">
+					<a href="javascript:void(0)">적용 사례 자세히 보기</a>
+				</span>
+			</div>
+			 	<div class="box4">
+			 		<div class="box_over">
+						<div class="box_list">
+							<h3>Best Case Study</h3>
+								<span class="listbtn">
+									<a href="javascript:void(0)"><i>전체 리스트 보기</i></a>
+								</span>
+								<div class="bestbox">
+									<ul>
+										<li>
+											<a href="javascript:void(0)">
+												<span class="imgss">
+													<img class="hov"src="/lib/img/frame_bast1.jpg" alt="부산 남∙북항대교(영도구간)현장" />
+													<img src="/lib/img/frame_bast1_1.jpg" alt="부산 남∙북항대교(영도구간)현장" />
+												</span>
+												<strong>부산 남∙북항대교(영도구간)현장</strong>
+												<em>부산 남∙북항대교(영도구간)는 동∙서부를 가깝게 잇는 길목이 되어 부산을 한층 편리한 생활...</em>
+												<span class="bttn"></span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)">
+												<span class="imgss">
+													<img class="hov"src="/lib/img/frame_bast2.jpg" alt="대방건설 디엠시티 오피스텔 현장" />
+													<img src="/lib/img/frame_bast2-2.jpg" alt="대방건설 디엠시티 오피스텔 현장" />
+												</span>
+												<strong>대방건설 디엠시티 오피스텔 현장</strong>
+												<em>서울 마곡지구의 대방 디엠시티 오피스텔 신축현장은 2014년부터 당사 일반철근이 지속적으로...</em>
+												<span class="bttn"></span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)">
+												<span class="imgss">
+													<img class="hov"src="/lib/img/frame_bast3.jpg" alt="부산 남∙북항대교(영도구간)현장" />
+													<img src="/lib/img/frame_bast3-3.jpg" alt="부산 남∙북항대교(영도구간)현장" />
+												</span>
+												<strong>제주도 내 Solution 구축현장</strong>
+												<em>제주도 지역에 철근수요가 증가하면서 대한제강은 2014년 8월 제주지사를 오픈하여 전략적인...</em>
+												<span class="bttn"></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							
+						
+						</div>
+					</div>
+			 	</div>
+		 </div>
+	  </div>	
+	</div>	
+</div>
+<div class="footer"></div>
+<div class="top_btn">
+  <img src="/lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+</div>
+</body>
+</html>

@@ -13,6 +13,11 @@
 		</style>
 		<script>
 			$(document).ready(function(){
+				var el = $('#wrapper > ul > li').find('#el');
+				el.css('color','red');
+				var next = $('#wrapper > ul > li > ul > li').find('#nextEl');
+				next.css('color','blue');
+				
 				
 			});
 		</script>

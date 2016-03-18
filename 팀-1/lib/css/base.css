@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+	File : Base.CSS(Front)
+ 	CSS 적용순서 : 아이디 > 태그와 클래스 > 클래스 > 태그
+	CSS 선택자 선언순서 : Type Selector, Layout Selector, Class Selector, Etc
+	CSS 속성 선언순서 : display, position, float/clear, overflow, width/height, margin/padding, border, background, color/font, align, etc 
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+*, *:before, *:after {
+	margin:0px; 
+	padding:0px;
+	box-sizing:inherit;
+  	-webkit-box-sizing:inherit;
+  	-moz-box-sizing:inherit;
+	-o-box-sizing:inherit; 		
+}
+
+html {height:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -o-box-sizing:border-box;}
+
+body {	 
+	scrollbar-3dlight-color:#b4b4b4;
+	scrollbar-arrow-color:#333333;
+	scrollbar-base-color:#eeeeee;
+	scrollbar-darkshadow-color:#efefef;
+	scrollbar-face-color:#efefef;
+	scrollbar-highlight-color:#ffffff;
+	scrollbar-shadow-color:#b4b4b4;
+	height:100%;
+	font-family:"NanumGothic";
+	font-size:100%;
+	/*font:inherit;*/
+	line-height:1;
+	vertical-align:baseline;
+	color:#444444;
+	-webkit-font-smoothing:antialiased;
+	overflow-x:hidden;
+}
+
+address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section {display:block\9; margin:0\9; padding:0\9;}
+hr {display:none;}
+caption {overflow:hidden; height:0px; font-size:0px; line-height:0px;}
+h1, h2, h3, h4, h5, h6 ,h7 {font-weight:normal;}
+img {border:none; vertical-align:middle;}
+ol, ul, li, dl, dt, dd {list-style:none;}
+table {
+	width:100%; 
+	border:0px; 
+	border-spacing:0px; 
+	border-collapse:collapse; 	
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	-webkit-box-sizing:border-box; 
+	-o-box-sizing: border-box;
+}
+th, td {border:0px; word-break:keep-all; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -o-box-sizing:border-box;}
+th {font-family:"NanumGothic"; font-weight:normal;}
+td {font-family:"NanumGothic";}
+fieldset {width:100%; border:0px;}
+legend {display:none;}
+frameset {border:0px;}
+iframe {width:100%; border:0px;}
+em, address {font-style:normal;}
+button, a, input, label, textarea {font-family:"NanumGothic"; vertical-align:middle;}
+select {font-family:"NanumGothic"; font-family:"Tahoma"\9; vertical-align:middle;}
+button {overflow:visible; /*outline:none;*/ cursor:pointer; border:0px;}
+button::-moz-focus-inner {padding:0px;}
+select, input, textarea {box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -o-box-sizing:border-box;}
+input[placeholder] {font-weight:bold; font-size:14px; color:#999;}
+
+/* Font */
+@font-face { 
+    font-family:"NanumGothic"; 
+    src:url('/Common/Fonts/NanumGothic.eot');        
+	src:local('※'), 
+		url('/Common/Fonts/NanumGothic.eot?#iefix') format('embedded-opentype'),
+	    url('/Common/Fonts/NanumGothic.woff') format('woff');  
+	font-style:normal;
+    font-weight:normal;
+}
+
+@font-face {
+  font-family:'NanumGothic Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/Common/Fonts/NanumGothic-Bold.eot');
+  src: url('/Common/Fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/Common/Fonts/NanumGothic-Bold.woff2') format('woff2'),
+       url('/Common/Fonts/NanumGothic-Bold.woff') format('woff'),
+}

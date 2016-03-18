@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>채용공고 &gt; 채용공고 &gt; Recruit &gt; People &gt; DaehanSteel 대한제강</title>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="/lib/img/favicon.ico">
+<link rel="stylesheet" href="/lib/css/common.css" media="all" />
+<link rel="stylesheet" href="/lib/css/master.css" media="all" />
+<script type="text/javascript" src="/lib/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="/lib/js/script.js"></script>
+
+<style type="text/css">
+
+.header{width: 100%; height: 360px; background: url('../../../lib/img/vs_3_4.jpg')center top no-repeat;background-attachment: fixed;}
+
+.content_line{font-family:'nanumbarungothicbold';}
+.content_line>ul li{width: 24.69%;}
+.content_line>ul li a {font-size:17px;}
+
+.cont_recr_post {padding-bottom:0px;}
+.cont_recr_post .recr_post .recr_post_title h3{font-family: 'nanumbarungothic'; font-size: 28px; line-height: 40px; margin-bottom: 22px; font-weight: normal;}
+.cont_recr_post .recr_post .post_tb{border-bottom: 1px solid #a7a9ac; }
+.cont_recr_post .recr_post .post_tb .tb-post {border-collapse: collapse; font-style: normal; font-family: 'nanumbarungothic'; border-bottom: 1px solid #a7a9ac;}
+.cont_recr_post .recr_post .post_tb .tb-post caption{display: none;}
+.cont_recr_post .recr_post .post_tb .tb-post thead {border-top: 1px solid #a7a9ac; border-bottom: 1px solid #a7a9ac; font-family: 'nanumbarungothicbold'; font-size: 14px; font-weight: normal;}
+.cont_recr_post .recr_post .post_tb .tb-post thead tr {width:950px; height:48px;font-family: 'nanumbarungothicbold';}
+.cont_recr_post .recr_post .post_tb .tb-post tbody {font-size:13px;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .idx {width:49px; height:47px; text-align:center; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .tit {width:453px; height:47px; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .target {width:70px; height:47px; text-align:center; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .type {width:70px; height:47px; text-align:center; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .preiod {width:182px; height:47px; text-align:center; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .post_btn {width:126px; height:47px; text-align:center; border-bottom:1px solid #ebebeb; font-style: normal;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .post_btn a {display:inline-block; height:23px; line-height:25px; padding:1px 10px 0; background: #747578; color:#FFF;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody .post_btn a:hover {background: #515454; color:#FFF;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody td.tit a {color: #5b5c5e; margin-left:10px;}
+.cont_recr_post .recr_post .post_tb .tb-post tbody td.tit a:hover {color:#f05a28;}
+
+.cont_recr_post .recr_post .post_tb .tb-post .data_file_down {display:none;}
+.cont_recr_post .recr_post .post_tb .tb-post .data_file_down
+.cont_recr_post .recr_post .post_tb .tb-post .data_file_down .view {border-top:1px solid #FFF;}
+.cont_recr_post .recr_post .post_tb .tb-post .data_file_down img{width:840px; padding:25px 55px 40px; background-color:#f3f2ef;}
+
+.cont_recr_post .recr_post .rcGuide {position:relative; margin-top:35px;}
+.cont_recr_post .recr_post .rcGuide li em {color:#f05a28;}
+.cont_recr_post .recr_post .rcGuide a {display: block; width:219px; height:32px; padding-top:8px; color: #747578; background: url('../../../lib/img/people_recruit_post_btn.gif') no-repeat;}
+.cont_recr_post .recr_post .rcGuide span {position:absolute; right:0; top:0; font-size: 16px; text-align: center;}
+.cont_recr_post .recr_post .rcGuide span:hover a{color:#FFF; background-position: 0 -60px;}
+
+.blind{position:fixed;left:0;top:0;width: 100%; height: 100%;background:black;opacity: 0.7;display: none}
+.close{width: 60px;height: 60px;background:url('../../../lib/img/main_modal2_5.png'); position:fixed;top: 20px;right:5px;display:none;cursor: pointer}
+
+#postPopup {width: 660px; height: 681px; position:fixed; left:29%; top:0; display:none; z-index: 90; background-color: #fff;padding:50px; margin-top:50px}
+#postPopup .lyrCon .lrcTit h6{font-size: 34px; color: #44403d; font-size: 28px; line-height: 1.429em; margin-bottom: 22px; font-weight: normal}
+#postPopup .lyrCon .lrcTit strong {display: block; margin: 10px 0; font-size: 22px;}
+#postPopup .lyrCon .lrcTit p {color: #6d6e71; font-style: normal; font-size: 13px;}
+#postPopup .lyrCon .lrcCon {margin-top: 48px;}
+#postPopup .lyrCon .lrcCon strong{display: block; margin-bottom: 20px; font-size: 22px;}
+#postPopup .lyrCon .lrcCon .rule{height: 70px; margin-bottom: 20px; background: url('../../../lib/img/people_popup_img_recruit_rule.jpg') no-repeat; text-indent: -5000em; overflow: hidden;}
+#postPopup .lyrCon .lrcCon .addInfo-type2{padding: 17px 20px 14px; margin: 0 0 37px; font-size: 12px; line-height: 1.833em; background: #f3f2ef;}
+
+#postPopup .lyrCon .lrcCon .time{position: relative; height: 100px; overflow: hidden;}
+#postPopup .lyrCon .lrcCon .time .t1{position: absolute; left: 0;}
+#postPopup .lyrCon .lrcCon .time .t2{position: absolute; left: 210px;}
+#postPopup .lyrCon .lrcCon .time .t3{position: absolute; left: 430px;}
+
+
+
+</style>
+
+    <script type="text/javascript">
+
+        $(function(){
+
+        	$('.btnProcess').click(function(){
+                $('body').append("<div class='blind'></div><div class='close'></div>")
+                $('.blind').fadeIn();
+                $('.close').show();
+                $('#postPopup').fadeIn();
+                
+                $('.close').click(function(){
+            	$('.blind').fadeOut(0,function(){(this).remove()});
+            	$('#postPopup').hide();
+            	$(this).fadeOut(0,function(){(this).remove()});
+            })
+            });
+            $('.tit1').click(function(){ $('.down1').show(); $('.down2').hide();})
+            $('.tit2').click(function(){ $('.down2').show(); $('.down1').hide();})
+        })
+        
+    </script>
+
+</head>
+<body>
+<div class="header"></div>
+<div class="content_line">
+    <ul>
+        <li><a href="/html/People/recruit/recru_notify.html">공지사항</a></li>
+        <li><a href="/html/People/recruit/recru_offi_msys.html">회사생활</a></li>
+        <li><a href="/html/People/recruit/recru_job.html">직무소개</a></li>
+        <li class="on"><a href="/html/People/recruit/recru_post.html">채용공고</a></li>
+    </ul>
+</div>
+<div class="conWrap">
+	<div id="container" class="cont_recr_post" >
+	 <!--본문 내용 -->
+	 	<div class="recr_post">
+	 		<div class="recr_post_title">
+	 		<h3>대한제강에서 현재 진행 중인 채용공고 입니다.</h3>
+	 		</div>
+
+			<div class="post_tb">
+            	<table class="tb-post" summary="이 표는 공지사항 게시판 정보를 제공하며 번호, 제목, 작성일로 구성되어 있습니다.">
+                <caption>공지사항 게시판 목록</caption>
+                <thead>
+                	<tr>
+	                    <th scope="col" class="idx">번호</th>
+    	                <th scope="col" class="tit">모집분야</th>
+    	                <th scope="col" class="target">대상</th>
+    	                <th scope="col" class="type">직종</th>
+    	                <th scope="col" class="preiod">모집기간</th>
+        	            <th scope="col" class="post_btn">지원 및 수정</th>
+            	    </tr>
+                </thead>
+                <tbody>
+                
+	                <tr>
+	                    <td class="idx">2</td>
+	                    <td class="tit tit1"><a href="javascript:void(0)">2016 대한제강(주) 임원 비서 채용 (~2/23)</a></td>
+	                    <td class="target">	신입/경력</td>
+	                    <td class="type">비서(계약직)</td>	                    
+	                    <td class="preiod">2016.02.18-2016.02.23</td>	                    
+	                    <td class="post_btn"><a href="http://dev.idaehan.com/Recruit/Apply/recruit.intro.php?IDX=63&amp;inputType=view" target="_blank">지원서 조회</a></td>	                    
+	                </tr>
+	                <tr class="data_file_down down1">
+            			<td colspan="6" class="view">
+                			<div><img name="target_resize_image[]" width="750" style="border:0px solid #8c8c8c" border="0" src="/lib/img/people_recruit_file.down.jpg" /></div>
+                
+            			</td>
+        			</tr>
+	                <tr>
+	                    <td class="idx">1</td>
+	                    <td class="tit tit2"><a href="javascript:void(0)">2016년 대한제강㈜ 생산직 채용전제형 인턴사원모집</a></td>
+	                    <td class="target">	신입/경력</td>
+	                    <td class="type">생산직</td>	                    
+	                    <td class="preiod">2016.02.17-2016.02.23</td>	                    
+	                    <td class="post_btn"><a href="http://dev.idaehan.com/Recruit/Apply/recruit.intro.php?IDX=63&amp;inputType=view" target="_blank">지원서 조회</a></td>	                    
+	                </tr>
+	                <tr class="data_file_down down2">
+            			<td colspan="6" class="view">
+                			<div><img name="target_resize_image[]" width="750" style="border:0px solid #8c8c8c" border="0" src="/lib/img/people_post_sub_file2.down.jpg" /></div>
+                
+            			</td>
+        			</tr>
+	            </tbody>
+            	</table>
+        	</div>
+        	<div class="rcGuide">
+			    <ul>
+			        <li>- 모집분야를 Click 하시면 내용 <em>상세보기</em>가 가능합니다.</li>
+			        <li>- 처음 지원하시는 지원자는 <em>'신규지원'</em>을 임시저장 하신 지원자는 <em>'수정'</em> 버튼을 이용해 주시기 바랍니다.</li>
+			        <li>- 최종지원하신 경우 <em>'수정'</em> 버튼을 이용하시면 제출하신 이력서 확인이 가능합니다.</li>
+			    </ul>
+			    <span class="btnProcess"><a href="javascript:void(0)">채용프로세스 안내</a></span>
+			</div>
+
+	 	</div>
+	 	    
+	<div id="postPopup">
+		
+		<div class="lyrCon lyrrecruit">
+		    <div class="lrcTit">
+		        <h6>대한제강의 채용프로세스를 안내합니다.</h6>
+		        <strong>대한제강은 열정을 가진 인재, 리더를 기다리고 있습니다.</strong>
+		        <p>대한제강은 수시 채용과 상시 채용을 병행 실시 하고있으며 4단계의 프로세스를 거쳐 채용을 하고 있습니다.</p>
+		    </div>
+		
+		    <div class="lrcCon">
+		        <strong>채용 프로세스</strong>
+		        <p class="rule">STEP1 서류전형 -&gt; STEP2 인적성테스트 전형 -&gt; STEP3 면접전형 -&gt; STEP4 채용검진 -&gt; STEP5 최종합격</p>
+		        <div class="addInfo-type2">
+		            <ul>
+		                <li>- 지필테스트 전형은 채용유형에 따라 생략될 수 있으며, 각 채용 시 별도로 공지합니다. </li>
+		                <li>- 면접 전형은 해당 Position에 적합한 인재 선발을 위하여 다양한 형태로 진행됩니다.<br>(실무 면접, 임원 면접, CEO 면접, English Interview, Presentation 등)</li>
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="lrcCon">
+		        <strong>채용 시기</strong>
+		        <div class="time">
+		            <dl class="t1">
+		                <dt>사무직</dt>
+		                <dd>- 정기 공채 : 매년 9월 경</dd>
+		                <dd>- 수시 채용 : 필요 시 진행</dd>
+		            </dl>
+		            <dl class="t2">
+		                <dt>생산직 </dt>
+		                <dd>- 정기 공채 : 매년 3월 경</dd>
+		                <dd>- 수시 채용 : 필요 시 진행</dd>
+		            </dl>
+		            <dl class="t3">
+		                <dt>인턴십</dt>
+		                <dd>- Staz Track Internship : 매년 4월 </dd>
+		            </dl>
+		        </div>
+		        <div class="addInfo-type2">
+		            <ul>
+		                <li>- 경력직 (사무직, 생산직) 채용은 필요 시 진행</li>
+		            </ul>
+		        </div>
+		    </div>
+		
+		</div>
+	</div> 	 
+	 
+	 <div class="con_wrap"></div>
+	 </div>
+</div>
+
+<div class="footer"></div>
+<div class="top_btn">
+  <img src="/lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+</div>
+</body>
+</html>

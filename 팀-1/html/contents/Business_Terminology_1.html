@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib/css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/ui_style.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/common.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-1.11.2.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            /* Tap Menu */
+            $(".tapMenu li").on("click", function(e){
+                $(".tapMenu li").removeClass("on");
+                $(this).addClass("on");
+            });
+
+            /* scroll 반응 */
+            $(".list_style").on("click", "li",  function(e){
+                var content_top = $(".content").position().top;
+                var tap_top = $(".tap_wrap").position().top;
+                var tapScroll_top = content_top + tap_top;
+
+                $(".list_style li").removeClass("on");
+                $(this).addClass("on");
+
+                $("html, body").animate({scrollTop:tapScroll_top}, 'slow');
+            });
+
+            /* 더 보기 */
+            var listCnt = 0;
+            $(".list_style li").hide();
+            $(".list_style li[data-index='"+0+"']").show();
+            $(".btn_more").on("click", function(e){
+                listCnt ++;
+                if(listCnt == listCnt){
+                    $(".list_style li[data-index='"+listCnt+"']").show();
+                }
+                
+            }); 
+
+            /* list가 10개 미만일떄 더 보기 버튼 안보이게*/
+            var list_len = $(".list_style li").length;
+            if(list_len <= 9){
+                $(".btn_more").hide();
+            }else{
+                $(".btn_more").show();
+            }
+
+        })
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <div class="all_nav">
+        <div class="header_nav_wrap">
+             <span class="icon"></span>
+            <h1 class="logo"><a href="#">DaehanStell</a></h1>
+            <div class="len">
+                <ul>
+                    <li><a href="#">KR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+        
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="s_manu">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Networks</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">CI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                     <ul class="s_manu">
+                        <li><a href="#">Steel Library</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                   </ul>   
+                </li>
+                <li>
+                    <a href="#">People</a>
+                    <ul class="s_manu">
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="#">Persona</a></li>
+                        <li><a href="#">Life</a></li>
+                        <li><a href="#">Recruit</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="right_manu">
+           <span class="icon"></span>
+            <a href="#">
+                <img src="../../lib/img/nv_frameworks.gif" alt="frameworks" />
+            </a>
+        </div>
+       
+        <div class="bottom_manu_wrap">
+            <span><img src="../../lib/img/nv_symbol_1.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_2.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_3.jpg" alt="" /></span>
+        </div>
+        
+     </div>
+     <div class="title_wrap">
+         <h2 class="title">Steel Library</h2>
+         <a class="prev" href="#">Sustainability</a>
+         <a class="next" href="#">Product</a>
+     </div>
+</div>
+
+
+<div class="content_line">
+    <ul>
+        <li class="on"><a href="#">Manufacturing Process</a></li>
+        <li><a href="#">Basic Knowledge</a></li>
+        <li><a href="#">Terminology</a></li>
+    </ul>
+</div>
+<div class="content terminology">
+   
+    <div class="con_wrap">
+        <div class="top_btn">
+            <img src="../../lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+        </div>
+    </div>
+    <!-- section-->
+    <section class="section">
+        <h3>철근의 기본상식과 용어에 대한 궁금증을 해결해드립니다.</h3>
+        <!-- tap_type1 -->
+        <div class="tap_wrap type1">
+            <!-- tap_header -->
+            <div class="tap_header">
+                <ul class="tapMenu type1">
+                    <li class="on"><a href="#noLink">전체</a></li>
+                    <li><a href="#noLink">철근품질</a></li>
+                    <li><a href="#noLink">공정용어</a></li>
+                    <li><a href="#noLink">설비용어</a></li>
+                    <li><a href="#noLink">철강제품</a></li>
+                    <li><a href="#noLink">기타</a></li>
+                </ul>
+            </div>
+            <!-- //tap_header -->
+
+            <!-- tap_body -->
+            <div class="tap_body">
+                <ul class="list_style type1 mar_t20">
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">탄소 당량 (Carbon Equivalent)</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">철강에서 합금원소는 경화능이나 내식성 및 내열성을 증가시키기 위해 각 원소들을 첨가할 수 있습니다. 이들은 임계 냉각 속도와 변태온도를 낮추기 때문에 마르텐자이트로의 변태를 용이하게 하여 경화능을 높이게 됩니다. 이러한 원소들의 경화능(이것이 높으면 균열을 발생시킴)을 탄소함유량의 효과로 환산한 것이며, 강재의 용접시 예열 및 층간 온도로서 균열을 피할 수 있으므로 탄소 당량은 바로 이 예열 및 층간 온도 설정의 기준이 됩니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">공칭둘레</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">원형봉강으로 환산하였을 때 둘레를 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">단위중량</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">단중 = 단위무게 = 원형봉강으로 환산하였을 때 단위중량(Kg/m)을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">공칭단면적[S]</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">원형봉강으로 환산하였을 때 단면적을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">공칭지름[d]</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">원형봉강으로 환산하였을 때 지름을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">물림간격</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">시험편을 시험기에 설치했을 때 시험기 물림장치 사이의 시험편 길이를 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">물림부</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">시험편의 끝부분으로서 시험기의 물림 장치에 물려지는 부분입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">표점거리</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">평행부에 찍어놓은 2개의 표점 사이의 거리로서, 연신율 측정에 기준이 되는 길이입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">항복 연신율</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">인장시험 과정 중, 시험편 평행부가 항복하기 시작할 때부터 거의 일정한 응력상태에서 변형이 증가하고 다음에 평활하게 응력이 증가하기 시작할 때까지의 표점간 길이 변화를 표점거리에 대한 백분율로 나타냅니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">파단 연신율</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">시험편 파단 후의 영구 연신율.(혼동 우려가 없을시 “연신율” 이라 표시) 최초 표점거리를 파단 후 표점거리에 대한 백분율로 나타낸 것으로 KS규격에 강종별, SIZE별로 최소치 규제가 있습니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">항복강도</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">인장시험 과정 중, 시험편 평행부가 항복을 일으키기 이전의 최대하중을 평행부의 공칭단면적으로 나눈 값. 항복이란 철근이 탄성변형의 하중을 넘어 영구 변형의 단계로 넘어가는 가중을 받은것으로 KS규격에 강종 별로 최소치의 규제가 있습니다. SD300(연강) : 300 N/㎟, SD400(고강) : 400 N/㎟, SD500(초고강) : 500 N/㎟</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">인장강도</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">최대인장하중을 평행부의 공칭단면적으로 나눈 값으로 KS규격에 강종별로 인장강도의 최소치 규제가 있습니다. SD300(연강) : 440 N/㎟, SD400(고강) : 560 N/㎟, SD500(초고강) : 620 N/㎟</span>
+                        </div>
+                    </li>
+                    <li data-index="1">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">최대 인장 하중</span>
+                            <i>철근 품질</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">인장시험 과정 중 시험편이 견딘 최대하중을 지칭합니다. 철근을 만능재료시험기를 이용하여 인장시험을 하는데 파단되기 전 철근이 최대로 견딘 하중을 최대인장하중이라 한다. (단위 : N)</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="btn_wrap">
+                    <a href="#this" class="btn_more">
+                        <i>더보기</i>
+                    </a>
+                </div>
+            </div>
+            <!-- //tap_body -->
+        </div>
+        <!-- //tap_type1 -->
+    </section>
+    <!-- //section-->
+
+
+</div>
+
+<div class="footer">
+    <div class="footer_wrap">
+        <div class="footer_gnb1">
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                        <ul class="s_manu">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Networks</a></li>
+                            <li><a href="#">IR</a></li>
+                            <li><a href="#">CI</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Steel Library</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">People</a>
+                        <ul class="s_manu">
+                            <li><a href="#">CEO</a></li>
+                            <li><a href="#">Persona</a></li>
+                            <li><a href="#">Life</a></li>
+                            <li><a href="#">Recruit</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Frameworks</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Solution</a></li>
+                            <li><a href="#">Case Study</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer_gnb2">
+            <ul>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank">개인정보 취급방침</a></li>
+                <li><a href="#" target="_blank">이메일 무단 수집 거부</a></li>
+             </ul>
+             <ul>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award.jpg" alt="웹사이트부문 GRAND PRIX수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award2.jpg" alt="레드닷 디자인어워드 수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_logo2.jpg" alt="국가공인 웹 접근성 품질인증마크_(사)한국시각장애인연합회 (2015.10.08~2016.10.07)" /></a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank"><em>Brochure</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+                <li><a href="#" target="_blank"><em>Webzine</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+             </ul>
+        </div>
+        
+        <div class="footer_wrap2">
+            <div class="footer_gnb3">
+                <p class="copyright">Copyright DaehanSteel. All rights reserved.</p>
+            </div>
+            <div class="footer_gnb4">
+                <a href="#">FAMILY SITE</a>
+                    <ul class="family">
+                        <li><a href="#">e-Transportation</a></li>
+                        <li><a href="#">e-Procurement</a></li>
+                        <li><a href="#">e-Sales</a></li>
+                        <li><a href="#">대한 네트웍스</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

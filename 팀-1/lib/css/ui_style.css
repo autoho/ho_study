@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------------------------------------------------------------------------------ 
+ 	CSS 적용순서 : 아이디 > 태그와 클래스 > 클래스 > 태그
+	CSS 선택자 선언순서 : Type Selector, Layout Selector, Class Selector, Etc
+	CSS 속성 선언순서 : display, position, float/clear, overflow, width/height, margin/padding, border, background, color/font, align, etc 
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* UI_Style.css*/
+
+/* Tap */
+.tap_wrap {*zoom:1;}
+.tap_wrap:after {content:""; display:block; clear:both}
+.tap_wrap .tap_header {}
+.tap_wrap .tap_bdoy {}
+.tap_wrap.type1 .btn_more {    
+	overflow:hidden;
+    display:block;
+    height:26px;
+    margin-top:20px;
+    padding:9px 0 5px;
+    font-size:16px;
+    line-height:26px;
+    color: #747578;
+    text-align:center;
+    background:url('../img/set_btnmore.gif') no-repeat;
+}
+
+
+.tap_wrap.type1 .btn_more i {
+	padding-right:18px;
+    background: url('../img/set_x1_morelist.gif') right 9px no-repeat;
+}
+
+.tap_wrap.type1 .btn_more:hover {background-position:0 -80px; color:#fff;}
+.tap_wrap.type1 .btn_more:hover i {background-position:right 0px;}
+
+
+.tap_wrap .tapMenu.type1 {*zoom:1;}
+.tap_wrap .tapMenu.type1:after {content:""; display:block; clear:both;}
+.tap_wrap .tapMenu.type1 li {float:left; width:157px; border:1px solid #cacbcd; border-left:0px;}
+.tap_wrap .tapMenu.type1 li:first-child {border-left:1px solid #cacbcd;}
+.tap_wrap .tapMenu.type1 li.on {border:1px solid #f05a28;}
+.tap_wrap .tapMenu.type1 li.on a {background-color:#f05a28; color:#fff;}
+.tap_wrap .tapMenu.type1 li a {display:block; height:29px; padding-top:9px; font-size:14px; color:#747578; text-align:center;}
+
+
+/* UI LI type */
+.list_style.type1 {border-top:1px solid #a7a9ac; border-bottom:1px solid #a7a9ac;}
+.list_style.type1.mar_t20 {margin-top:20px;}
+.list_style.type1 li {border-top:1px solid #ebebeb;}
+.list_style.type1 li:first-child {border-top:0px;}
+.list_style.type1 li a {display:block; position:relative; font-size:13px; color:#5b5c5e;}
+.list_style.type1 li .question {position:relative; background:url('../img/tg_faq_down.gif') no-repeat 912px center;}
+.list_style.type1 li .answer {display:none; position:relative;}
+.list_style.type1 li strong {position:absolute; left:0px; top:12px; width:49px; text-align:center;}
+.list_style.type1 li i {position:absolute; right:100px; top:12px; width:49px; text-align:center;}
+.list_style.type1 li span.subject {display:block; padding:13px 158px 11px 49px;}
+.list_style.type1 li .answer {/*display:none;*/}
+
+.list_style.type1 li.on {background-color:#f3f2ee;}
+.list_style.type1 li.on .question {background:url('../img/tg_faq_up.gif') no-repeat no-repeat 912px; color:#f05a28;}
+.list_style.type1 li.on .answer {display:block; border-top:1px solid #fff;}

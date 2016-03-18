@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib/css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/ui_style.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/common.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-1.11.2.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            /* Tap Menu */
+            $(".tapMenu li").on("click", function(e){
+                $(".tapMenu li").removeClass("on");
+                $(this).addClass("on");
+            });
+
+            /* scroll 반응 */
+            $(".list_style").on("click", "li",  function(e){
+                var content_top = $(".content").position().top;
+                var tap_top = $(".tap_wrap").position().top;
+                var tapScroll_top = content_top + tap_top;
+
+                $(".list_style li").removeClass("on");
+                $(this).addClass("on");
+
+                $("html, body").animate({scrollTop:tapScroll_top}, 'slow');
+            });
+
+            /* 더 보기 */
+            var listCnt = 0;
+            $(".list_style li").hide();
+            $(".list_style li[data-index='"+0+"']").show();
+            $(".btn_more").on("click", function(e){
+                listCnt ++;
+                if(listCnt == listCnt){
+                    $(".list_style li[data-index='"+listCnt+"']").show();
+                }
+                
+            }); 
+
+            /* list가 10개 미만일떄 더 보기 버튼 안보이게*/
+            var list_len = $(".list_style li").length;
+            if(list_len <= 9){
+                $(".btn_more").hide();
+            }else{
+                $(".btn_more").show();
+            }
+
+        })
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <div class="all_nav">
+        <div class="header_nav_wrap">
+             <span class="icon"></span>
+            <h1 class="logo"><a href="#">DaehanStell</a></h1>
+            <div class="len">
+                <ul>
+                    <li><a href="#">KR</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+        
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="s_manu">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Networks</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">CI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                     <ul class="s_manu">
+                        <li><a href="#">Steel Library</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                   </ul>   
+                </li>
+                <li>
+                    <a href="#">People</a>
+                    <ul class="s_manu">
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="#">Persona</a></li>
+                        <li><a href="#">Life</a></li>
+                        <li><a href="#">Recruit</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="right_manu">
+           <span class="icon"></span>
+            <a href="#">
+                <img src="../../lib/img/nv_frameworks.gif" alt="frameworks" />
+            </a>
+        </div>
+       
+        <div class="bottom_manu_wrap">
+            <span><img src="../../lib/img/nv_symbol_1.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_2.jpg" alt="" /></span>
+            <span><img src="../../lib/img/nv_symbol_3.jpg" alt="" /></span>
+        </div>
+        
+     </div>
+     <div class="title_wrap">
+         <h2 class="title">Steel Library</h2>
+         <a class="prev" href="#">Sustainability</a>
+         <a class="next" href="#">Product</a>
+     </div>
+</div>
+
+
+<div class="content_line">
+    <ul>
+        <li class="on"><a href="#">Manufacturing Process</a></li>
+        <li><a href="#">Basic Knowledge</a></li>
+        <li><a href="#">Terminology</a></li>
+    </ul>
+</div>
+<div class="content terminology">
+   
+    <div class="con_wrap">
+        <div class="top_btn">
+            <img src="../../lib/img/btn_topbtn.png" alt="상단으로 올라가는 버튼">
+        </div>
+    </div>
+    <!-- section-->
+    <section class="section">
+        <h3>철근의 기본상식과 용어에 대한 궁금증을 해결해드립니다.</h3>
+        <!-- tap_type1 -->
+        <div class="tap_wrap type1">
+            <!-- tap_header -->
+            <div class="tap_header">
+                <ul class="tapMenu type1">
+                    <li class="on"><a href="#noLink">전체</a></li>
+                    <li><a href="#noLink">철근품질</a></li>
+                    <li><a href="#noLink">공정용어</a></li>
+                    <li><a href="#noLink">설비용어</a></li>
+                    <li><a href="#noLink">철강제품</a></li>
+                    <li><a href="#noLink">기타</a></li>
+                </ul>
+            </div>
+            <!-- //tap_header -->
+
+            <!-- tap_body -->
+            <div class="tap_body">
+                <ul class="list_style type1 mar_t20">
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">가이드</span>
+                            <i>설비용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">압연재가 Roll 공형에 치입될 때 정확한 유도를 하는 작업으로 매우 중요합니다. 이 유도 장치의 설치여하에 따라 제품의 품질, 회수율, 생산성이 좌우되며, 유도 장치는 사용법에 따라 차이가 있겠지만 다음과 같은 요구 사항들이 충족이 되어야 합니다.<br />
+                            <br />Guide 요구조건<br /><br />1. 조립 해체가 용이해야 한다.<br /><br />2. 수명이 길어야 한다.<br /><br />3. 열 충격에 의한 변형이 없어야 한다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">핀 다이아(Pin Dia)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">철근 가공할 때 굽히는 과정에서 사용하는 롤과 비슷한 설비입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">압연기(Roll Stand)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">금속의 압연을 위해 사용하는 공작기계를 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">몰드 (Mould / Mold)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">융해 금속(쇳물)을 흘려 넣어 주물(鑄物)을 만드는 형(型)을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">버너(Burner)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">가스 ·기름 ·미분체(微粉體)와 같은 기체 ·액체 ·분체 연료를 고속으로 내뿜는 장치. 가스나 액체 연료의 연소 기구로서 연료와 공기를 적당량 배합하여 그 분출구에 점화하는 것을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">전극봉</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">금속의 절단, 용접이나 전기로(電氣爐)의 전극 등에 사용되는 전도성이 높은 스테인리스강의 봉을 지칭합니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">턴디쉬 (Tundish)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">연주에서 용강이 들어있는 래들에서 용강을 주입하는 1차적 용기 입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">래들 (Laddle)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">래들은 전로에서 취련이 완료된 용강을 담는 그릇입니다.</span>
+                        </div>
+                    </li>
+                    <li data-index="0">
+                        <a href="#this" class="question">
+                            <strong>Q</strong>
+                            <span class="subject">전기로 (Electric Arc Furnace)</span>
+                            <i>설비 용어</i>
+                        </a>
+                        <div class="answer">
+                            <strong>A</strong>
+                            <span class="subject">전열을 이용해 철스크랩을 가열하는 설비 입니다.</span>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="btn_wrap">
+                    <a href="#this" class="btn_more">
+                        <i>더보기</i>
+                    </a>
+                </div>
+            </div>
+            <!-- //tap_body -->
+        </div>
+        <!-- //tap_type1 -->
+    </section>
+    <!-- //section-->
+
+
+</div>
+
+<div class="footer">
+    <div class="footer_wrap">
+        <div class="footer_gnb1">
+            <ul class="b_manu">
+                <li>
+                    <a href="#">About Us</a>
+                        <ul class="s_manu">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Networks</a></li>
+                            <li><a href="#">IR</a></li>
+                            <li><a href="#">CI</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Steel Library</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">People</a>
+                        <ul class="s_manu">
+                            <li><a href="#">CEO</a></li>
+                            <li><a href="#">Persona</a></li>
+                            <li><a href="#">Life</a></li>
+                            <li><a href="#">Recruit</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Frameworks</a>
+                        <ul class="s_manu">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Solution</a></li>
+                            <li><a href="#">Case Study</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer_gnb2">
+            <ul>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank">개인정보 취급방침</a></li>
+                <li><a href="#" target="_blank">이메일 무단 수집 거부</a></li>
+             </ul>
+             <ul>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award.jpg" alt="웹사이트부문 GRAND PRIX수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_award2.jpg" alt="레드닷 디자인어워드 수상" /></a></li>
+                <li><a href="#" target="_blank"><img src="../../lib/img/mark_logo2.jpg" alt="국가공인 웹 접근성 품질인증마크_(사)한국시각장애인연합회 (2015.10.08~2016.10.07)" /></a></li>
+            </ul>
+            <ul>
+                <li><a href="#" target="_blank"><em>Brochure</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+                <li><a href="#" target="_blank"><em>Webzine</em><img src="../../lib/img/btn_link_view.gif" alt="보기버튼" /></a></li>
+             </ul>
+        </div>
+        
+        <div class="footer_wrap2">
+            <div class="footer_gnb3">
+                <p class="copyright">Copyright DaehanSteel. All rights reserved.</p>
+            </div>
+            <div class="footer_gnb4">
+                <a href="#">FAMILY SITE</a>
+                    <ul class="family">
+                        <li><a href="#">e-Transportation</a></li>
+                        <li><a href="#">e-Procurement</a></li>
+                        <li><a href="#">e-Sales</a></li>
+                        <li><a href="#">대한 네트웍스</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

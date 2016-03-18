@@ -13,8 +13,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
+				var el=$('#wrapper > ul > li');
 				
-				
+				var firstEl = el.first();
+					firstEl.css('color','red')
+				var lastEl = el.last();
+					lastEl.css('color','red')
 			});
 		</script>
 	</head>
