@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>메테오라회원가입</title>
+</head>
+<body>
+<p>회원정보입력</p>
+
+    <form action="member" method="get">
+
+        <fieldset>
+            <legend>별 표시는 필수입력 사항입니다.</legend>
+            <ul>
+                <li>
+                    <label for="userNa">사용자 이름</label>
+                    <input type="text" id="userNa" value="이름" name="suerNa">
+                    <br />
+                </li>
+                <li>
+                    <label for="userId">아이디</label>
+                    <input type="userId" id="userId" name="userId"><input type="button" value="중복확인">
+                </li>
+                <li>
+                    <em>- 영문,숫자조합으로 6~20자까지 사용가능합니다.</em>
+                </li>
+                <li>
+                    <em>- 첫 글자는 영문으로 설정 해 주십시오.</em>
+                </li>
+                <li>
+                    <label for="suerPw">비밀번호</label>
+                    <input type="userPw" id="userPw" name="userPw">
+                </li>
+                <li>
+                    <em>- 영문, 숫자,특수 문자 조합으로 8~20자 까지 사용가능합니다. (영문은 대소문자 구분)</em>
+                </li>
+                <li>
+                    <em>- 유출되기 쉬운 비밀번호는 등록 할 수 없습니다. (예:111,abcd,password 등)</em>
+                </li>
+
+                <li>
+                    <label for="suerPw">비밀번호 확인</label>
+                    <input type="userPw" id="userPw" name="userPw">
+                </li>
+
+                <li>
+                    <label for="useremail">이메일</label>
+                    <input type="useremail" id="useremail" name="sueremail"><input type="text">
+                </li>
+                <li>
+                    <label for="userHp">연락처</label>
+                    <input type="userHp" id="userHp" name="userHp"><input type="text"><input type="text">
+                </li>
+                <li>
+                    <label for="userCp">휴대전화</label>
+                    <input type="userCp" id="suerCp" name="suerCp">-<input type="text">
+                    <input type="text"><input type="text">
+                </li>
+                <li>
+                    주소 <input type="text"><input type="text">
+                    <input type="text" value="주소찾기"></li>
+                <li><input type="text"></li>
+                <li><input type="text"></li>
+
+            </ul>
+
+            <input type="button" value="회원가입">
+
+            </fieldset>
+        </form>
+
+
+</body>
+</html>

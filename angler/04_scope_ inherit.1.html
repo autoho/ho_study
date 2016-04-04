@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scope deepen</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+        var worldCtrl = function($scope){
+            
+            $scope.population = 7000;
+            $scope.countries = [
+                {"name":"France", "population":63.1},
+                {"name":"United Kindom", "population":61.8}
+            ];
+            
+            $scope.worldsPercentage = function(countryPopulation){
+                return (countryPopulation / $scope.population) * 100;
+            };
+        }
+     </script>
+     
+</head>
+<body ng-app>
+    <div ng-controller="worldCtrl">
+    
+    <ul>
+        <li ng-repeat="country in countries">
+            {{country.name}} has population of {{country.population}},
+            {{ worldsPercentage(country.population)}} % of the World`s population
+        </li>
+    </ul>
+    
+    <hr />
+        World`s population : {{population}} millions
+    </div>
+</body>
+
+</html>

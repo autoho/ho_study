@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선언형 템플릿뷰와 명령형 컨트롤로러 로직</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+   
+    var app = angular.module('myapp',[]);
+    
+    app.controller('myCtrl',function($scope){
+        $scope.firstName = "김";
+        $scope.lastName = "민철";
+    })
+   
+    </script>
+     
+</head>
+<body ng-app="myapp" ng-controller="myCtrl">
+    
+   성<input type="text" ng-model="firstName"/>
+   이름<input type="text" ng-model="lastName"/>
+   
+   <br />
+   
+   {{firstName + lastName}}
+   
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scope deepen</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+        var worldCtrl = function($scope){
+            $scope.population = 5;
+            $scope.countries = [
+                {"name":"호식이", "address":"성내동 245-1", "phone":" 000-0000"},
+                {"name":"두마리", "address":"암사동 333-2", "phone":" 000-0000"},
+                {"name":"비비큐", "address":"둔촌동 321-1", "phone":" 000-0000"},
+                {"name":"투다리", "address":"성내동 321-3", "phone":" 000-0000"},
+                {"name":"갓세븐", "address":"풍납동 321-2", "phone":" 000-0000"}
+
+            ];
+        }
+     </script>
+     
+</head>
+<body ng-app>
+    <div ng-controller="worldCtrl">
+    
+    <ul>
+        <li ng-repeat="country in countries">
+            {{country.name}} of address {{country.address}} and phone{{country.phone}}
+        </li>
+    </ul>
+    
+    <hr />
+        World`s chiken phone nember : {{population}} store
+    </div>
+</body>
+
+</html>

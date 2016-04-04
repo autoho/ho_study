@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+</head>
+
+<!--metrix(n,n,n,n,n,n)-->
+<!--삼각함수와 행렬이 중요-->
+<!--tx,ty-->
+
+
+<!--matrix3d-->
+<!--(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)-->
+<!--16자리 축n 삼각함수 벡터 행렬 선형대수학-->
+
+<style type="text/css">
+    /*.box{border:1px #F00 solid; width: 200px;height: 200px; transition:1s;}*/
+    /*1.box:hover{transform:matrix(1,0.8,0.5,1,100,100);}*/
+    /*2.box:hover{height: 20px; transform-origin:left; transform:rotate(45deg);}*/
+    /*3.box:hover{transform-origin:left; transform:translateX(120px) scale(1,2);}*/
+    /*4.box:hover{transform-origin:150px; transform:rotate(45deg);}*/
+
+    .menu{width: 50px; height: 50px; background:#000; border:0; padding:0 5px; transition:1s;}
+    button::-moz-focus-inner{padding:0;}
+    .menu span{display:block; height: 2px; background:#FFF; margin:10px 0; transition:1s;}
+.menu:hover span.top{ transform-origin:9%; transform: rotate(45deg)}
+
+.menu:hover span.middle{ opacity: 0;}
+
+.menu:hover span{ margin-left:5px}
+.menu:hover span.bottom{ transform-origin:9%; transform: rotate(-45deg) translateX(4px)}
+    
+</style>
+
+
+<body>
+    
+    <!--<div class="box"></div>-->
+    
+    <button class="menu">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </button>
+    
+    
+    
+    
+    
+</body>
+</html>

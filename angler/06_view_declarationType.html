@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선언형 템플릿뷰와 명령형 컨트롤로러 로직</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+    //remaining
+    var TextAreaWithLimutCtrl = function($scope){
+        
+      $scope.remaining = function(){
+          return $scope.message.length
+      }
+    }
+    
+    </script>
+     
+</head>
+<body ng-app>
+    
+    <div class="container" ng-controller="TextAreaWithLimutCtrl">
+        
+        <span>
+            Remaining:{{remaining()}}
+        </span>
+        
+        <div class="row">
+            <textarea ng-model="message">{{message}}</textarea>
+        </div>
+        
+        <div class="row">
+            <button ng-click="send()">Send</button>
+            <button ng-click="clear()">Clear</button>
+        </div>
+    </div>
+    
+</body>
+
+</html>

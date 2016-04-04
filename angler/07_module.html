@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선언형 템플릿뷰와 명령형 컨트롤로러 로직</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+   
+    /*
+    var helloCtrl = function($scope){
+        $scope.name="world";
+    }
+    */
+    
+    angular.module('hello',[])
+    .controller('helloCtrl',function($scope){
+            $scope.name = "world"
+        })
+   
+    </script>
+     
+</head>
+<body ng-app="hello">
+    <div ng-controller="helloCtrl">
+        <input type="text" ng-model="name"/>
+         <h1 ng-bind="name"></h1>
+    </div>
+   
+</body>
+
+</html>

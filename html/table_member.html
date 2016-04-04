@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>메테오라 회원가입</title>
+</head>
+<body>
+    <fieldset>
+        <legend>회원정보 입력</legend>
+
+<table border="1" width="100%" summary="회원가입 사용자 이름 입력란 입니다.">
+    <caption>표시는 필수 입력 사항입니다.</caption>
+    <colgroup>
+        <col width="10%"/>
+        <col width="100%"/>
+        <col width="5%"/>
+        <col width="5%"/>
+
+    </colgroup>
+    <tbody>
+       <tr>
+           <th><label for="userNa">사용자 이름</label></th>
+           <td>
+               <input type="text" id="userNa" value="이름" name="suerNa" />
+               <br />
+           </td>
+       </tr>
+       <tr>
+           <th rowspan="2"><label for="userId">아이디</label></th>
+           <td colspan="2">
+               <input type="text" id="userId" name="suerId" />
+               <input type="button" value="중복확인" /></br>
+           </td>
+       </tr>
+        <tr>
+            <td colspan="2">
+                <em>-영문,숫자 조합으로 6~20자 까지 사용가능합니다.</em><br/>
+                <em>-첫 글자는 영문으로 설정 해 주십시오.</em><br/>
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="2"><label for="userPw">비밀번호</label></th>
+            <td colspan="2">
+                <input type="text" id="userPw" name="userPw" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <em>-영문,숫자 특수문자 조합으로 8~20자 까지 사용가능합니다.(영문은 대소문자 구분)</em><br/>
+                <em>-유출되기 쉬운 비밀번호는 등록 할 수 없습니다.(예:111,abcd,password 등)</em><br/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="userRp">비밀번호 확인</label>
+            </th>
+            <td colspan="2"><input type="text" id="userRp" name="userRp" />
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="userEm">이메일</label>
+            </th>
+            <td colspan="2">
+                <input type="text" id="userEm" mane="userEm" />@
+                <input type="text" />
+                <select>
+                    <option>직접입력</option>
+                    <option>naver.com</option>
+                    <option>hotmail.net</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <th><label for="userPh">연락처</label></th>
+            <td colspan="2">
+                <input type="text" id="userPh" mane="userPh" />
+                -<input type="text" />
+                -<input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <th>휴대전화</th>
+            <td colspan="2">
+                <select>
+                    <option>010</option>
+                    <option>02</option>
+                    <option>011</option>
+                </select>
+                - <input type="text" />
+                - <input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="3"><label for="userAd">주소</label></th>
+            <td colspan="2">
+                <input type="text" id="userAd" name="userAd" />-
+                <input type="text" />
+                <input type="button" value="주소찾기" />
+            </td>
+        <tr>
+            <td colspan="2"><input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text">
+        </td>
+        </tr>
+
+    </tbody>
+</table>
+        <tr>
+            <td><input type="button" value="회원가입" /></td>
+        </tr>
+    </fieldset>
+<table>
+    <tr>
+        <td> <select>
+                    <potion class="fast">빠르게15초</potion>
+                    <potion class="normal">보통25초</potion>
+                    <potion class="slow">느리게35초</potion>
+                    <potion class="off">끄기</potion>
+                </select></td>
+    </tr>
+</table>    
+   
+</body>
+</html>

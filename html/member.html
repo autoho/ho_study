@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="member" method="get">
+        <!--fieldset : 감싸고 보이지 않는다 ,필드가 레전드를 감싼다 폼은 필드를 감싼다.-->
+        <fieldset>
+            <legend>필수항목</legend>
+
+        <ul>
+            <li><label for="userID">아이디:</label><input type="text" id="userID" value="아이디" name="suerid"></li>
+            <li><label for="userPw">비밀번호:</label><input type="password" id="userPw" name="userPw"></li>
+            <li>이메일:<input type="text"></li>
+            <li><label for="man">성별:</label>
+                <input type="radio" name="sex" id="man">
+                <label for="">남자</label>
+                <input type="radio" name="sex" id="woman">
+                <label for="">여자</label>
+            </li>
+
+            <li>취미:
+                <input name="option1" type="checkbox" checked="chedked">영화감상
+                <input type="checkbox" checked="chedked">음주가무1
+                <input type="checkbox">음주가무2
+                <input type="checkbox">회식
+            </li>
+
+            <li>첨부파일:<input type="file"></li>
+        </ul>
+
+            <input type="button" value="뒤로가기">
+            <input type="submit" value="전송">
+            <input type="reset" value="초기화">
+
+        </fieldset>
+    </form>
+
+
+
+</body>
+</html>

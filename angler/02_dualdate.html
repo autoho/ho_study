@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>양방향데이터 바인딩</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+</head>
+<body ng-app ng-init="name='World'">
+    Say Hello to : <input type="text" ng-model="name"/>
+    <!--ng- <== 엔지로 시작되는 모델은 앙귤러임-->
+    <h1>Hello {{name}} !</h1>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html ng-app="way">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>two way data binding</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script>
+            var app = angular.module("way", []);
+            app.controller("mainCtrl", function($scope) {
+                var menuList = [
+                    {itemId: 1, itemName: '베이글', itemPrice: 3000, itemCount: 0},
+                    {itemId: 2, itemName: '소이 라떼', itemPrice: 4000, itemCount: 0},
+                    {itemId: 3, itemName: '카라멜 마끼아또', itemPrice: 4500, itemCount: 0}
+                ];
+ 
+                $scope.menuList = menuList;
+                $scope.totalPrice = 0;
+                
+                $scope.buy = function(){
+                    $scope.totalPrice = 0;
+                    
+                    angular.forEach($scope.menuList, function(menu, idx) {
+                        $scope.totalPrice = $scope.totalPrice + (menu.itemPrice * Number(menu.itemCount));
+                    });
+                };
+            });
+        </script>
+    </head>
+    <body ng-controller="mainCtrl">
+        <div>
+            <h1>메뉴판</h1>
+            <h2>메뉴 목록</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>메뉴</th>
+                        <th>가격</th>
+                        <th>갯수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="menu in menuList">
+                        <td>{{menu.itemName}}</td>
+                        <td>{{menu.itemPrice}}</td>
+                        <td><input type="text" ng-model="menu.itemCount"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button ng-click="buy()">구매</button>
+            <h2>구입 가격</h2>
+            <div>
+                가격: {{totalPrice}}
+            </div>
+        </div>
+    </body>
+</html>

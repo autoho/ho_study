@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>앙귤러와 제이쿼리 양방향데이터</title>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+     
+</head>
+     <body ng-init="person = {name: '친구들', favorite : ['수박', '귤', '사과']}">
+        <h1> hello {{person.name}}</h1>
+        <h2> 좋아하는 과일</h2>
+        <ul ng-repeat='fruit in person.favorite'>
+            <li><a href="#{{fruit}}">{{fruit}}</a></li>
+        </ul>
+    </body>
+
+</html>

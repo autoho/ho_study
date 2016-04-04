@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scope deepen</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+        
+        // 스코프 프로퍼티를이용하지 않고 바인딩하는 방법
+        var HelloCtrl = function($scope){
+            
+        };
+     </script>
+     
+</head>
+<body ng-app ng-init="thing={name:'world'}">
+    
+    <h1>Hello {{thing.name}}</h1>
+    
+    <div ng-controller="HelloCtrl">
+        Say hello to: <input type="text" ng-model="thing.name" />
+        <h2>Hello, {{thing.name}}!</h2>
+    </div>
+    
+</body>
+
+</html>

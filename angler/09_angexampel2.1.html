@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ng-repeat exam</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-init="customerList = [{name:'Jack', age:31}, {name:'Jolie', age:25}]">
+            고객 목록
+            <ul>
+                <li ng-repeat="customer in customerList">
+                    [{{$index + 1}}] 고객 이름: {{customer.name}}, 고객 나이: {{customer.age}}
+                </li>
+            </ul>
+        </div>
+        <div ng-init="friendList = {name:'Paul', age: 22, hobby:'Game'}">
+            내 친구 소개
+            <ul>
+                <li ng-repeat="(attr, value) in friendList">
+                    <p>{{attr}} : {{value}} </p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

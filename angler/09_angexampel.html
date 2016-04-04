@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html ng-app>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>angularJS template</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    </head>
+    <body ng-init="person = {name: 'yeonsu', favorite: ['사과', '귤', '감']}">
+        <h1>hello {{person.name}}</h1>
+        <p> 좋아하는 과일의 갯수: {{numberOfFavorite = person.favorite.length}}</p>
+        <p>과일 갯수 * $100 = {{numberOfFavorite * 100 | currency}}</p>
+        <p>yeonsu가 맞습니까? {{person.name == 'yeonsu'}}</p>
+        <p>좋아하는 과일 수가 4개보다 많습니까? {{numberOfFavorite > 4 }}</p>
+        <p>scope에 없는 객체 접근 하면? {{car.type.name}}</p>
+    </body>
+</html>

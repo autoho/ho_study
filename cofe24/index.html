@@ -1,0 +1,432 @@
+<!--@layout(/layout/basic/main.html)-->
+
+<div class="visual">
+    <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/img_visual.jpg" alt="" />
+</div>
+
+<!-- 추천상품 -->
+<div module="product_listmain_1">
+    <!--@css(/css/module/product/listmain_1.css)-->
+    <!--
+        $count = 8
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2><span>{$category_title_text}</span></h2>
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><!-- //추천상품 -->
+
+<!-- 신상품 -->
+<div module="product_listmain_2">
+    <!--@css(/css/module/product/listmain_2.css)-->
+    <!--
+        $count = 8
+    -->
+    <h2><span>{$category_title_text}</span></h2>
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><!-- //신상품 -->
+
+<!-- 추가카테고리1 -->
+<div module="product_listmain_3">
+    <!--@css(/css/module/product/listmain_3.css)-->
+    <!--
+        $count = 8
+    -->
+    <h2>
+        <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+        <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></span>
+    </h2>
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><!-- //추가카테고리1 -->
+
+<!-- 추가카테고리2 -->
+<div module="product_listmain_4">
+    <!--@css(/css/module/product/listmain_4.css)-->
+    <!--
+        $count = 8
+    -->
+    <h2>
+        <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+        <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></span>
+    </h2>
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><!-- //추가카테고리2 -->
+
+<!-- 추가분류관리(진열순서1) -->
+<div module="product_listmain_5">
+    <!--@css(/css/module/product/listmain_5.css)-->
+    <!--
+        $count = 8
+    -->
+    <h2>
+        <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+        <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></span>
+    </h2>
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><!-- //추가분류관리(진열순서1) -->
+
+<!-- 추가분류관리(진열순서2) -->
+<div module="product_listmain_6">
+    <!--@css(/css/module/product/listmain_6.css)-->
+    <!--
+        $count = 8
+    -->
+    <h2>
+        <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+        <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></span>
+    </h2>
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><!-- 추가분류관리(진열순서2) -->
+
+<!-- 추가분류관리(진열순서3) -->
+<div module="product_listmain_7">
+    <!--@css(/css/module/product/listmain_7.css)-->
+    <!--
+        $count = 8
+    -->
+    <h2>
+        <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+        <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></span>
+    </h2>
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</div>
+                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                </div>
+                <p class="name">
+                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="product_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><!-- //추가분류관리(진열순서3) -->
+
+<!-- 게시판 -->
+<div id="boardArea">
+    <div module="board_listpackage_5">
+        <!--@css(/css/module/layout/board_listpackage_5.css)-->
+        <h2><span>자유게시판</span></h2>
+        <table border="1" summary="">
+            <caption>자유 게시판</caption>
+            <thead>
+                <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">날짜</th>
+                </tr>
+            </thead>
+            <tbody module="board_list_5">
+                <!--
+                    $count = 5
+                    $main_list = yes
+                    $subject_cut = 25
+                    $main_list_reply_view = no
+                -->
+                <tr>
+                    <td class="title"><a href="/board/free/read.html{$param_read}">{$subject}</a></td>
+                    <td>{$write_date|date:Y/m/d}</td>
+                </tr>
+                <tr>
+                    <td class="title"><a href="/board/free/read.html{$param_read}">{$subject}</a></td>
+                    <td>{$write_date|date:Y/m/d}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="more"><a href="/board/free/list.html?board_no=5"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_board_more.gif" alt="더보기" /></a></p>
+    </div>
+
+    <div module="board_listpackage_6">
+        <!--@css(/css/module/layout/board_listpackage_6.css)-->
+        <h2><span>상품 Q&amp;A</span></h2>
+        <table border="1" summary="">
+            <caption>상품 Q&amp;A</caption>
+            <thead>
+                <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">날짜</th>
+                </tr>
+            </thead>
+            <tbody module="board_list_6">
+                <!--
+                    $count = 5
+                    $main_list = yes
+                    $subject_cut = 25
+                    $main_list_reply_view = no
+                -->
+                <tr>
+                    <td class="title"><a href="/board/product/read.html{$param_read}">{$subject}</a></td>
+                    <td>{$write_date|date:Y/m/d}</td>
+                </tr>
+                <tr>
+                    <td class="title"><a href="/board/product/read.html{$param_read}">{$subject}</a></td>
+                    <td>{$write_date|date:Y/m/d}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="more"><a href="/board/product/list.html?board_no=6"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_board_more.gif" alt="더보기" /></a></p>
+    </div>
+</div><!-- //게시판 -->
+
+<!--@define(cmc_log)-->
